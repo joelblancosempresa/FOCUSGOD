@@ -239,12 +239,12 @@
     opacity:0;
     transform:rotateY(-80deg);
     transform-origin:left center;
-    transition:opacity .5s ease, transform .65s cubic-bezier(0.34,1.56,0.64,1);
   }
   .flip-reveal.is-visible{
     opacity:1;
     transform:rotateY(0deg);
   }
+  .tw-title{min-height:1.2em;}
   .value h2{
     font-size:20px;
     text-transform:uppercase;
@@ -257,7 +257,7 @@
     border-radius:2px;
     padding:18px;
     margin-bottom:16px;
-    transition:border-color .3s ease;
+    transition:border-color .3s ease, opacity .5s ease, transform .65s cubic-bezier(0.34,1.56,0.64,1);
   }
   .method:hover{border-color:#3a3a3a;}
   .method h3{
@@ -838,17 +838,17 @@
   <h2>Cómo leer la Biblia correctamente</h2>
 
   <div class="method flip-reveal">
-    <h3>1. Consistencia, no cantidad</h3>
+    <h3 class="tw-title" data-text="1. Consistencia, no cantidad"></h3>
     <p>15 minutos todos los días transforman más que una sesión larga de vez en cuando. Un capítulo al día es suficiente. Lo que construye el hábito es la constancia, no el volumen.</p>
   </div>
 
   <div class="method flip-reveal">
-    <h3>2. Únelo a algo que ya haces</h3>
+    <h3 class="tw-title" data-text="2. Únelo a algo que ya haces"></h3>
     <p>Lee justo después de tu café, o antes de dormir, o al despertar. Unir la lectura a un hábito que ya tienes ("habit stacking") es la forma más confiable de que se quede.</p>
   </div>
 
   <div class="method flip-reveal">
-    <h3>3. Método S.O.A.P. para no solo leer, sino entender</h3>
+    <h3 class="tw-title" data-text="3. Método S.O.A.P. para no solo leer, sino entender"></h3>
     <p><b>S</b>agrado texto — elige el pasaje.<br>
     <b>O</b>bservación — ¿qué ves? ¿quién habla? ¿qué palabra se repite?<br>
     <b>A</b>plicación — ¿qué me dice esto de Dios y qué cambia en mi vida?<br>
@@ -856,7 +856,7 @@
   </div>
 
   <div class="method flip-reveal">
-    <h3>4. Empieza y termina en oración</h3>
+    <h3 class="tw-title" data-text="4. Empieza y termina en oración"></h3>
     <p>Antes de leer, pide entendimiento. No estás estudiando un libro cualquiera, estás pidiéndole a Dios que te hable directamente.</p>
   </div>
 
@@ -913,6 +913,21 @@ function typeSequential(elements, speed, cb){
   typeNext();
 }
 
+// ---- Escribe una sola vez el título de cada tarjeta al hacerse visible ----
+function typeOnce(el, speed){
+  if(!el || el.dataset.typed === '1') return;
+  var text = el.getAttribute('data-text');
+  if(!text) return;
+  el.dataset.typed = '1';
+  var j = 0;
+  el.textContent = '';
+  var interval = setInterval(function(){
+    el.textContent += text[j];
+    j++;
+    if(j >= text.length){ clearInterval(interval); }
+  }, speed);
+}
+
 document.addEventListener('DOMContentLoaded', function(){
   var lines = document.querySelectorAll('.tw-line');
   typeSequential(Array.prototype.slice.call(lines), 45);
@@ -934,13 +949,19 @@ document.addEventListener('DOMContentLoaded', function(){
       entries.forEach(function(entry){
         if(entry.isIntersecting){
           entry.target.classList.add('is-visible');
+          var title = entry.target.querySelector('.tw-title');
+          if(title){ typeOnce(title, 28); }
           observer.unobserve(entry.target);
         }
       });
     }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
     revealEls.forEach(function(el){ observer.observe(el); });
   } else {
-    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+    revealEls.forEach(function(el){
+      el.classList.add('is-visible');
+      var title = el.querySelector('.tw-title');
+      if(title){ typeOnce(title, 28); }
+    });
   }
 
   // ---- Accordion ----
