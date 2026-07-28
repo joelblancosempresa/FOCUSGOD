@@ -30,14 +30,20 @@
     overflow-x:hidden;
   }
 
-  /* progress bar */
+  /* progress bar (vertical, lado izquierdo) */
   .progress-bar{
     position:fixed;
-    top:0;left:0;
-    height:3px;
-    width:0%;
-    background:linear-gradient(90deg, var(--accent), #ffffff);
+    top:0;
+    left:0;
+    width:3px;
+    height:100%;
+    background:rgba(255,255,255,0.06);
     z-index:999;
+  }
+  .progress-bar-fill{
+    width:100%;
+    height:0%;
+    background:linear-gradient(180deg, var(--accent), #ffffff);
   }
 
   /* top credit */
@@ -118,15 +124,15 @@
     padding:8px 20px 12px;
   }
 
-  /* scroll reveal */
+  /* scroll reveal: las cartas suben desde abajo al entrar en pantalla */
   .reveal{
     opacity:0;
-    transform:translateY(18px);
-    transition:opacity .6s ease, transform .6s ease;
+    transform:translateY(46px) scale(0.98);
+    transition:opacity .7s cubic-bezier(0.16,1,0.3,1), transform .7s cubic-bezier(0.16,1,0.3,1);
   }
   .reveal.is-visible{
     opacity:1;
-    transform:translateY(0);
+    transform:translateY(0) scale(1);
   }
 
   .item{
@@ -225,6 +231,19 @@
     padding:40px 20px 20px;
     border-top:1px solid var(--line);
     margin-top:20px;
+    perspective:1200px;
+  }
+
+  /* las cartas de "cómo leer la Biblia" se dan la vuelta al aparecer */
+  .flip-reveal{
+    opacity:0;
+    transform:rotateY(-80deg);
+    transform-origin:left center;
+    transition:opacity .5s ease, transform .65s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .flip-reveal.is-visible{
+    opacity:1;
+    transform:rotateY(0deg);
   }
   .value h2{
     font-size:20px;
@@ -347,7 +366,7 @@
 </head>
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+<div class="progress-bar"><div class="progress-bar-fill" id="progressBarFill"></div></div>
 
 <div class="top-credit">
   <a href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
@@ -818,17 +837,17 @@
 <section class="value">
   <h2>Cómo leer la Biblia correctamente</h2>
 
-  <div class="method reveal">
+  <div class="method flip-reveal">
     <h3>1. Consistencia, no cantidad</h3>
     <p>15 minutos todos los días transforman más que una sesión larga de vez en cuando. Un capítulo al día es suficiente. Lo que construye el hábito es la constancia, no el volumen.</p>
   </div>
 
-  <div class="method reveal">
+  <div class="method flip-reveal">
     <h3>2. Únelo a algo que ya haces</h3>
     <p>Lee justo después de tu café, o antes de dormir, o al despertar. Unir la lectura a un hábito que ya tienes ("habit stacking") es la forma más confiable de que se quede.</p>
   </div>
 
-  <div class="method reveal">
+  <div class="method flip-reveal">
     <h3>3. Método S.O.A.P. para no solo leer, sino entender</h3>
     <p><b>S</b>agrado texto — elige el pasaje.<br>
     <b>O</b>bservación — ¿qué ves? ¿quién habla? ¿qué palabra se repite?<br>
@@ -836,7 +855,7 @@
     <b>P</b>oración — termina pidiéndole a Dios que lo haga real en ti.</p>
   </div>
 
-  <div class="method reveal">
+  <div class="method flip-reveal">
     <h3>4. Empieza y termina en oración</h3>
     <p>Antes de leer, pide entendimiento. No estás estudiando un libro cualquiera, estás pidiéndole a Dios que te hable directamente.</p>
   </div>
@@ -852,7 +871,7 @@
   <h2>¿Qué es Focusgod?</h2>
   <p class="pain">¿Sientes que tienes demasiadas distracciones? ¿Una adicción de la que no logras soltarte? ¿Sientes que tu vida no tiene un propósito claro?</p>
   <p>Focusgod nace para eso: una app para ayudarte a enfocarte en Dios en medio del ruido. Menos distracción, más presencia, un propósito real.</p>
-  <p class="launch">Estamos por lanzar. Deja tu correo y sé de los primeros en enterarte.</p>
+  <p class="launch">Está a punto de salir. Déjanos tu correo y entérate antes que nadie.</p>
 
   <form id="signupForm" class="signup-form">
     <input type="email" id="signupEmail" placeholder="tu@correo.com" required>
@@ -898,18 +917,18 @@ document.addEventListener('DOMContentLoaded', function(){
   var lines = document.querySelectorAll('.tw-line');
   typeSequential(Array.prototype.slice.call(lines), 45);
 
-  // ---- Scroll progress bar ----
-  var progressBar = document.getElementById('progressBar');
+  // ---- Barra de progreso vertical (lado derecho) ----
+  var progressFill = document.getElementById('progressBarFill');
   window.addEventListener('scroll', function(){
     var h = document.documentElement;
     var scrollTop = h.scrollTop || document.body.scrollTop;
     var scrollHeight = h.scrollHeight - h.clientHeight;
     var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-    progressBar.style.width = progress + '%';
+    progressFill.style.height = progress + '%';
   });
 
   // ---- Scroll reveal ----
-  var revealEls = document.querySelectorAll('.reveal');
+  var revealEls = document.querySelectorAll('.reveal, .flip-reveal');
   if('IntersectionObserver' in window){
     var observer = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
@@ -970,14 +989,14 @@ document.addEventListener('DOMContentLoaded', function(){
       body: JSON.stringify({email: email})
     })
     .then(function(){
-      msg.textContent = 'Listo. Te avisamos apenas lancemos.';
+      msg.textContent = '¡Hecho! Te avisaremos en cuanto salga.';
       msg.className = 'form-msg success';
       form.reset();
       btn.textContent = 'Avísame cuando lance';
       btn.disabled = false;
     })
     .catch(function(){
-      msg.textContent = 'Algo falló. Intenta de nuevo.';
+      msg.textContent = 'Ha fallado algo. Inténtalo de nuevo.';
       msg.className = 'form-msg error';
       btn.textContent = 'Avísame cuando lance';
       btn.disabled = false;
