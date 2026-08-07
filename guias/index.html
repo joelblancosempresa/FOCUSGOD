@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Lecturas — FOCUSGOD</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lecturas — FOCUSGOD">
+<meta property="og:description" content="Guías gratuitas para vivir tu fe con propósito: por dónde empezar, hábitos, y más.">
+<meta property="og:image" content="https://focusgodapp.com/guias/preview.jpg">
+<meta property="og:url" content="https://focusgodapp.com/guias/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lecturas — FOCUSGOD">
+<meta name="twitter:description" content="Guías gratuitas para vivir tu fe con propósito: por dónde empezar, hábitos, y más.">
+<meta name="twitter:image" content="https://focusgodapp.com/guias/preview.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --bg-card:#0d0d0d;
+    --fg:#f3f3f1;
+    --muted:#8f8f8f;
+    --line:#262626;
+    --accent:#e8e2d0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);}
+  body{
+    font-family:'Courier Prime','Courier New',monospace;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:60px;
+    background:radial-gradient(circle at 50% -10%, #161616 0%, #000000 55%);
+    max-width:600px;
+    margin:0 auto;
+    overflow-x:hidden;
+  }
+
+  .top-credit{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+    padding:16px 20px 0;
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:1px;
+    text-transform:uppercase;
+    flex-wrap:wrap;
+  }
+  .top-credit a{
+    color:var(--muted);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+  }
+  .top-credit a:hover{color:var(--fg);}
+  .badge-sm{width:11px;height:11px;flex-shrink:0;}
+  .top-credit .dot{opacity:0.5;}
+
+  header.hero{
+    padding:40px 20px 32px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  h1{
+    font-size:30px;
+    line-height:1.2;
+    margin:0 0 18px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .hero p{
+    color:#c9c9c9;
+    font-size:14.5px;
+    max-width:38ch;
+    margin:0 auto;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(46px) scale(0.98);
+    transition:opacity .7s cubic-bezier(0.16,1,0.3,1), transform .7s cubic-bezier(0.16,1,0.3,1);
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+
+  .list{
+    padding:24px 20px 12px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .card{
+    display:block;
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:22px;
+    text-decoration:none;
+    color:var(--fg);
+    transition:border-color .3s ease, transform .2s ease;
+  }
+  .card:hover{border-color:var(--accent);}
+  .card:active{transform:scale(0.99);}
+  .card-num{
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:2px;
+    display:block;
+    margin-bottom:8px;
+  }
+  .card-title{
+    font-size:19px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0 0 8px;
+  }
+  .card-desc{
+    font-size:13.5px;
+    color:#c4c4c4;
+    margin:0 0 14px;
+  }
+  .card-meta{
+    font-size:11.5px;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:6px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .card-meta .arrow{transition:transform .2s ease;}
+  .card:hover .card-meta .arrow{transform:translateX(4px);}
+
+  .card.soon{
+    opacity:0.5;
+    pointer-events:none;
+  }
+  .card.soon .card-meta{color:var(--muted);}
+
+  footer.simple{
+    padding:44px 20px 20px;
+    border-top:1px solid var(--line);
+    margin-top:20px;
+    text-align:center;
+  }
+  .signature{
+    font-size:19px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    color:var(--fg);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+  .signature:hover{color:var(--accent);}
+  .badge-md{width:17px;height:17px;flex-shrink:0;}
+  .footer-tagline{
+    display:block;
+    text-align:center;
+    margin-top:14px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div class="top-credit">
+  <a href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+    @joelblancosierra
+    <svg class="badge-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+      <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  <span class="dot">·</span>
+  <span>Focusgod</span>
+</div>
+
+<header class="hero">
+  <h1>Lecturas</h1>
+  <p>Guías gratuitas para leer tu Biblia con propósito y vivir tu fe sin excusas.</p>
+</header>
+
+<div class="list">
+
+  <a class="card reveal" href="/lecturas/">
+    <span class="card-num">01</span>
+    <h2 class="card-title">Empieza la Biblia por aquí</h2>
+    <p class="card-desc">19 puntos de entrada para empezar a leerla de verdad, elijas donde elijas empezar.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/mata-la-pereza/">
+    <span class="card-num">02</span>
+    <h2 class="card-title">10/10 formas para matar la pereza</h2>
+    <p class="card-desc">10 versículos, 10 hábitos. Deja de aplazar y empieza a actuar según la Biblia.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <div class="card soon reveal">
+    <span class="card-num">03</span>
+    <h2 class="card-title">Próximamente</h2>
+    <p class="card-desc">Nuevas guías cada semana.</p>
+    <span class="card-meta">Muy pronto</span>
+  </div>
+
+</div>
+
+<footer class="simple reveal">
+  <a class="signature" href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+    joelblancosierra
+    <svg class="badge-md" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+      <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  <span class="footer-tagline">FOCUSGOD — no seas un cristiano promedio</span>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+});
+</script>
+
+</body>
+</html>
