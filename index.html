@@ -70,10 +70,8 @@
       50%       { transform: translateX(-50%) translateY(5px); }
     }
     /* ── Menú ── */
-    #menu-btn {
-      position: absolute;
-      top: 1.2rem; left: 1.2rem;
-      z-index: 20;
+    .menu-wrap { position: absolute; top: 1.2rem; left: 1.2rem; z-index: 20; }
+    .menu-btn {
       width: 38px; height: 38px;
       display: flex;
       align-items: center;
@@ -83,11 +81,10 @@
       border-radius: 8px;
       cursor: pointer;
     }
-    #menu-btn svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; }
-    #menu-dropdown {
+    .menu-btn svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; }
+    .menu-dropdown {
       position: absolute;
-      top: 4.2rem; left: 1.2rem;
-      z-index: 20;
+      top: 3rem; left: 0;
       background: #111;
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 8px;
@@ -96,16 +93,16 @@
       flex-direction: column;
       min-width: 160px;
     }
-    #menu-dropdown.open { display: flex; }
-    #menu-dropdown a {
+    .menu-dropdown.open { display: flex; }
+    .menu-dropdown a {
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 0.85rem;
       color: #fff;
       text-decoration: none;
       padding: 0.8rem 1rem;
     }
-    #menu-dropdown a:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.08); }
-    #menu-dropdown a:hover { background: rgba(255,255,255,0.06); }
+    .menu-dropdown a:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .menu-dropdown a:hover { background: rgba(255,255,255,0.06); }
     /* ── Spacer section 1 ── */
     #spacer {
       height: 100vh;
@@ -320,13 +317,7 @@
   <!-- Canvas shader de fondo -->
   <canvas id="shader-canvas"></canvas>
   <!-- Menú desplegable -->
-  <div id="menu-btn" onclick="document.getElementById('menu-dropdown').classList.toggle('open')">
-    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-  </div>
-  <div id="menu-dropdown">
-    <a href="/">Inicio</a>
-    <a href="/guias/">Guías</a>
-  </div>
+  <div id="site-nav"></div>
   <!-- Título completamente fijo, fuera de todo -->
   <div id="title">FOCUSGOD</div>
   <div id="scroll-hint">
@@ -517,5 +508,6 @@
       });
     });
   </script>
+  <script src="/nav.js"></script>
 </body>
 </html>
