@@ -64,12 +64,13 @@
     justify-content:center;
     align-items:center;
     gap:7px;
-    padding:16px 20px 0;
+    flex:1;
     font-size:11px;
     color:var(--muted);
     letter-spacing:1px;
     text-transform:uppercase;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
+    overflow:hidden;
   }
   .top-credit a{
     color:var(--muted);
@@ -81,6 +82,57 @@
   .top-credit a:hover{color:var(--fg);}
   .badge-sm{width:11px;height:11px;flex-shrink:0;}
   .top-credit .dot{opacity:0.5;}
+
+  .site-header{
+    position:fixed;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:600px;
+    z-index:50;
+    background:#000;
+    border-bottom:1px solid var(--line);
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .menu-wrap{position:relative;flex-shrink:0;}
+  .menu-btn{
+    width:34px;height:34px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--line);
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .menu-btn svg{width:15px;height:15px;stroke:var(--fg);fill:none;stroke-width:2;stroke-linecap:round;}
+  .menu-dropdown{
+    position:absolute;
+    top:44px; left:0;
+    z-index:60;
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:none;
+    flex-direction:column;
+    min-width:150px;
+  }
+  .menu-dropdown.open{display:flex;}
+  .menu-dropdown a{
+    font-family:inherit;
+    font-size:12.5px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--fg);
+    text-decoration:none;
+    padding:12px 14px;
+  }
+  .menu-dropdown a:not(:last-child){border-bottom:1px solid var(--line);}
+  .menu-dropdown a:hover{background:rgba(255,255,255,0.05);color:var(--accent);}
+  body{padding-top:60px;}
+
   .back-link{
     text-align:center;
     padding:10px 20px 0;
@@ -392,18 +444,27 @@
 
 <div class="progress-bar"><div class="progress-bar-fill" id="progressBarFill"></div></div>
 
-<div class="top-credit">
-  <a href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
-    @joelblancosierra
-    <svg class="badge-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="12" fill="#3897F0"/>
-      <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </a>
-  <span class="dot">·</span>
-  <span>Focusgod</span>
-  <span class="dot">·</span>
-  <span>Guía gratuita</span>
+<div class="site-header">
+  <div class="menu-wrap">
+    <div class="menu-btn" onclick="document.getElementById('menuDropdown').classList.toggle('open')">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </div>
+    <div class="menu-dropdown" id="menuDropdown">
+      <a href="https://focusgodapp.com/">Inicio</a>
+      <a href="/guias/">Guías</a>
+    </div>
+  </div>
+  <div class="top-credit">
+    <a href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+      @joelblancosierra
+      <svg class="badge-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+        <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <span class="dot">·</span>
+    <span>Focusgod</span>
+  </div>
 </div>
 <div class="back-link"><a href="/guias/">&larr; Más guías</a></div>
 
