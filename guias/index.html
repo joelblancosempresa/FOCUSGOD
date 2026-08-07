@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Empieza la Biblia por aquí — FOCUSGOD</title>
+<title>Lecturas — FOCUSGOD</title>
 
-<!-- Vista previa al compartir el link (WhatsApp, Instagram, iMessage...) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Empieza la Biblia por aquí — FOCUSGOD">
-<meta property="og:description" content="19 puntos de entrada para empezar a leer la Biblia de verdad. Guía gratuita.">
-<meta property="og:image" content="https://focusgodapp.com/lecturas/preview.jpg">
-<meta property="og:url" content="https://focusgodapp.com/lecturas/">
+<meta property="og:title" content="Lecturas — FOCUSGOD">
+<meta property="og:description" content="Guías gratuitas para vivir tu fe con propósito: por dónde empezar, hábitos, y más.">
+<meta property="og:image" content="https://focusgodapp.com/guias/preview.jpg">
+<meta property="og:url" content="https://focusgodapp.com/guias/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Empieza la Biblia por aquí — FOCUSGOD">
-<meta name="twitter:description" content="19 puntos de entrada para empezar a leer la Biblia de verdad. Guía gratuita.">
-<meta name="twitter:image" content="https://focusgodapp.com/lecturas/preview.jpg">
+<meta name="twitter:title" content="Lecturas — FOCUSGOD">
+<meta name="twitter:description" content="Guías gratuitas para vivir tu fe con propósito: por dónde empezar, hábitos, y más.">
+<meta name="twitter:image" content="https://focusgodapp.com/guias/preview.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,23 +41,6 @@
     overflow-x:hidden;
   }
 
-  /* progress bar (vertical, lado izquierdo) */
-  .progress-bar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:3px;
-    height:100%;
-    background:rgba(255,255,255,0.06);
-    z-index:999;
-  }
-  .progress-bar-fill{
-    width:100%;
-    height:0%;
-    background:linear-gradient(180deg, var(--accent), #ffffff);
-  }
-
-  /* top credit */
   .top-credit{
     display:flex;
     justify-content:center;
@@ -133,74 +115,25 @@
   .menu-dropdown a:hover{background:rgba(255,255,255,0.05);color:var(--accent);}
   body{padding-top:60px;}
 
-  .back-link{
-    text-align:center;
-    padding:10px 20px 0;
-  }
-  .back-link a{
-    font-size:11px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    color:var(--muted);
-    text-decoration:none;
-  }
-  .back-link a:hover{color:var(--accent);}
-
-  .wrap{
-    max-width:480px;
-    margin:0 auto;
-    padding:0 20px;
-  }
   header.hero{
-    padding:36px 20px 32px;
+    padding:40px 20px 32px;
     text-align:center;
     border-bottom:1px solid var(--line);
   }
   h1{
-    font-size:26px;
-    line-height:1.3;
+    font-size:30px;
+    line-height:1.2;
     margin:0 0 18px;
     text-transform:uppercase;
     letter-spacing:1px;
-    min-height:70px;
   }
-  .tw-cursor{
-    display:inline-block;
-    width:2px;
-    height:20px;
-    background:var(--accent);
-    margin-left:3px;
-    vertical-align:middle;
-    animation:blink 0.9s step-start infinite;
-  }
-  @keyframes blink{ 50%{opacity:0;} }
-
   .hero p{
     color:#c9c9c9;
     font-size:14.5px;
     max-width:38ch;
-    margin:0 auto 10px;
-    opacity:0;
-    animation:fadeIn .6s ease forwards;
-    animation-delay:1.4s;
-  }
-  @keyframes fadeIn{ to{opacity:1;} }
-
-  section.intro{
-    padding:28px 20px;
-    border-bottom:1px solid var(--line);
-  }
-  section.intro p{
-    font-size:14.5px;
-    color:#d6d6d6;
-    margin:0 0 14px;
-  }
-  section.intro p:last-child{margin-bottom:0;}
-  .list{
-    padding:8px 20px 12px;
+    margin:0 auto;
   }
 
-  /* scroll reveal: las cartas suben desde abajo al entrar en pantalla */
   .reveal{
     opacity:0;
     transform:translateY(46px) scale(0.98);
@@ -211,169 +144,81 @@
     transform:translateY(0) scale(1);
   }
 
-  .item{
-    border-bottom:1px solid var(--line);
-    transition:background .3s ease;
-  }
-  .item:first-child{border-top:1px solid var(--line);}
-  .item.open{background:linear-gradient(90deg, rgba(232,226,208,0.05), transparent 70%);}
-  .item-head{
+  .list{
+    padding:24px 20px 12px;
     display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-    padding:20px 2px;
-    cursor:pointer;
-    background:none;
-    border:none;
-    width:100%;
-    text-align:left;
-    color:var(--fg);
-    font-family:inherit;
-    -webkit-tap-highlight-color:transparent;
+    flex-direction:column;
+    gap:16px;
   }
-  .item-head:hover .item-title{color:var(--accent);}
-  .item-head-text{flex:1;}
-  .item-num{
-    font-size:11px;
-    color:var(--muted);
-    letter-spacing:2px;
-    margin-bottom:4px;
+  .card{
     display:block;
-  }
-  .item-title{
-    font-size:16.5px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    margin:0 0 4px;
-    transition:color .2s ease;
-  }
-  .item-sub{
-    font-size:13px;
-    color:#b5b5b5;
-    font-weight:400;
-  }
-  .item-toggle{
-    font-size:20px;
-    color:var(--muted);
-    flex-shrink:0;
-    transition:transform .3s ease, color .3s ease;
-    line-height:1;
-    width:22px;
-    text-align:center;
-  }
-  .item.open .item-toggle{transform:rotate(45deg);color:var(--accent);}
-  .item-body{
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .35s ease;
-  }
-  .item-body-inner{
-    padding:0 2px 24px;
-  }
-  .tag-feel{
-    font-size:13px;
-    color:var(--accent);
-    border-left:2px solid var(--accent);
-    padding:8px 0 8px 12px;
-    margin:0 0 16px;
-    font-style:normal;
-  }
-  .item-body-inner p{
-    font-size:14px;
-    color:#d0d0d0;
-    margin:0 0 14px;
-  }
-  .meta-row{
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
-    font-size:12px;
-    color:var(--muted);
-    border-top:1px solid var(--line);
-    padding-top:14px;
-    margin-top:4px;
-  }
-  .meta-row span b{color:#c9c9c9;font-weight:700;}
-  .key-verse{
-    font-size:12.5px;
-    color:var(--muted);
-    margin-top:12px;
-  }
-  .key-verse b{color:#c9c9c9;}
-
-  section.value{
-    padding:40px 20px 20px;
-    border-top:1px solid var(--line);
-    margin-top:20px;
-    perspective:1200px;
-  }
-
-  /* las cartas de "cómo leer la Biblia" se dan la vuelta al aparecer */
-  .flip-reveal{
-    opacity:0;
-    transform:rotateY(-80deg);
-    transform-origin:left center;
-  }
-  .flip-reveal.is-visible{
-    opacity:1;
-    transform:rotateY(0deg);
-  }
-  .tw-title{min-height:1.2em;}
-  .value h2{
-    font-size:20px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    margin:0 0 20px;
-  }
-  .method{
     background:var(--bg-card);
     border:1px solid var(--line);
     border-radius:2px;
-    padding:18px;
-    margin-bottom:16px;
-    transition:border-color .3s ease, opacity .5s ease, transform .65s cubic-bezier(0.34,1.56,0.64,1);
+    padding:22px;
+    text-decoration:none;
+    color:var(--fg);
+    transition:border-color .3s ease, transform .2s ease;
   }
-  .method:hover{border-color:#3a3a3a;}
-  .method h3{
-    font-size:14px;
+  .card:hover{border-color:var(--accent);}
+  .card:active{transform:scale(0.99);}
+  .card-num{
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:2px;
+    display:block;
+    margin-bottom:8px;
+  }
+  .card-title{
+    font-size:19px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
     margin:0 0 8px;
-    letter-spacing:1px;
   }
-  .method p{
+  .card-desc{
     font-size:13.5px;
     color:#c4c4c4;
-    margin:0;
+    margin:0 0 14px;
   }
-  .tips{
-    margin-top:24px;
-    font-size:14px;
-    color:#d0d0d0;
+  .card-meta{
+    font-size:11.5px;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:6px;
+    text-transform:uppercase;
+    letter-spacing:1px;
   }
-  .tips p{margin:0 0 14px;}
-  .tips strong{color:var(--fg);}
+  .card-meta .arrow{transition:transform .2s ease;}
+  .card:hover .card-meta .arrow{transform:translateX(4px);}
 
-  /* about / footer */
-  footer.about{
-    padding:44px 20px 50px;
-    border-top:1px solid var(--line);
-    margin-top:10px;
+  .card.soon{
+    opacity:0.5;
+    pointer-events:none;
   }
-  footer.about h2{
+  .card.soon .card-meta{color:var(--muted);}
+
+  footer.simple{
+    padding:44px 20px 20px;
+    border-top:1px solid var(--line);
+    margin-top:20px;
+    text-align:center;
+  }
+  footer.simple h2{
     font-size:19px;
     text-transform:uppercase;
     letter-spacing:1px;
     margin:0 0 16px;
   }
-  footer.about .pain{
+  footer.simple .pain{
     color:#d6d6d6;
     font-size:14.5px;
     margin:0 0 14px;
+    text-align:left;
   }
-  footer.about p{font-size:14px;color:#c4c4c4;margin:0 0 14px;}
-  footer.about .launch{color:var(--accent);}
-
+  footer.simple p{font-size:14px;color:#c4c4c4;margin:0 0 14px;text-align:left;}
+  footer.simple .launch{color:var(--accent);}
   .signup-form{
     display:flex;
     flex-direction:column;
@@ -389,7 +234,6 @@
     font-size:14px;
     border-radius:2px;
     outline:none;
-    transition:border-color .2s ease;
   }
   .signup-form input:focus{border-color:var(--accent);}
   .signup-form button{
@@ -404,31 +248,24 @@
     text-transform:uppercase;
     border-radius:2px;
     cursor:pointer;
-    transition:opacity .2s ease, transform .15s ease;
   }
-  .signup-form button:active{transform:scale(0.98);}
   .signup-form button:disabled{opacity:0.6;cursor:default;}
-  .form-msg{font-size:12.5px;color:var(--muted);min-height:16px;margin:0;}
+  .form-msg{font-size:12.5px;color:var(--muted);min-height:16px;margin:0;text-align:left;}
   .form-msg.success{color:#a9d6b4;}
   .form-msg.error{color:#e0a0a0;}
-
   .signature{
-    margin-top:28px;
-    padding-top:22px;
-    border-top:1px solid var(--line);
     font-size:19px;
     font-weight:700;
     letter-spacing:0.5px;
     color:var(--fg);
     text-decoration:none;
-    display:flex;
+    display:inline-flex;
     align-items:center;
     justify-content:center;
     gap:8px;
   }
   .signature:hover{color:var(--accent);}
   .badge-md{width:17px;height:17px;flex-shrink:0;}
-
   .footer-tagline{
     display:block;
     text-align:center;
@@ -441,8 +278,6 @@
 </style>
 </head>
 <body>
-
-<div class="progress-bar"><div class="progress-bar-fill" id="progressBarFill"></div></div>
 
 <div class="site-header">
   <div id="site-nav"></div>
@@ -458,494 +293,38 @@
     <span>Focusgod</span>
   </div>
 </div>
-<div class="back-link"><a href="/guias/">&larr; Más guías</a></div>
 
 <header class="hero">
-  <h1><span class="tw-line" data-text="Empieza la"></span><br><span class="tw-line" data-text="Biblia por aquí"></span><span class="tw-cursor"></span></h1>
-  <p>Empieza a leer de verdad, con un punto de partida claro.</p>
+  <h1>Lecturas</h1>
+  <p>Guías gratuitas para leer tu Biblia con propósito y vivir tu fe sin excusas.</p>
 </header>
 
-<section class="intro">
-  <p>La Biblia no es un libro. Es una biblioteca: 66 libros, distintos autores, distintos momentos, un mismo Dios.</p>
-  <p>Nadie te dijo por dónde empezar. Por eso nunca empezaste.</p>
-  <p>Aquí tienes 19 puntos de entrada. Elige el que más habla de lo que estás viviendo ahora. Toca cada libro para ver por qué empezar ahí, qué esperar, y el versículo clave.</p>
-</section>
+<div class="list">
 
-<div class="list" id="accordion">
+  <a class="card reveal" href="/lecturas/">
+    <span class="card-num">01</span>
+    <h2 class="card-title">Empieza la Biblia por aquí</h2>
+    <p class="card-desc">19 puntos de entrada para empezar a leerla de verdad, elijas donde elijas empezar.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
 
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">01</span>
-        <span class="item-title">Juan</span>
-        <span class="item-sub">Conoce quién es Jesús</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si sientes que no conoces a Jesús de verdad, solo lo de la iglesia o la cultura — esto es para ti.</p>
-        <p>Juan no empieza con reglas. Empieza con una persona. Escrito para que creas, no para que memorices. Vas a ver sus señales, sus palabras, y por qué dijo que Él era el camino, no solo alguien que lo señalaba.</p>
-        <p>Lo esencial: los "Yo Soy" de Jesús (pan de vida, luz del mundo, buen pastor) y el capítulo de la cruz y la resurrección, el corazón del libro.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Juan 3:16 · Juan 14:6</div>
-        <div class="meta-row">
-          <span><b>21</b> capítulos</span>
-          <span>Ideal: <b>21 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <a class="card reveal" href="/guias/mata-la-pereza/">
+    <span class="card-num">02</span>
+    <h2 class="card-title">10/10 formas para matar la pereza</h2>
+    <p class="card-desc">10 versículos, 10 hábitos. Deja de aplazar y empieza a actuar según la Biblia.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
 
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">02</span>
-        <span class="item-title">Efesios</span>
-        <span class="item-sub">Conoce tu identidad en Cristo</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si tu identidad depende de lo que otros piensan de ti — esto es para ti.</p>
-        <p>Antes de decirte qué hacer, Pablo te dice quién eres: elegido, adoptado, sellado. Los primeros 3 capítulos son identidad. Los últimos 3 son cómo vivir desde ahí, no para ganarla.</p>
-        <p>Lo esencial: capítulo 1, la lista de lo que ya eres en Cristo antes de que hicieras algo para merecerlo.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Efesios 2:8-9 · Efesios 1:4-5</div>
-        <div class="meta-row">
-          <span><b>6</b> capítulos</span>
-          <span>Ideal: <b>6 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">03</span>
-        <span class="item-title">Génesis</span>
-        <span class="item-sub">Conoce tu origen y por qué el mundo está roto</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si te preguntas por qué el mundo duele tanto — esto es para ti.</p>
-        <p>El principio de todo: de dónde vienes, por qué el mundo está roto desde el capítulo 3, y por qué desde ahí Dios empieza a perseguir un rescate. Sin Génesis, el resto de la Biblia pierde contexto.</p>
-        <p>Lo esencial: la creación (cap. 1-2), la caída (cap. 3), y las historias de Abraham y José como preview de cómo trabaja Dios.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Génesis 1:1 · Génesis 1:27</div>
-        <div class="meta-row">
-          <span><b>50</b> capítulos</span>
-          <span>Ideal: <b>7 semanas</b>, 1-2 capítulos al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">04</span>
-        <span class="item-title">1 Corintios</span>
-        <span class="item-sub">Cómo ser santo en una cultura corrupta</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si sientes que el mundo te presiona a ser como todos — esto es para ti.</p>
-        <p>Una iglesia rodeada de exactamente lo que te rodea hoy: sexo sin límites, orgullo, división. Pablo no suaviza nada. Te enseña a vivir diferente sin salir del mundo.</p>
-        <p>Lo esencial: el capítulo 13, la definición más clara de amor que existe, y el capítulo 15, la defensa de la resurrección.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> 1 Corintios 13 · 1 Corintios 10:13</div>
-        <div class="meta-row">
-          <span><b>16</b> capítulos</span>
-          <span>Ideal: <b>16 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">05</span>
-        <span class="item-title">Proverbios</span>
-        <span class="item-sub">Cómo tener sabiduría para tus decisiones diarias</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si no sabes qué decisión tomar hoy — esto es para ti.</p>
-        <p>31 capítulos, uno por día del mes. Dinero, palabras, relaciones, carácter. Sabiduría práctica para hoy, no teología para después.</p>
-        <p>Lo esencial: capítulo 3 sobre confiar en Dios más que en tu propio entendimiento, y capítulo 31 sobre carácter.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Proverbios 3:5-6 · Proverbios 1:7</div>
-        <div class="meta-row">
-          <span><b>31</b> capítulos</span>
-          <span>Ideal: <b>1 mes</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">06</span>
-        <span class="item-title">Mateo</span>
-        <span class="item-sub">Ve lo que Jesús enseñó</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si quieres saber qué enseñó Jesús realmente, no lo que dicen que enseñó — esto es para ti.</p>
-        <p>El Sermón del Monte. Las parábolas. Las palabras que todavía incomodan a cualquiera que las lea en serio. Escrito para mostrar al Rey que las escrituras antiguas prometían.</p>
-        <p>Lo esencial: capítulos 5-7, el Sermón del Monte completo, la enseñanza más densa de Jesús en un solo lugar.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Mateo 6:33 · Mateo 5-7</div>
-        <div class="meta-row">
-          <span><b>28</b> capítulos</span>
-          <span>Ideal: <b>1 mes</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">07</span>
-        <span class="item-title">Marcos</span>
-        <span class="item-sub">Ve lo que Jesús hizo</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si te cuesta quedarte quieto leyendo y necesitas acción — esto es para ti.</p>
-        <p>El evangelio más corto y más rápido. Menos discursos, más movimiento: sanando, liberando, confrontando, sin pausa. Ideal si es tu primera vez leyendo un evangelio completo.</p>
-        <p>Lo esencial: la palabra "inmediatamente" aparece más de 40 veces. Es literalmente un libro de acción.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Marcos 10:45</div>
-        <div class="meta-row">
-          <span><b>16</b> capítulos</span>
-          <span>Ideal: <b>16 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">08</span>
-        <span class="item-title">Romanos</span>
-        <span class="item-sub">Entiende el evangelio</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si nunca te han explicado el evangelio completo, solo pedazos — esto es para ti.</p>
-        <p>El libro que más ha cambiado la teología de la iglesia en su historia. Pecado, gracia, justificación, fe. El evangelio de principio a fin, sin saltarse partes incómodas.</p>
-        <p>Lo esencial: capítulo 8, posiblemente el capítulo más consolador de toda la Biblia.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Romanos 3:23 · Romanos 6:23 · Romanos 8:28</div>
-        <div class="meta-row">
-          <span><b>16</b> capítulos</span>
-          <span>Ideal: <b>16 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">09</span>
-        <span class="item-title">Eclesiastés</span>
-        <span class="item-sub">Por qué la vida sin Dios no tiene sentido</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si lo tienes todo y aun así sientes que falta algo — esto es para ti.</p>
-        <p>Un hombre que lo tuvo todo: dinero, placer, éxito, sabiduría. Y te dice que sin Dios, todo es vacío. El libro más honesto de la Biblia sobre el vacío que sientes.</p>
-        <p>Lo esencial: el giro final del último capítulo, donde toda la búsqueda desemboca en una sola conclusión.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Eclesiastés 1:2 · Eclesiastés 12:13</div>
-        <div class="meta-row">
-          <span><b>12</b> capítulos</span>
-          <span>Ideal: <b>12 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">10</span>
-        <span class="item-title">Gálatas</span>
-        <span class="item-sub">Aprende a vivir libre sin religión</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si estás cansado de sentir que nunca haces lo suficiente para Dios — esto es para ti.</p>
-        <p>Para el que está cansado de reglas y de rendimiento espiritual. Pablo confronta la religión vacía de frente y te devuelve la libertad real que trae la gracia, no las reglas.</p>
-        <p>Lo esencial: capítulo 5, el contraste entre vivir por la carne y vivir por el Espíritu.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Gálatas 5:1 · Gálatas 2:20</div>
-        <div class="meta-row">
-          <span><b>6</b> capítulos</span>
-          <span>Ideal: <b>6 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">11</span>
-        <span class="item-title">Hebreos</span>
-        <span class="item-sub">Por qué Jesús es mejor que todo a lo que puedas volver</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si estás a punto de rendirte y volver a tu vida vieja — esto es para ti.</p>
-        <p>Escrito para gente a punto de abandonar la fe y regresar a lo de antes. Capítulo tras capítulo te muestra por qué no hay nada mejor a lo que volver.</p>
-        <p>Lo esencial: capítulo 11, la lista de personas que vivieron por fe sin ver el resultado completo.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Hebreos 4:16 · Hebreos 12:1-2</div>
-        <div class="meta-row">
-          <span><b>13</b> capítulos</span>
-          <span>Ideal: <b>13 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">12</span>
-        <span class="item-title">Filipenses</span>
-        <span class="item-sub">Encuentra alegría en las pruebas</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si estás en una temporada dura y no encuentras alegría — esto es para ti.</p>
-        <p>Pablo lo escribió preso. Y aun así el tema central del libro es el gozo. Te enseña de dónde sacar alegría que no depende de tu circunstancia.</p>
-        <p>Lo esencial: capítulo 4, la instrucción práctica de qué hacer con la ansiedad antes de que te consuma.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Filipenses 4:6-7 · Filipenses 4:13</div>
-        <div class="meta-row">
-          <span><b>4</b> capítulos</span>
-          <span>Ideal: <b>4 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">13</span>
-        <span class="item-title">Hechos</span>
-        <span class="item-sub">Mira cómo nació la iglesia y el poder del Espíritu Santo</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si sientes que te falta poder o valentía para vivir tu fe — esto es para ti.</p>
-        <p>La historia real de cómo un grupo pequeño y asustado terminó cambiando el mundo entero. Poder, valentía, y el Espíritu Santo moviéndose sin freno desde el capítulo 2.</p>
-        <p>Lo esencial: capítulo 2, el día de Pentecostés, el punto de partida de todo lo que sigue.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Hechos 1:8</div>
-        <div class="meta-row">
-          <span><b>28</b> capítulos</span>
-          <span>Ideal: <b>1 mes</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">14</span>
-        <span class="item-title">Números</span>
-        <span class="item-sub">Confía en Dios en el desierto y por qué quejarse retrasa la promesa</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si sientes que Dios se está tardando en cumplir lo que prometió — esto es para ti.</p>
-        <p>Un pueblo a un paso de la promesa que tardó 40 años de más por quejarse en vez de confiar. Si estás en tu propio desierto esperando algo, este libro va a dolerte y a ayudarte a la vez.</p>
-        <p>Lo esencial: capítulo 14, el momento exacto donde la queja les costó una generación entera.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Números 6:24-26</div>
-        <div class="meta-row">
-          <span><b>36</b> capítulos</span>
-          <span>Ideal: <b>5 semanas</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">15</span>
-        <span class="item-title">Lucas</span>
-        <span class="item-sub">Ve el corazón de Jesús</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si sientes que no calificas para Dios — esto es para ti.</p>
-        <p>El evangelio más detallado con los marginados: pobres, mujeres, pecadores, extranjeros. Si alguna vez pensaste que estás demasiado lejos, Lucas te muestra exactamente lo contrario.</p>
-        <p>Lo esencial: capítulo 15, la parábola del hijo pródigo, el resumen más claro del corazón de Dios hacia el que vuelve.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Lucas 15 · Lucas 19:10</div>
-        <div class="meta-row">
-          <span><b>24</b> capítulos</span>
-          <span>Ideal: <b>24 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">16</span>
-        <span class="item-title">Santiago</span>
-        <span class="item-sub">Cómo ser fiel y no solo creyente</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si crees en Dios pero tu vida no ha cambiado nada — esto es para ti.</p>
-        <p>Fe sin obras está muerta. Directo, práctico, incómodo. Santiago no te deja quedarte solo en la teoría ni en publicaciones bonitas de fe.</p>
-        <p>Lo esencial: capítulo 1, sobre las pruebas y el control de lo que dices; capítulo 2, sobre fe y acción.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Santiago 2:17 · Santiago 1:2-4</div>
-        <div class="meta-row">
-          <span><b>5</b> capítulos</span>
-          <span>Ideal: <b>5 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">17</span>
-        <span class="item-title">Salmos</span>
-        <span class="item-sub">Aprende a orar con honestidad y en el dolor</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si no sabes cómo orar cuando estás mal — esto es para ti.</p>
-        <p>150 oraciones reales: alegría, rabia, duda, desesperación, adoración. Te enseña que puedes ser honesto con Dios incluso cuando no tienes las palabras bonitas.</p>
-        <p>Lo esencial: Salmo 23 para consuelo, Salmo 34 para dolor, Salmo 51 para arrepentimiento genuino.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Salmos 23 · Salmos 34:18</div>
-        <div class="meta-row">
-          <span><b>150</b> capítulos</span>
-          <span>No hace falta seguir orden: elige por lo que sientes hoy</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">18</span>
-        <span class="item-title">Éxodo</span>
-        <span class="item-sub">Ve cómo Dios libera</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si sientes que estás atrapado en algo de lo que no puedes salir solo — esto es para ti.</p>
-        <p>La historia de un pueblo esclavo que Dios saca con mano fuerte. Si necesitas recordar que Dios libera de verdad, aquí está la prueba en una historia real, no en teoría.</p>
-        <p>Lo esencial: capítulo 3, la zarza ardiente; capítulo 14, el cruce del Mar Rojo.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Éxodo 3 · Éxodo 14</div>
-        <div class="meta-row">
-          <span><b>40</b> capítulos</span>
-          <span>Ideal: <b>5-6 semanas</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="item reveal">
-    <button class="item-head">
-      <span class="item-head-text">
-        <span class="item-num">19</span>
-        <span class="item-title">Apocalipsis</span>
-        <span class="item-sub">Recuerda el final. Cristo gana.</span>
-      </span>
-      <span class="item-toggle">+</span>
-    </button>
-    <div class="item-body">
-      <div class="item-body-inner">
-        <p class="tag-feel">Si el mundo te da miedo y necesitas recordar cómo termina la historia — esto es para ti.</p>
-        <p>No es un libro para asustarte. Es un libro para recordarte cómo termina todo. Pase lo que pase ahora, el final ya está escrito. Y Cristo gana.</p>
-        <p>Lo esencial: capítulo 21, la promesa de un final sin dolor, sin muerte, sin lágrimas.</p>
-        <div class="key-verse"><b>Lee especialmente:</b> Apocalipsis 21:4 · Apocalipsis 1:8</div>
-        <div class="meta-row">
-          <span><b>22</b> capítulos</span>
-          <span>Ideal: <b>22 días</b>, 1 capítulo al día</span>
-        </div>
-      </div>
-    </div>
+  <div class="card soon reveal">
+    <span class="card-num">03</span>
+    <h2 class="card-title">Próximamente</h2>
+    <p class="card-desc">Nuevas guías cada semana.</p>
+    <span class="card-meta">Muy pronto</span>
   </div>
 
 </div>
 
-<section class="value">
-  <h2>Cómo leer la Biblia correctamente</h2>
-
-  <div class="method flip-reveal">
-    <h3 class="tw-title" data-text="1. Consistencia, no cantidad"></h3>
-    <p>15 minutos todos los días transforman más que una sesión larga de vez en cuando. Un capítulo al día es suficiente. Lo que construye el hábito es la constancia, no el volumen.</p>
-  </div>
-
-  <div class="method flip-reveal">
-    <h3 class="tw-title" data-text="2. Únelo a algo que ya haces"></h3>
-    <p>Lee justo después de tu café, o antes de dormir, o al despertar. Unir la lectura a un hábito que ya tienes ("habit stacking") es la forma más confiable de que se quede.</p>
-  </div>
-
-  <div class="method flip-reveal">
-    <h3 class="tw-title" data-text="3. Método S.O.A.P. para no solo leer, sino entender"></h3>
-    <p><b>S</b>agrado texto — elige el pasaje.<br>
-    <b>O</b>bservación — ¿qué ves? ¿quién habla? ¿qué palabra se repite?<br>
-    <b>A</b>plicación — ¿qué me dice esto de Dios y qué cambia en mi vida?<br>
-    <b>P</b>oración — termina pidiéndole a Dios que lo haga real en ti.</p>
-  </div>
-
-  <div class="method flip-reveal">
-    <h3 class="tw-title" data-text="4. Empieza y termina en oración"></h3>
-    <p>Antes de leer, pide entendimiento. No estás estudiando un libro cualquiera, estás pidiéndole a Dios que te hable directamente.</p>
-  </div>
-
-  <div class="tips">
-    <p><strong>No necesitas leerlos en orden.</strong> Elige el libro de esta guía que más habla de lo que estás viviendo hoy.</p>
-    <p><strong>No necesitas terminarlo en una semana.</strong> Un capítulo al día, con constancia, es más que suficiente.</p>
-    <p>Así se empieza a leer la Biblia de verdad: no con un plan perfecto, sino con la primera página.</p>
-  </div>
-</section>
-
-<footer class="about reveal">
+<footer class="simple reveal">
   <h2>¿Qué es Focusgod?</h2>
   <p class="pain">¿Sientes que tienes demasiadas distracciones? ¿Una adicción de la que no logras soltarte? ¿Sientes que tu vida no tiene un propósito claro?</p>
   <p>Focusgod nace para eso: una app para ayudarte a enfocarte en Dios en medio del ruido. Menos distracción, más presencia, un propósito real.</p>
@@ -964,112 +343,27 @@
       <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
-
   <span class="footer-tagline">FOCUSGOD — no seas un cristiano promedio</span>
 </footer>
 
 <script>
-// ---- Typewriter effect on hero H1 ----
-function typeSequential(elements, speed, cb){
-  var i = 0;
-  function typeNext(){
-    if(i >= elements.length){ if(cb) cb(); return; }
-    var el = elements[i];
-    var text = el.getAttribute('data-text');
-    var j = 0;
-    el.textContent = '';
-    var interval = setInterval(function(){
-      el.textContent += text[j];
-      j++;
-      if(j >= text.length){
-        clearInterval(interval);
-        i++;
-        typeNext();
-      }
-    }, speed);
-  }
-  typeNext();
-}
-
-// ---- Escribe una sola vez el título de cada tarjeta al hacerse visible ----
-function typeOnce(el, speed){
-  if(!el || el.dataset.typed === '1') return;
-  var text = el.getAttribute('data-text');
-  if(!text) return;
-  el.dataset.typed = '1';
-  var j = 0;
-  el.textContent = '';
-  var interval = setInterval(function(){
-    el.textContent += text[j];
-    j++;
-    if(j >= text.length){ clearInterval(interval); }
-  }, speed);
-}
-
 document.addEventListener('DOMContentLoaded', function(){
-  var lines = document.querySelectorAll('.tw-line');
-  typeSequential(Array.prototype.slice.call(lines), 45);
-
-  // ---- Barra de progreso vertical (lado derecho) ----
-  var progressFill = document.getElementById('progressBarFill');
-  window.addEventListener('scroll', function(){
-    var h = document.documentElement;
-    var scrollTop = h.scrollTop || document.body.scrollTop;
-    var scrollHeight = h.scrollHeight - h.clientHeight;
-    var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-    progressFill.style.height = progress + '%';
-  });
-
-  // ---- Scroll reveal ----
-  var revealEls = document.querySelectorAll('.reveal, .flip-reveal');
+  var revealEls = document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
     var observer = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if(entry.isIntersecting){
           entry.target.classList.add('is-visible');
-          var title = entry.target.querySelector('.tw-title');
-          if(title){ typeOnce(title, 28); }
           observer.unobserve(entry.target);
         }
       });
     }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
     revealEls.forEach(function(el){ observer.observe(el); });
   } else {
-    revealEls.forEach(function(el){
-      el.classList.add('is-visible');
-      var title = el.querySelector('.tw-title');
-      if(title){ typeOnce(title, 28); }
-    });
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
   }
 
-  // ---- Accordion ----
-  document.querySelectorAll('.item-head').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = btn.closest('.item');
-      var body = item.querySelector('.item-body');
-      var isOpen = item.classList.contains('open');
-
-      document.querySelectorAll('.item.open').forEach(function(openItem){
-        if(openItem !== item){
-          openItem.classList.remove('open');
-          openItem.querySelector('.item-body').style.maxHeight = null;
-        }
-      });
-
-      if(isOpen){
-        item.classList.remove('open');
-        body.style.maxHeight = null;
-      } else {
-        item.classList.add('open');
-        body.style.maxHeight = body.scrollHeight + 'px';
-      }
-    });
-  });
-
-  // ---- Signup form ----
-  // Reemplaza esta URL por la que te da Google Apps Script al desplegar (ver instrucciones aparte).
   var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVYs7btmLpBToTdGD2cxISlcJv6RLzjgrv_a0M5lU6v15V-Sc9sG1KsrTdTVKFPOWe/exec';
-
   var form = document.getElementById('signupForm');
   var msg = document.getElementById('formMsg');
   form.addEventListener('submit', function(e){
@@ -1080,7 +374,6 @@ document.addEventListener('DOMContentLoaded', function(){
     btn.textContent = 'Enviando...';
     msg.textContent = '';
     msg.className = 'form-msg';
-
     fetch(SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
