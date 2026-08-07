@@ -6,11 +6,8 @@
   <title>FOCUSGOD APP</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html, body { width: 100%; background: #000; }
-
     body { overflow-y: scroll; }
-
     /* ── Canvas fijo ── */
     #shader-canvas {
       position: fixed;
@@ -18,7 +15,6 @@
       width: 100%; height: 100%;
       z-index: 0;
     }
-
     /* ── Título fijo ── */
     #title {
       position: fixed;
@@ -36,7 +32,6 @@
       pointer-events: none;
       will-change: opacity;
     }
-
     /* ── Scroll hint fijo ── */
     #scroll-hint {
       position: fixed;
@@ -53,7 +48,6 @@
       animation: bounce 2s infinite;
       will-change: opacity;
     }
-
     #scroll-hint span {
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: 0.5rem;
@@ -61,7 +55,6 @@
       text-transform: uppercase;
       color: #fff;
     }
-
     #scroll-hint svg {
       width: 14px; height: 14px;
       stroke: #fff; fill: none;
@@ -69,19 +62,53 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-
     @keyframes bounce {
       0%, 100% { transform: translateX(-50%) translateY(0); }
       50%       { transform: translateX(-50%) translateY(5px); }
     }
-
+    /* ── Menú ── */
+    #menu-btn {
+      position: fixed;
+      top: 1.2rem; left: 1.2rem;
+      z-index: 20;
+      width: 38px; height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #menu-btn svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; }
+    #menu-dropdown {
+      position: fixed;
+      top: 4.2rem; left: 1.2rem;
+      z-index: 20;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+      min-width: 160px;
+    }
+    #menu-dropdown.open { display: flex; }
+    #menu-dropdown a {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+    }
+    #menu-dropdown a:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    #menu-dropdown a:hover { background: rgba(255,255,255,0.06); }
     /* ── Spacer section 1 ── */
     #spacer {
       height: 100vh;
       position: relative;
       z-index: 1;
     }
-
     /* gradiente al fondo del spacer */
     #spacer::after {
       content: '';
@@ -91,7 +118,6 @@
       background: linear-gradient(to bottom, transparent 0%, #000 85%);
       pointer-events: none;
     }
-
     /* ── Section 2: Countdown ── */
     #section2 {
       position: relative;
@@ -104,9 +130,8 @@
       align-items: center;
       justify-content: flex-start;
       gap: 2.5rem;
-      padding: 3rem 1rem 2rem;
+      padding: 3rem 1rem 4rem;
     }
-
     /* Flip clock */
     .flip-clock {
       display: flex;
@@ -114,16 +139,13 @@
       justify-content: center;
       gap: 0.5rem;
     }
-
     .flip-group {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.4rem;
     }
-
     .flip-digits { display: flex; gap: 0.2rem; }
-
     .digit {
       width: clamp(2rem, 4vw, 2.5rem);
       height: clamp(2.8rem, 5.5vw, 3.5rem);
@@ -139,7 +161,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .digit::after {
       content: '';
       position: absolute;
@@ -148,15 +169,12 @@
       background: rgba(0,0,0,0.5);
       pointer-events: none;
     }
-
     .digit .val { display: block; }
     .digit .val.anim { animation: flipAnim 0.3s ease; }
-
     @keyframes flipAnim {
       0%   { transform: translateY(-60%); opacity: 0; }
       100% { transform: translateY(0);    opacity: 1; }
     }
-
     .flip-label {
       font-family: ui-sans-serif, system-ui, sans-serif;
       font-size: clamp(0.45rem, 0.9vw, 0.6rem);
@@ -164,7 +182,6 @@
       text-transform: uppercase;
       color: rgba(255,255,255,0.3);
     }
-
     .flip-sep {
       font-family: ui-monospace, monospace;
       font-weight: 700;
@@ -173,60 +190,116 @@
       padding-bottom: 1.5rem;
       line-height: 1;
     }
-
     #shimmer-wrap {
       margin-top: 1.5rem;
       overflow: hidden;
       text-align: center;
     }
-
     #shimmer-text {
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(0.75rem, 2vw, 1rem);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: linear-gradient(to right,
-    transparent 0%,
-    transparent 40%,
-    rgba(255,255,255,0.95) 50%,
-    transparent 60%,
-    transparent 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 220% 100%;
-  animation: shimmer 3s infinite linear;
-}
-
-@keyframes shimmer {
-  0%   { background-position: 120% center; }
-  100% { background-position: -20% center; }
-}
-
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: clamp(0.75rem, 2vw, 1rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: linear-gradient(to right,
+        transparent 0%,
+        transparent 40%,
+        rgba(255,255,255,0.95) 50%,
+        transparent 60%,
+        transparent 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 220% 100%;
+      animation: shimmer 3s infinite linear;
+    }
     @keyframes shimmer {
-      0%   { background-position: 100% center; }
-      100% { background-position: -10% center; }
+      0%   { background-position: 120% center; }
+      100% { background-position: -20% center; }
+    }
+    /* ── Waitlist ── */
+    #waitlist {
+      margin-top: 3rem;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+    #waitlist h2 {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: #fff;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+    #waitlist p {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1.6rem;
+    }
+    #waitlistForm {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    #waitlistForm input {
+      background: #18181b;
+      border: 1px solid #2a2a2e;
+      color: #fff;
+      padding: 0.9rem 1rem;
+      border-radius: 6px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+    }
+    #waitlistForm input:focus { border-color: rgba(255,255,255,0.4); }
+    #waitlistForm button {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 0.9rem 1rem;
+      border-radius: 6px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    #waitlistForm button:disabled { opacity: 0.6; }
+    #waitlistMsg {
+      margin-top: 0.7rem;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      min-height: 1rem;
     }
   </style>
 </head>
 <body>
-
   <!-- Canvas shader de fondo -->
   <canvas id="shader-canvas"></canvas>
-
+  <!-- Menú desplegable -->
+  <div id="menu-btn" onclick="document.getElementById('menu-dropdown').classList.toggle('open')">
+    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </div>
+  <div id="menu-dropdown">
+    <a href="/">Inicio</a>
+    <a href="/lecturas/">Lecturas</a>
+  </div>
   <!-- Título completamente fijo, fuera de todo -->
   <div id="title">FOCUSGOD</div>
   <div id="scroll-hint">
     <span>scroll</span>
     <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
-
   <!-- Sección 1: solo ocupa espacio para hacer scroll -->
   <div id="spacer"></div>
-
   <!-- Sección 2: contador -->
   <section id="section2">
     <div class="flip-clock">
@@ -262,12 +335,20 @@
         <span class="flip-label">Segundos</span>
       </div>
     </div>
-
   <div id="shimmer-wrap">
       <span id="shimmer-text" data-text="no seas un cristiano promedio">no seas un cristiano promedio</span>
     </div>
-  </section>
 
+    <div id="waitlist">
+      <h2>¿Qué es Focusgod?</h2>
+      <p>Una app para ayudarte a enfocarte en Dios en medio del ruido: menos distracción, más presencia, un propósito real. Deja tu correo y sé de los primeros en saberlo cuando lancemos.</p>
+      <form id="waitlistForm">
+        <input type="email" id="waitlistEmail" placeholder="tu@correo.com" required>
+        <button type="submit">Avísame cuando lance</button>
+      </form>
+      <p id="waitlistMsg"></p>
+    </div>
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
   <script>
     /* ── Shader sobre canvas nativo ── */
@@ -324,7 +405,6 @@
         renderer.render(scene, camera);
       })();
     })();
-
     /* ── Fade out título y scroll-hint al bajar ── */
     const titleEl = document.getElementById('title');
     const hintEl  = document.getElementById('scroll-hint');
@@ -336,7 +416,6 @@
       hintEl.style.opacity  = op * 0.3;
     }
     window.addEventListener('scroll', onScroll, { passive: true });
-
     /* ── Countdown ── */
     const TARGET = new Date('2026-08-19T00:00:00');
     function setDigit(id, char) {
@@ -365,6 +444,36 @@
     }
     update();
     setInterval(update, 1000);
+
+    /* ── Waitlist form ── */
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVYs7btmLpBToTdGD2cxISlcJv6RLzjgrv_a0M5lU6v15V-Sc9sG1KsrTdTVKFPOWe/exec';
+    var wForm = document.getElementById('waitlistForm');
+    var wMsg = document.getElementById('waitlistMsg');
+    wForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = document.getElementById('waitlistEmail').value;
+      var btn = wForm.querySelector('button');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      wMsg.textContent = '';
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {'Content-Type': 'text/plain;charset=utf-8'},
+        body: JSON.stringify({email: email})
+      })
+      .then(function(){
+        wMsg.textContent = '¡Hecho! Te avisaremos en cuanto salga.';
+        wForm.reset();
+        btn.textContent = 'Avísame cuando lance';
+        btn.disabled = false;
+      })
+      .catch(function(){
+        wMsg.textContent = 'Ha fallado algo. Inténtalo de nuevo.';
+        btn.textContent = 'Avísame cuando lance';
+        btn.disabled = false;
+      });
+    });
   </script>
 </body>
 </html>
