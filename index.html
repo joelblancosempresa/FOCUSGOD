@@ -227,16 +227,17 @@
       margin-top: 3rem;
       width: 100%;
       max-width: 380px;
-      text-align: center;
+      text-align: left;
       padding: 0 0.5rem;
     }
     #waitlist h2 {
       font-family: 'Courier Prime', 'Courier New', monospace;
-      font-weight: 600;
+      font-weight: 700;
       font-size: clamp(1.1rem, 2.5vw, 1.4rem);
       color: #fff;
       margin-bottom: 0.8rem;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
     }
     #waitlist p {
       font-family: 'Courier Prime', 'Courier New', monospace;
@@ -342,10 +343,6 @@
         <span class="flip-label">Segundos</span>
       </div>
     </div>
-  <div id="shimmer-wrap">
-      <span id="shimmer-text" data-text="no seas un cristiano promedio">no seas un cristiano promedio</span>
-    </div>
-
     <div id="waitlist">
       <h2>¿Qué es Focusgod?</h2>
       <p>¿Sientes que tienes demasiadas distracciones? ¿Una adicción de la que no logras soltarte? ¿Sientes que tu vida no tiene un propósito claro?</p>
@@ -356,6 +353,10 @@
         <button type="submit">Avísame cuando lance</button>
       </form>
       <p id="waitlistMsg"></p>
+    </div>
+
+    <div id="shimmer-wrap">
+      <span id="shimmer-text" data-text="no seas un cristiano promedio">no seas un cristiano promedio</span>
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
