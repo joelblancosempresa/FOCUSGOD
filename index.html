@@ -287,6 +287,33 @@
       color: rgba(255,255,255,0.5);
       min-height: 1rem;
     }
+    .signature {
+      margin-top: 2rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid #262626;
+      font-family: 'Courier Prime', 'Courier New', monospace;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #f3f3f1;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .signature:hover { color: #e8e2d0; }
+    .badge-md { width: 17px; height: 17px; flex-shrink: 0; }
+    .footer-tagline {
+      display: block;
+      text-align: center;
+      margin-top: 14px;
+      font-family: 'Courier Prime', 'Courier New', monospace;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #8f8f8f;
+    }
   </style>
 </head>
 <body>
@@ -353,10 +380,15 @@
         <button type="submit">Avísame cuando lance</button>
       </form>
       <p id="waitlistMsg"></p>
-    </div>
 
-    <div id="shimmer-wrap">
-      <span id="shimmer-text" data-text="no seas un cristiano promedio">no seas un cristiano promedio</span>
+      <a class="signature" href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+        joelblancosierra
+        <svg class="badge-md" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+          <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <span class="footer-tagline">FOCUSGOD — no seas un cristiano promedio</span>
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
