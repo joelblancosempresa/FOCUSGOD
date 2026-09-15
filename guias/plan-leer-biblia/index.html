@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>El plan exacto para empezar a leer la Biblia desde cero — FOCUSGOD</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="El plan exacto para empezar a leer la Biblia desde cero — FOCUSGOD">
+<meta property="og:description" content="El orden correcto de 12 libros para no abandonar en la primera semana.">
+<meta property="og:image" content="https://focusgodapp.com/guias/plan-leer-biblia/preview.jpg">
+<meta property="og:url" content="https://focusgodapp.com/guias/plan-leer-biblia/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El plan exacto para empezar a leer la Biblia desde cero — FOCUSGOD">
+<meta name="twitter:description" content="El orden correcto de 12 libros para no abandonar en la primera semana.">
+<meta name="twitter:image" content="https://focusgodapp.com/guias/plan-leer-biblia/preview.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --bg-card:#0d0d0d;
+    --fg:#f3f3f1;
+    --muted:#8f8f8f;
+    --line:#262626;
+    --accent:#e8e2d0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);}
+  body{
+    font-family:'Courier Prime','Courier New',monospace;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:60px;
+    background:radial-gradient(circle at 50% -10%, #161616 0%, #000000 55%);
+    max-width:600px;
+    margin:0 auto;
+    overflow-x:hidden;
+  }
+
+  .progress-bar{
+    position:fixed; top:0; left:0;
+    width:3px; height:100%;
+    background:rgba(255,255,255,0.06);
+    z-index:999;
+  }
+  .progress-bar-fill{
+    width:100%; height:0%;
+    background:linear-gradient(180deg, var(--accent), #ffffff);
+  }
+
+  .site-header{
+    position:fixed;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:600px;
+    z-index:50;
+    background:#000;
+    border-bottom:1px solid var(--line);
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .menu-wrap{position:relative;flex-shrink:0;}
+  .menu-btn{
+    width:34px;height:34px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--line);
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .menu-btn svg{width:15px;height:15px;stroke:var(--fg);fill:none;stroke-width:2;stroke-linecap:round;}
+  .menu-dropdown{
+    position:absolute;
+    top:44px; left:0;
+    z-index:60;
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:none;
+    flex-direction:column;
+    min-width:150px;
+  }
+  .menu-dropdown.open{display:flex;}
+  .menu-dropdown a{
+    font-family:inherit;
+    font-size:12.5px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--fg);
+    text-decoration:none;
+    padding:12px 14px;
+  }
+  .menu-dropdown a:not(:last-child){border-bottom:1px solid var(--line);}
+  .menu-dropdown a:hover{background:rgba(255,255,255,0.05);color:var(--accent);}
+  .top-credit{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+    flex:1;
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:1px;
+    text-transform:uppercase;
+    flex-wrap:nowrap;
+    overflow:hidden;
+  }
+  .top-credit a{
+    color:var(--muted);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+  }
+  .top-credit a:hover{color:var(--fg);}
+  .badge-sm{width:11px;height:11px;flex-shrink:0;}
+  .top-credit .dot{opacity:0.5;}
+  body{padding-top:60px;}
+
+  .back-link{
+    text-align:center;
+    padding:10px 20px 0;
+  }
+  .back-link a{
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--muted);
+    text-decoration:none;
+  }
+  .back-link a:hover{color:var(--accent);}
+
+  header.hero{
+    padding:36px 20px 32px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  h1{
+    font-size:22px;
+    line-height:1.3;
+    margin:0 0 18px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    min-height:100px;
+  }
+  .tw-cursor{
+    display:inline-block;
+    width:2px;
+    height:20px;
+    background:var(--accent);
+    margin-left:3px;
+    vertical-align:middle;
+    animation:blink 0.9s step-start infinite;
+  }
+  @keyframes blink{ 50%{opacity:0;} }
+
+  .hero p{
+    color:#c9c9c9;
+    font-size:14.5px;
+    max-width:38ch;
+    margin:0 auto 10px;
+    opacity:0;
+    animation:fadeIn .6s ease forwards;
+    animation-delay:1.9s;
+  }
+  @keyframes fadeIn{ to{opacity:1;} }
+
+  section.intro{
+    padding:28px 20px;
+    border-bottom:1px solid var(--line);
+  }
+  section.intro p{
+    font-size:14.5px;
+    color:#d6d6d6;
+    margin:0 0 14px;
+  }
+  section.intro p:last-child{margin-bottom:0;}
+  .list{padding:8px 20px 12px;}
+
+  .reveal{
+    opacity:0;
+    transform:translateY(46px) scale(0.98);
+    filter:blur(6px);
+    transition:opacity .8s cubic-bezier(0.16,1,0.3,1), transform .8s cubic-bezier(0.16,1,0.3,1), filter .8s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:blur(0);
+  }
+
+  .item{
+    border-bottom:1px solid var(--line);
+    transition:background .3s ease;
+  }
+  .item:first-child{border-top:1px solid var(--line);}
+  .item.open{background:linear-gradient(90deg, rgba(232,226,208,0.05), transparent 70%);}
+  .item-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:20px 2px;
+    cursor:pointer;
+    background:none;
+    border:none;
+    width:100%;
+    text-align:left;
+    color:var(--fg);
+    font-family:inherit;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .item-head:hover .item-title{color:var(--accent);}
+  .item-head-text{flex:1;}
+  .item-num{
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:2px;
+    margin-bottom:4px;
+    display:block;
+  }
+  .item-title{
+    font-size:16.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0 0 4px;
+    transition:color .2s ease;
+  }
+  .item-sub{
+    font-size:13px;
+    color:#b5b5b5;
+    font-weight:400;
+  }
+  .item-toggle{
+    font-size:20px;
+    color:var(--muted);
+    flex-shrink:0;
+    transition:transform .3s ease, color .3s ease;
+    line-height:1;
+    width:22px;
+    text-align:center;
+  }
+  .item.open .item-toggle{transform:rotate(45deg);color:var(--accent);}
+  .item-body{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+  }
+  .item-body-inner{padding:0 2px 24px;}
+  .tag-feel{
+    font-size:13px;
+    color:var(--accent);
+    border-left:2px solid var(--accent);
+    padding:8px 0 8px 12px;
+    margin:0 0 16px;
+    font-style:normal;
+  }
+  .item-body-inner p{
+    font-size:14px;
+    color:#d0d0d0;
+    margin:0 0 14px;
+  }
+  .habit-row{
+    border-top:1px solid var(--line);
+    padding-top:14px;
+    margin-top:4px;
+  }
+  .habit-row .habit-label{
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+    display:block;
+    margin-bottom:6px;
+  }
+  .habit-row .habit-text{
+    font-size:13.5px;
+    color:var(--fg);
+    font-weight:700;
+  }
+
+  section.value{
+    padding:40px 20px 20px;
+    border-top:1px solid var(--line);
+    margin-top:20px;
+  }
+  .value h2{
+    font-size:19px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin:0 0 16px;
+  }
+  .tips{
+    margin-top:6px;
+    font-size:14px;
+    color:#d0d0d0;
+  }
+  .tips p{margin:0 0 14px;}
+  .tips strong{color:var(--fg);}
+
+  footer.about{
+    padding:44px 20px 50px;
+    border-top:1px solid var(--line);
+    margin-top:10px;
+  }
+  footer.about h2{
+    font-size:19px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin:0 0 16px;
+  }
+  footer.about .pain{
+    color:#d6d6d6;
+    font-size:14.5px;
+    margin:0 0 14px;
+  }
+  footer.about p{font-size:14px;color:#c4c4c4;margin:0 0 14px;}
+  footer.about .launch{color:var(--accent);}
+
+  .signup-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:22px 0 6px;
+  }
+  .signup-form input{
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    color:var(--fg);
+    padding:14px;
+    font-family:inherit;
+    font-size:14px;
+    border-radius:2px;
+    outline:none;
+    transition:border-color .2s ease;
+  }
+  .signup-form input:focus{border-color:var(--accent);}
+  .signup-form button{
+    background:var(--accent);
+    color:#000;
+    border:none;
+    padding:14px;
+    font-family:inherit;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-radius:2px;
+    cursor:pointer;
+    transition:opacity .2s ease, transform .15s ease;
+  }
+  .signup-form button:active{transform:scale(0.98);}
+  .signup-form button:disabled{opacity:0.6;cursor:default;}
+  .form-msg{font-size:12.5px;color:var(--muted);min-height:16px;margin:0;}
+  .form-msg.success{color:#a9d6b4;}
+  .form-msg.error{color:#e0a0a0;}
+
+  .signature{
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+    font-size:19px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    color:var(--fg);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+  .signature:hover{color:var(--accent);}
+  .badge-md{width:17px;height:17px;flex-shrink:0;}
+  .footer-tagline{
+    display:block;
+    text-align:center;
+    margin-top:14px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+
+<div class="site-header">
+  <div id="site-nav"></div>
+  <div class="top-credit">
+    <a href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+      @joelblancosierra
+      <svg class="badge-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+        <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <span class="dot">·</span>
+    <span>Focusgod</span>
+  </div>
+</div>
+<div class="back-link"><a href="/guias/">&larr; Más guías</a></div>
+
+<header class="hero">
+  <h1><span class="tw-line" data-text="El plan exacto"></span><br><span class="tw-line" data-text="para empezar a leer"></span><br><span class="tw-line" data-text="la Biblia desde cero"></span><span class="tw-cursor"></span></h1>
+  <p>¿La Biblia lleva tiempo cerrada porque no sabes por dónde empezar? Es el error más común.</p>
+</header>
+
+<section class="intro">
+  <p>Casi todos abren la Biblia por Génesis, llegan a las genealogías y la cierran pensando que no es para ellos. Pero la Biblia no se lee de principio a fin como una novela, y el orden con el que empiezas lo cambia todo.</p>
+  <p>Empezar por Juan en lugar de Génesis es la diferencia entre engancharte o rendirte en la primera semana. Cuando empiezas por los evangelios, primero conoces a Jesús, y desde ahí el resto de la Biblia se entiende de otra manera.</p>
+  <p>Este es el orden recomendado, libro por libro. No tienes que leerla entera de golpe. Solo tienes que empezar.</p>
+</section>
+
+<div class="list" id="accordion">
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">01</span>
+        <span class="item-title">Juan</span>
+        <span class="item-sub">Empieza aquí</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Conocerás quién es Jesús y por qué lo cambia todo.</p>
+        <p>Juan no escribe una biografía cronológica, escribe con un propósito declarado: que creas que Jesús es el Hijo de Dios. Es la puerta de entrada más directa a quién es Él.</p>
+        <div class="habit-row">
+          <span class="habit-label">Por qué primero</span>
+          <span class="habit-text">Todo lo demás en la Biblia se entiende mejor una vez conoces a Jesús.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">02</span>
+        <span class="item-title">Marcos</span>
+        <span class="item-sub">El más corto y directo</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">El evangelio más corto y directo, ideal si nunca has leído la Biblia.</p>
+        <p>Marcos escribe rápido, sin rodeos, encadenando un evento tras otro. Es perfecto para quien quiere ver de un tirón lo que Jesús hizo, sin sentirse abrumado por la extensión.</p>
+        <div class="habit-row">
+          <span class="habit-label">Por qué después de Juan</span>
+          <span class="habit-text">Refuerza en acción lo que Juan te presentó en identidad.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">03</span>
+        <span class="item-title">Salmos</span>
+        <span class="item-sub">Para hablarle a Dios</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Aprende a hablarle a Dios en cualquier emoción que estés sintiendo.</p>
+        <p>Salmos no esconde emociones difíciles. Hay alabanza, pero también rabia, miedo y desesperación llevados directamente a Dios. Te enseña que no hay que fingir para orar.</p>
+        <div class="habit-row">
+          <span class="habit-label">Cómo leerlo</span>
+          <span class="habit-text">No hace falta orden. Abre uno cada día según cómo te sientas.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">04</span>
+        <span class="item-title">Proverbios</span>
+        <span class="item-sub">Sabiduría práctica</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Un capítulo al día te da sabiduría práctica para toda decisión.</p>
+        <p>Tiene 31 capítulos, uno para cada día del mes. No es teología abstracta, es consejo directo sobre dinero, palabras, relaciones y carácter.</p>
+        <div class="habit-row">
+          <span class="habit-label">Cómo leerlo</span>
+          <span class="habit-text">Lee el capítulo que coincide con el día del mes en que estás.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">05</span>
+        <span class="item-title">Génesis</span>
+        <span class="item-sub">El principio de todo</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Entiende el principio de todo y por qué existe lo que existe.</p>
+        <p>Ahora que ya conoces a Jesús, Génesis tiene más sentido: entiendes hacia dónde va toda la historia que empieza aquí. Por eso va en el quinto lugar y no en el primero.</p>
+        <div class="habit-row">
+          <span class="habit-label">Aviso</span>
+          <span class="habit-text">Las genealogías se pueden hojear rápido, no son el punto central del libro.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">06</span>
+        <span class="item-title">Romanos</span>
+        <span class="item-sub">La base de la fe</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Aquí está explicada la base completa de la fe cristiana.</p>
+        <p>Pablo explica, paso a paso, por qué todos necesitamos gracia y cómo funciona. Es más denso que los evangelios, pero es el fundamento teológico más completo de la Biblia.</p>
+        <div class="habit-row">
+          <span class="habit-label">Cómo leerlo</span>
+          <span class="habit-text">Ve despacio. Es normal releer un párrafo dos veces para entenderlo.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">07</span>
+        <span class="item-title">Filipenses</span>
+        <span class="item-sub">Gozo en la dificultad</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Corto y lleno de gozo y paz incluso en medio de la dificultad.</p>
+        <p>Pablo lo escribió desde la cárcel, y aun así es una de las cartas más gozosas de toda la Biblia. Un buen respiro después de la densidad de Romanos.</p>
+        <div class="habit-row">
+          <span class="habit-label">Se lee en</span>
+          <span class="habit-text">Una sola sentada, tiene solo 4 capítulos cortos.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">08</span>
+        <span class="item-title">Santiago</span>
+        <span class="item-sub">Fe práctica</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Fe práctica para vivir lo que crees en el día a día.</p>
+        <p>Santiago es directo hasta incomodar: la fe que no se traduce en acciones concretas no sirve de mucho. Es un libro para bajar la teología a la vida cotidiana.</p>
+        <div class="habit-row">
+          <span class="habit-label">Aviso</span>
+          <span class="habit-text">Léelo dispuesto a que te confronte, no solo a que te consuele.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">09</span>
+        <span class="item-title">Efesios</span>
+        <span class="item-sub">Quién eres en Cristo</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Descubre quién eres en Cristo y todo lo que tienes en Él.</p>
+        <p>Antes de decirte cómo vivir, Efesios pasa varios capítulos recordándote quién eres ya en Cristo. La identidad viene antes que la conducta, no al revés.</p>
+        <div class="habit-row">
+          <span class="habit-label">Fíjate en</span>
+          <span class="habit-text">Cuántas veces aparece la frase "en Cristo" en los primeros capítulos.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">10</span>
+        <span class="item-title">Hechos</span>
+        <span class="item-sub">Cómo empezó la iglesia</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Ve cómo empezó la iglesia y cómo el evangelio cambió el mundo.</p>
+        <p>Es la continuación directa de los evangelios: qué pasó después de que Jesús ascendiera. Ver cómo un grupo pequeño y asustado terminó cambiando el mundo entero da mucha perspectiva.</p>
+        <div class="habit-row">
+          <span class="habit-label">Conecta con</span>
+          <span class="habit-text">Lucas, ya que ambos libros los escribió la misma persona como una sola historia.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">11</span>
+        <span class="item-title">1 Juan</span>
+        <span class="item-sub">Ser amado de verdad</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Entiende lo que significa de verdad ser amado por Dios.</p>
+        <p>Corto, cálido y repetitivo en el mejor sentido: insiste una y otra vez en el amor de Dios hasta que se te queda grabado. Un buen libro para cerrar el recorrido con esperanza.</p>
+        <div class="habit-row">
+          <span class="habit-label">Se lee en</span>
+          <span class="habit-text">Menos de 20 minutos, tiene solo 5 capítulos cortos.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">12</span>
+        <span class="item-title">Lucas</span>
+        <span class="item-sub">El más detallado</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">El evangelio más detallado sobre la vida y el corazón de Jesús.</p>
+        <p>Después de haber leído los otros libros, vuelves a los evangelios con más contexto. Lucas, escrito con cuidado histórico, te da la imagen más completa del corazón de Jesús.</p>
+        <div class="habit-row">
+          <span class="habit-label">Por qué al final</span>
+          <span class="habit-text">Cierra el recorrido volviendo, con más profundidad, a donde empezaste: Jesús.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section class="value reveal">
+  <h2>Lo único que necesitas recordar</h2>
+  <div class="tips">
+    <p><strong>No tienes que leerla entera de golpe.</strong> Solo tienes que empezar.</p>
+    <p>No necesitas entenderlo todo el primer día, ni seguir este orden a la perfección. Necesitas empezar por el sitio correcto, y este plan te lo da.</p>
+  </div>
+</section>
+
+<footer class="about reveal">
+  <h2>¿Qué es Focusgod?</h2>
+  <p class="pain">¿Sientes que tienes demasiadas distracciones? ¿Una adicción de la que no logras soltarte? ¿Sientes que tu vida no tiene un propósito claro?</p>
+  <p>Focusgod nace para eso: una app para ayudarte a poner tu foco en Dios en medio del ruido. Menos distracción, más presencia, un propósito real.</p>
+  <p class="launch">Está a punto de salir. Déjanos tu correo y entérate antes que nadie.</p>
+
+  <form id="signupForm" class="signup-form">
+    <input type="email" id="signupEmail" placeholder="tu@correo.com" required>
+    <button type="submit">Avísame cuando lance</button>
+  </form>
+  <p class="form-msg" id="formMsg"></p>
+
+  <a class="signature" href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+    joelblancosierra
+    <svg class="badge-md" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+      <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  <span class="footer-tagline">FOCUSGOD — no seas un cristiano promedio</span>
+</footer>
+
+<script>
+function typeSequential(elements, speed, cb){
+  var i = 0;
+  function typeNext(){
+    if(i >= elements.length){ if(cb) cb(); return; }
+    var el = elements[i];
+    var text = el.getAttribute('data-text');
+    var j = 0;
+    el.textContent = '';
+    var interval = setInterval(function(){
+      el.textContent += text[j];
+      j++;
+      if(j >= text.length){
+        clearInterval(interval);
+        i++;
+        typeNext();
+      }
+    }, speed);
+  }
+  typeNext();
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  var lines = document.querySelectorAll('.tw-line');
+  typeSequential(Array.prototype.slice.call(lines), 38);
+
+  var progressFill = document.getElementById('progressBarFill');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var scrollTop = h.scrollTop || document.body.scrollTop;
+    var scrollHeight = h.scrollHeight - h.clientHeight;
+    var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    progressFill.style.height = progress + '%';
+  });
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  document.querySelectorAll('.item-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.item');
+      var body = item.querySelector('.item-body');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.item.open').forEach(function(openItem){
+        if(openItem !== item){
+          openItem.classList.remove('open');
+          openItem.querySelector('.item-body').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        body.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVYs7btmLpBToTdGD2cxISlcJv6RLzjgrv_a0M5lU6v15V-Sc9sG1KsrTdTVKFPOWe/exec';
+  var form = document.getElementById('signupForm');
+  var msg = document.getElementById('formMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('signupEmail').value;
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    msg.textContent = '';
+    msg.className = 'form-msg';
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify({email: email})
+    })
+    .then(function(){
+      msg.textContent = '¡Hecho! Te avisaremos en cuanto salga.';
+      msg.className = 'form-msg success';
+      form.reset();
+      btn.textContent = 'Avísame cuando lance';
+      btn.disabled = false;
+    })
+    .catch(function(){
+      msg.textContent = 'Ha fallado algo. Inténtalo de nuevo.';
+      msg.className = 'form-msg error';
+      btn.textContent = 'Avísame cuando lance';
+      btn.disabled = false;
+    });
+  });
+});
+</script>
+<script src="/nav.js"></script>
+
+</body>
+</html>
