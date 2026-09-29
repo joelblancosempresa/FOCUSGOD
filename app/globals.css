@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FBF6EF;
+  --red: #F0492E;
+  --ink: #20242E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FBF6EF;
+  color: #20242E;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+@layer utilities {
+  .btn-red {
+    @apply bg-red text-white font-semibold px-8 py-4 rounded-2xl text-base transition-all duration-150 hover:bg-redd active:scale-95;
+    box-shadow: 0 6px 22px rgba(240, 73, 46, 0.35);
+  }
+}
