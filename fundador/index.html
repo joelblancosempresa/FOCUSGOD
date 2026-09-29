@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Detrás de Focusgod — Joel Blanco Sierra</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Detrás de Focusgod — Joel Blanco Sierra">
+<meta property="og:description" content="21 años. Barcelona. Esta es la historia de por qué existe Focusgod.">
+<meta property="og:image" content="https://focusgodapp.com/fundador/preview.jpg">
+<meta property="og:url" content="https://focusgodapp.com/fundador/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Detrás de Focusgod — Joel Blanco Sierra">
+<meta name="twitter:description" content="21 años. Barcelona. Esta es la historia de por qué existe Focusgod.">
+<meta name="twitter:image" content="https://focusgodapp.com/fundador/preview.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --bg-card:#0d0d0d;
+    --fg:#f3f3f1;
+    --muted:#8f8f8f;
+    --line:#262626;
+    --accent:#e8e2d0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);}
+  body{
+    font-family:'Courier Prime','Courier New',monospace;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    max-width:600px;
+    margin:0 auto;
+    overflow-x:hidden;
+  }
+
+  .progress-bar{
+    position:fixed; top:0; left:0;
+    width:3px; height:100%;
+    background:rgba(255,255,255,0.06);
+    z-index:999;
+  }
+  .progress-bar-fill{
+    width:100%; height:0%;
+    background:linear-gradient(180deg, var(--accent), #ffffff);
+  }
+
+  .site-header{
+    position:fixed;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:600px;
+    z-index:50;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .menu-wrap{position:relative;flex-shrink:0;}
+  .menu-btn{
+    width:34px;height:34px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,0.08);
+    border:1px solid var(--line);
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .menu-btn svg{width:15px;height:15px;stroke:var(--fg);fill:none;stroke-width:2;stroke-linecap:round;}
+  .menu-dropdown{
+    position:absolute;
+    top:44px; left:0;
+    z-index:60;
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:none;
+    flex-direction:column;
+    min-width:150px;
+  }
+  .menu-dropdown.open{display:flex;}
+  .menu-dropdown a{
+    font-family:inherit;
+    font-size:12.5px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--fg);
+    text-decoration:none;
+    padding:12px 14px;
+  }
+  .menu-dropdown a:not(:last-child){border-bottom:1px solid var(--line);}
+  .menu-dropdown a:hover{background:rgba(255,255,255,0.05);color:var(--accent);}
+  .site-header .eyebrow{
+    flex:1;
+    text-align:center;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* hero foto */
+  .hero-photo{
+    position:relative;
+    width:100%;
+    height:88vh;
+    overflow:hidden;
+  }
+  .hero-photo img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center 20%;
+    filter:grayscale(15%) contrast(1.05);
+    transform:scale(1.06);
+    animation:heroZoom 8s ease-out forwards;
+  }
+  @keyframes heroZoom{ from{transform:scale(1.06);} to{transform:scale(1);} }
+  .hero-photo::after{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 40%, #000 96%);
+  }
+  .hero-caption{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    z-index:2;
+    padding:0 24px 40px;
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.6s;
+  }
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);} }
+  .hero-caption h1{
+    font-size:clamp(26px, 7vw, 34px);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin:0 0 8px;
+  }
+  .hero-caption p{
+    font-size:13.5px;
+    color:#c9c9c9;
+    letter-spacing:0.5px;
+    margin:0;
+  }
+
+  section.chapter{
+    padding:60px 24px;
+    border-bottom:1px solid var(--line);
+  }
+  section.chapter:last-of-type{border-bottom:none;}
+  .chapter-num{
+    display:block;
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:3px;
+    margin-bottom:14px;
+  }
+  .chapter h2{
+    font-size:21px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0 0 20px;
+    line-height:1.3;
+  }
+  .chapter p{
+    font-size:15px;
+    color:#d6d6d6;
+    margin:0 0 16px;
+  }
+  .chapter p:last-child{margin-bottom:0;}
+  .chapter p.lead{
+    color:var(--accent);
+    font-size:16px;
+    font-weight:700;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(46px) scale(0.98);
+    filter:blur(7px);
+    transition:opacity .9s cubic-bezier(0.16,1,0.3,1), transform .9s cubic-bezier(0.16,1,0.3,1), filter .9s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:blur(0);
+  }
+
+  footer.about{
+    padding:60px 24px 50px;
+    border-top:1px solid var(--line);
+  }
+  footer.about h2{
+    font-size:21px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0 0 18px;
+  }
+  footer.about p{font-size:15px;color:#d6d6d6;margin:0 0 16px;}
+  footer.about .launch{color:var(--accent);font-weight:700;}
+
+  .signup-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:24px 0 6px;
+  }
+  .signup-form input{
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    color:var(--fg);
+    padding:14px;
+    font-family:inherit;
+    font-size:14px;
+    border-radius:2px;
+    outline:none;
+  }
+  .signup-form input:focus{border-color:var(--accent);}
+  .signup-form button{
+    background:var(--accent);
+    color:#000;
+    border:none;
+    padding:14px;
+    font-family:inherit;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-radius:2px;
+    cursor:pointer;
+  }
+  .signup-form button:disabled{opacity:0.6;cursor:default;}
+  .form-msg{font-size:12.5px;color:var(--muted);min-height:16px;margin:0;}
+  .form-msg.success{color:#a9d6b4;}
+  .form-msg.error{color:#e0a0a0;}
+
+  .signature{
+    margin-top:32px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+    font-size:19px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    color:var(--fg);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+  .signature:hover{color:var(--accent);}
+  .badge-sm{width:11px;height:11px;flex-shrink:0;}
+  .badge-md{width:17px;height:17px;flex-shrink:0;}
+  .footer-tagline{
+    display:block;
+    text-align:center;
+    margin-top:14px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+
+<div class="site-header">
+  <div id="site-nav"></div>
+  <span class="eyebrow">Focusgod · Fundador</span>
+</div>
+
+<div class="hero-photo">
+  <img src="joel-foto.jpg" alt="Joel Blanco Sierra">
+  <div class="hero-caption">
+    <h1>Joel Blanco Sierra</h1>
+    <p>21 años · Barcelona, España · Fundador de Focusgod</p>
+  </div>
+</div>
+
+<section class="chapter reveal">
+  <span class="chapter-num">01 — El punto de partida</span>
+  <h2>Buscaba mi propósito</h2>
+  <p>Como cualquier joven, pasé tiempo buscando mi propósito. Probando cosas, mirando a otros, tratando de entender hacia dónde iba mi vida.</p>
+  <p class="lead">Nunca lo encontré buscando más fuerte. Lo encontré cuando cambié hacia dónde miraba.</p>
+</section>
+
+<section class="chapter reveal">
+  <span class="chapter-num">02 — El giro</span>
+  <h2>El foco en Dios abre tu propósito</h2>
+  <p>Un día entendí algo que lo cambió todo: para encontrar mi propósito de verdad, tenía que poner mi foco en Dios. Buscar primero su reino, como dice Mateo 6:33.</p>
+  <p>Ahí vi claro que no bastaba con ir a la iglesia, ni con leer la Biblia cada día por rutina. Tenía que haber algo más.</p>
+  <p class="lead">El foco en Dios no es una tarea más. Es lo que te lleva a tu propósito.</p>
+</section>
+
+<section class="chapter reveal">
+  <span class="chapter-num">03 — Lo que cambió</span>
+  <h2>Empecé a vivir para Él</h2>
+  <p>Empecé a buscar de verdad, y vi cómo Dios transformaba mi vida por dentro. Empecé a cargar mi cruz cada día — como dice Lucas: "el que quiera venir en pos de mí, tome su cruz cada día, y sígame."</p>
+  <p class="lead">Seguir a Jesús no es un momento. Es una decisión diaria.</p>
+</section>
+
+<section class="chapter reveal">
+  <span class="chapter-num">04 — La trampa</span>
+  <h2>Las distracciones te ciegan</h2>
+  <p>El mundo te engaña manteniendo tu foco en otra parte: en el móvil, en lo que tienes, en lo que aparentas. Y mientras tu foco esté ahí, no puedes ver tu propósito ni lo que Dios quiere hacer contigo.</p>
+  <p class="lead">No cambias tú primero. Cambia tu foco, y ahí Dios te abre los ojos.</p>
+</section>
+
+<section class="chapter reveal">
+  <span class="chapter-num">05 — De ahí nace el nombre</span>
+  <h2>Decidí hacer algo</h2>
+  <p>Por eso decidí hacer algo. Crear una aplicación que te ayude a recuperar el foco cuando el mundo no deja de distraerte.</p>
+  <p class="lead">Así nació Focusgod: una app para recuperar tu foco. Ponlo en Dios.</p>
+</section>
+
+<section class="chapter reveal">
+  <span class="chapter-num">06 — Mi propósito</span>
+  <h2>Dártelo a ti</h2>
+  <p>Descubrí que mi propósito es este: dar este mensaje a los jóvenes, a cualquiera que lo necesite, para que encuentren el suyo.</p>
+  <p>Para que tengan esperanza, fuerza, y vean las grandes cosas que Dios tiene preparadas para ellos — planes de bien, no de mal, como dice Jeremías 29:11.</p>
+  <p class="lead">Y si estás leyendo esto, también es para ti.</p>
+</section>
+
+<footer class="about reveal">
+  <h2>Qué es Focusgod</h2>
+  <p>Focusgod es una app para ayudarte a poner tu foco en Dios en medio del ruido. Para que dejes de vivir distraído y empieces a vivir con el propósito para el que fuiste diseñado.</p>
+  <p class="launch">Está a punto de salir. Únete antes que nadie.</p>
+
+  <form id="signupForm" class="signup-form">
+    <input type="email" id="signupEmail" placeholder="tu@correo.com" required>
+    <button type="submit">Avísame cuando lance</button>
+  </form>
+  <p class="form-msg" id="formMsg"></p>
+
+  <a class="signature" href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+    joelblancosierra
+    <svg class="badge-md" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+      <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  <span class="footer-tagline">FOCUSGOD — no seas un cristiano promedio</span>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var progressFill = document.getElementById('progressBarFill');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var scrollTop = h.scrollTop || document.body.scrollTop;
+    var scrollHeight = h.scrollHeight - h.clientHeight;
+    var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    progressFill.style.height = progress + '%';
+  });
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -60px 0px'});
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVYs7btmLpBToTdGD2cxISlcJv6RLzjgrv_a0M5lU6v15V-Sc9sG1KsrTdTVKFPOWe/exec';
+  var form = document.getElementById('signupForm');
+  var msg = document.getElementById('formMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('signupEmail').value;
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    msg.textContent = '';
+    msg.className = 'form-msg';
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify({email: email})
+    })
+    .then(function(){
+      msg.textContent = '¡Hecho! Te avisaremos en cuanto salga.';
+      msg.className = 'form-msg success';
+      form.reset();
+      btn.textContent = 'Avísame cuando lance';
+      btn.disabled = false;
+    })
+    .catch(function(){
+      msg.textContent = 'Ha fallado algo. Inténtalo de nuevo.';
+      msg.className = 'form-msg error';
+      btn.textContent = 'Avísame cuando lance';
+      btn.disabled = false;
+    });
+  });
+});
+</script>
+<script src="/nav.js"></script>
+
+</body>
+</html>

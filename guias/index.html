@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Lecturas — FOCUSGOD</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lecturas — FOCUSGOD">
+<meta property="og:description" content="Guías gratuitas para vivir tu fe con propósito: por dónde empezar, hábitos, y más.">
+<meta property="og:image" content="https://focusgodapp.com/guias/preview.jpg">
+<meta property="og:url" content="https://focusgodapp.com/guias/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lecturas — FOCUSGOD">
+<meta name="twitter:description" content="Guías gratuitas para vivir tu fe con propósito: por dónde empezar, hábitos, y más.">
+<meta name="twitter:image" content="https://focusgodapp.com/guias/preview.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --bg-card:#0d0d0d;
+    --fg:#f3f3f1;
+    --muted:#8f8f8f;
+    --line:#262626;
+    --accent:#e8e2d0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);}
+  body{
+    font-family:'Courier Prime','Courier New',monospace;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:60px;
+    background:radial-gradient(circle at 50% -10%, #161616 0%, #000000 55%);
+    max-width:600px;
+    margin:0 auto;
+    overflow-x:hidden;
+  }
+
+  .top-credit{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+    flex:1;
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:1px;
+    text-transform:uppercase;
+    flex-wrap:nowrap;
+    overflow:hidden;
+  }
+  .top-credit a{
+    color:var(--muted);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+  }
+  .top-credit a:hover{color:var(--fg);}
+  .badge-sm{width:11px;height:11px;flex-shrink:0;}
+  .top-credit .dot{opacity:0.5;}
+
+  .site-header{
+    position:fixed;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:600px;
+    z-index:50;
+    background:#000;
+    border-bottom:1px solid var(--line);
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .menu-wrap{position:relative;flex-shrink:0;}
+  .menu-btn{
+    width:34px;height:34px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--line);
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .menu-btn svg{width:15px;height:15px;stroke:var(--fg);fill:none;stroke-width:2;stroke-linecap:round;}
+  .menu-dropdown{
+    position:absolute;
+    top:44px; left:0;
+    z-index:60;
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:none;
+    flex-direction:column;
+    min-width:150px;
+  }
+  .menu-dropdown.open{display:flex;}
+  .menu-dropdown a{
+    font-family:inherit;
+    font-size:12.5px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--fg);
+    text-decoration:none;
+    padding:12px 14px;
+  }
+  .menu-dropdown a:not(:last-child){border-bottom:1px solid var(--line);}
+  .menu-dropdown a:hover{background:rgba(255,255,255,0.05);color:var(--accent);}
+  body{padding-top:60px;}
+
+  header.hero{
+    padding:40px 20px 32px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  h1{
+    font-size:30px;
+    line-height:1.2;
+    margin:0 0 18px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .hero p{
+    color:#c9c9c9;
+    font-size:14.5px;
+    max-width:38ch;
+    margin:0 auto;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(46px) scale(0.98);
+    transition:opacity .7s cubic-bezier(0.16,1,0.3,1), transform .7s cubic-bezier(0.16,1,0.3,1);
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+
+  .list{
+    padding:24px 20px 12px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .card{
+    display:block;
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:22px;
+    text-decoration:none;
+    color:var(--fg);
+    transition:border-color .3s ease, transform .2s ease;
+  }
+  .card:hover{border-color:var(--accent);}
+  .card:active{transform:scale(0.99);}
+  .card-num{
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:2px;
+    display:block;
+    margin-bottom:8px;
+  }
+  .card-title{
+    font-size:19px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0 0 8px;
+  }
+  .card-desc{
+    font-size:13.5px;
+    color:#c4c4c4;
+    margin:0 0 14px;
+  }
+  .card-meta{
+    font-size:11.5px;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:6px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .card-meta .arrow{transition:transform .2s ease;}
+  .card:hover .card-meta .arrow{transform:translateX(4px);}
+
+  .card.soon{
+    opacity:0.5;
+    pointer-events:none;
+  }
+  .card.soon .card-meta{color:var(--muted);}
+
+  footer.simple{
+    padding:44px 20px 20px;
+    border-top:1px solid var(--line);
+    margin-top:20px;
+    text-align:center;
+  }
+  footer.simple h2{
+    font-size:19px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin:0 0 16px;
+  }
+  footer.simple .pain{
+    color:#d6d6d6;
+    font-size:14.5px;
+    margin:0 0 14px;
+    text-align:left;
+  }
+  footer.simple p{font-size:14px;color:#c4c4c4;margin:0 0 14px;text-align:left;}
+  footer.simple .launch{color:var(--accent);}
+  .signup-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:22px 0 6px;
+  }
+  .signup-form input{
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    color:var(--fg);
+    padding:14px;
+    font-family:inherit;
+    font-size:14px;
+    border-radius:2px;
+    outline:none;
+  }
+  .signup-form input:focus{border-color:var(--accent);}
+  .signup-form button{
+    background:var(--accent);
+    color:#000;
+    border:none;
+    padding:14px;
+    font-family:inherit;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-radius:2px;
+    cursor:pointer;
+  }
+  .signup-form button:disabled{opacity:0.6;cursor:default;}
+  .form-msg{font-size:12.5px;color:var(--muted);min-height:16px;margin:0;text-align:left;}
+  .form-msg.success{color:#a9d6b4;}
+  .form-msg.error{color:#e0a0a0;}
+  .signature{
+    font-size:19px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    color:var(--fg);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+  .signature:hover{color:var(--accent);}
+  .badge-md{width:17px;height:17px;flex-shrink:0;}
+  .footer-tagline{
+    display:block;
+    text-align:center;
+    margin-top:14px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div id="site-nav"></div>
+  <div class="top-credit">
+    <a href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+      @joelblancosierra
+      <svg class="badge-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+        <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <span class="dot">·</span>
+    <span>Focusgod</span>
+  </div>
+</div>
+
+<header class="hero">
+  <h1>Lecturas</h1>
+  <p>Guías gratuitas para leer tu Biblia con propósito y vivir tu fe sin excusas.</p>
+</header>
+
+<div class="list">
+
+  <div class="card soon reveal">
+    <span class="card-num">Nueva</span>
+    <h2 class="card-title">Próximamente</h2>
+    <p class="card-desc">Nuevas guías cada semana.</p>
+    <span class="card-meta">Muy pronto</span>
+  </div>
+
+  <a class="card reveal" href="/guias/milagro-en-proceso/">
+    <span class="card-num">12</span>
+    <h2 class="card-title">Tu desastre puede ser un milagro en proceso</h2>
+    <p class="card-desc">Lo que Dios hizo con Job, Elías, David, Moisés y Agar en su peor momento.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/plan-leer-biblia/">
+    <span class="card-num">11</span>
+    <h2 class="card-title">El plan exacto para empezar a leer la Biblia desde cero</h2>
+    <p class="card-desc">No tienes que leerla entera de golpe. Solo tienes que empezar por el sitio correcto.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/volver-a-dios/">
+    <span class="card-num">10</span>
+    <h2 class="card-title">Cómo volver a Dios cuando sientes que te has alejado</h2>
+    <p class="card-desc">8 prácticas bíblicas concretas para construir cercanía real con Dios.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/senales-alejamiento/">
+    <span class="card-num">09</span>
+    <h2 class="card-title">Señales de que te estás alejando de Dios</h2>
+    <p class="card-desc">No te alejaste de golpe. Fue poco a poco. Y puedes volver igual.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/dejar-el-pecado/">
+    <span class="card-num">08</span>
+    <h2 class="card-title">Cómo dejar el pecado según la Biblia</h2>
+    <p class="card-desc">Dejar el pecado no es fuerza de voluntad. Es depender de quien ya lo venció.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/advertencias-amor/">
+    <span class="card-num">07</span>
+    <h2 class="card-title">Lo que la Biblia advierte sobre el amor y las relaciones</h2>
+    <p class="card-desc">8 advertencias bíblicas para no confundir amor con miedo, costumbre o soledad.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/tu-proposito/">
+    <span class="card-num">06</span>
+    <h2 class="card-title">Tu propósito ya está escrito en la Biblia</h2>
+    <p class="card-desc">8 claves bíblicas y 3 preguntas para reconocer para qué te creó Dios.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/esperar-en-dios/">
+    <span class="card-num">05</span>
+    <h2 class="card-title">Lo que la Biblia dice sobre esperar</h2>
+    <p class="card-desc">La espera de Dios nunca es tiempo perdido. Es tiempo invertido.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/identidad-en-dios/">
+    <span class="card-num">04</span>
+    <h2 class="card-title">20 verdades de tu identidad en Dios</h2>
+    <p class="card-desc">Lo que Dios dice de ti no cambia nunca. 20 versículos para recordarlo.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/como-orar/">
+    <span class="card-num">03</span>
+    <h2 class="card-title">Empieza a orar correctamente así</h2>
+    <p class="card-desc">8 claves bíblicas para dejar de recitar y empezar a hablar con Dios de verdad.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/guias/mata-la-pereza/">
+    <span class="card-num">02</span>
+    <h2 class="card-title">10/10 formas para matar la pereza</h2>
+    <p class="card-desc">10 versículos, 10 hábitos. Deja de aplazar y empieza a actuar según la Biblia.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+  <a class="card reveal" href="/lecturas/">
+    <span class="card-num">01</span>
+    <h2 class="card-title">Empieza la Biblia por aquí</h2>
+    <p class="card-desc">19 puntos de entrada para empezar a leerla de verdad, elijas donde elijas empezar.</p>
+    <span class="card-meta">Leer guía <span class="arrow">→</span></span>
+  </a>
+
+</div>
+
+<footer class="simple reveal">
+  <h2>¿Qué es Focusgod?</h2>
+  <p class="pain">¿Sientes que tienes demasiadas distracciones? ¿Una adicción de la que no logras soltarte? ¿Sientes que tu vida no tiene un propósito claro?</p>
+  <p>Focusgod nace para eso: una app para ayudarte a enfocarte en Dios en medio del ruido. Menos distracción, más presencia, un propósito real.</p>
+  <p class="launch">Está a punto de salir. Déjanos tu correo y entérate antes que nadie.</p>
+
+  <form id="signupForm" class="signup-form">
+    <input type="email" id="signupEmail" placeholder="tu@correo.com" required>
+    <button type="submit">Avísame cuando lance</button>
+  </form>
+  <p class="form-msg" id="formMsg"></p>
+
+  <a class="signature" href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+    joelblancosierra
+    <svg class="badge-md" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+      <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  <span class="footer-tagline">FOCUSGOD — no seas un cristiano promedio</span>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVYs7btmLpBToTdGD2cxISlcJv6RLzjgrv_a0M5lU6v15V-Sc9sG1KsrTdTVKFPOWe/exec';
+  var form = document.getElementById('signupForm');
+  var msg = document.getElementById('formMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('signupEmail').value;
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    msg.textContent = '';
+    msg.className = 'form-msg';
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify({email: email})
+    })
+    .then(function(){
+      msg.textContent = '¡Hecho! Te avisaremos en cuanto salga.';
+      msg.className = 'form-msg success';
+      form.reset();
+      btn.textContent = 'Avísame cuando lance';
+      btn.disabled = false;
+    })
+    .catch(function(){
+      msg.textContent = 'Ha fallado algo. Inténtalo de nuevo.';
+      msg.className = 'form-msg error';
+      btn.textContent = 'Avísame cuando lance';
+      btn.disabled = false;
+    });
+  });
+});
+</script>
+<script src="/nav.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Empieza a orar correctamente así — FOCUSGOD</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Empieza a orar correctamente así — FOCUSGOD">
+<meta property="og:description" content="8 claves bíblicas para aprender a orar de verdad, con un versículo para cada una.">
+<meta property="og:image" content="https://focusgodapp.com/guias/como-orar/preview.jpg">
+<meta property="og:url" content="https://focusgodapp.com/guias/como-orar/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Empieza a orar correctamente así — FOCUSGOD">
+<meta name="twitter:description" content="8 claves bíblicas para aprender a orar de verdad, con un versículo para cada una.">
+<meta name="twitter:image" content="https://focusgodapp.com/guias/como-orar/preview.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --bg-card:#0d0d0d;
+    --fg:#f3f3f1;
+    --muted:#8f8f8f;
+    --line:#262626;
+    --accent:#e8e2d0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);}
+  body{
+    font-family:'Courier Prime','Courier New',monospace;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:60px;
+    background:radial-gradient(circle at 50% -10%, #161616 0%, #000000 55%);
+    max-width:600px;
+    margin:0 auto;
+    overflow-x:hidden;
+  }
+
+  .progress-bar{
+    position:fixed; top:0; left:0;
+    width:3px; height:100%;
+    background:rgba(255,255,255,0.06);
+    z-index:999;
+  }
+  .progress-bar-fill{
+    width:100%; height:0%;
+    background:linear-gradient(180deg, var(--accent), #ffffff);
+  }
+
+  .site-header{
+    position:fixed;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:600px;
+    z-index:50;
+    background:#000;
+    border-bottom:1px solid var(--line);
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .menu-wrap{position:relative;flex-shrink:0;}
+  .menu-btn{
+    width:34px;height:34px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--line);
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .menu-btn svg{width:15px;height:15px;stroke:var(--fg);fill:none;stroke-width:2;stroke-linecap:round;}
+  .menu-dropdown{
+    position:absolute;
+    top:44px; left:0;
+    z-index:60;
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:none;
+    flex-direction:column;
+    min-width:150px;
+  }
+  .menu-dropdown.open{display:flex;}
+  .menu-dropdown a{
+    font-family:inherit;
+    font-size:12.5px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--fg);
+    text-decoration:none;
+    padding:12px 14px;
+  }
+  .menu-dropdown a:not(:last-child){border-bottom:1px solid var(--line);}
+  .menu-dropdown a:hover{background:rgba(255,255,255,0.05);color:var(--accent);}
+  .top-credit{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+    flex:1;
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:1px;
+    text-transform:uppercase;
+    flex-wrap:nowrap;
+    overflow:hidden;
+  }
+  .top-credit a{
+    color:var(--muted);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+  }
+  .top-credit a:hover{color:var(--fg);}
+  .badge-sm{width:11px;height:11px;flex-shrink:0;}
+  .top-credit .dot{opacity:0.5;}
+  body{padding-top:60px;}
+
+  .back-link{
+    text-align:center;
+    padding:10px 20px 0;
+  }
+  .back-link a{
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--muted);
+    text-decoration:none;
+  }
+  .back-link a:hover{color:var(--accent);}
+
+  header.hero{
+    padding:36px 20px 32px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  h1{
+    font-size:26px;
+    line-height:1.3;
+    margin:0 0 18px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    min-height:70px;
+  }
+  .tw-cursor{
+    display:inline-block;
+    width:2px;
+    height:20px;
+    background:var(--accent);
+    margin-left:3px;
+    vertical-align:middle;
+    animation:blink 0.9s step-start infinite;
+  }
+  @keyframes blink{ 50%{opacity:0;} }
+
+  .hero p{
+    color:#c9c9c9;
+    font-size:14.5px;
+    max-width:38ch;
+    margin:0 auto 10px;
+    opacity:0;
+    animation:fadeIn .6s ease forwards;
+    animation-delay:1.4s;
+  }
+  @keyframes fadeIn{ to{opacity:1;} }
+
+  section.intro{
+    padding:28px 20px;
+    border-bottom:1px solid var(--line);
+  }
+  section.intro p{
+    font-size:14.5px;
+    color:#d6d6d6;
+    margin:0 0 14px;
+  }
+  section.intro p:last-child{margin-bottom:0;}
+  .list{padding:8px 20px 12px;}
+
+  .reveal{
+    opacity:0;
+    transform:translateY(46px) scale(0.98);
+    filter:blur(6px);
+    transition:opacity .8s cubic-bezier(0.16,1,0.3,1), transform .8s cubic-bezier(0.16,1,0.3,1), filter .8s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:blur(0);
+  }
+
+  .item{
+    border-bottom:1px solid var(--line);
+    transition:background .3s ease;
+  }
+  .item:first-child{border-top:1px solid var(--line);}
+  .item.open{background:linear-gradient(90deg, rgba(232,226,208,0.05), transparent 70%);}
+  .item-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:20px 2px;
+    cursor:pointer;
+    background:none;
+    border:none;
+    width:100%;
+    text-align:left;
+    color:var(--fg);
+    font-family:inherit;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .item-head:hover .item-title{color:var(--accent);}
+  .item-head-text{flex:1;}
+  .item-num{
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:2px;
+    margin-bottom:4px;
+    display:block;
+  }
+  .item-title{
+    font-size:16.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0 0 4px;
+    transition:color .2s ease;
+  }
+  .item-sub{
+    font-size:13px;
+    color:#b5b5b5;
+    font-weight:400;
+  }
+  .item-toggle{
+    font-size:20px;
+    color:var(--muted);
+    flex-shrink:0;
+    transition:transform .3s ease, color .3s ease;
+    line-height:1;
+    width:22px;
+    text-align:center;
+  }
+  .item.open .item-toggle{transform:rotate(45deg);color:var(--accent);}
+  .item-body{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+  }
+  .item-body-inner{padding:0 2px 24px;}
+  .tag-feel{
+    font-size:13px;
+    color:var(--accent);
+    border-left:2px solid var(--accent);
+    padding:8px 0 8px 12px;
+    margin:0 0 16px;
+    font-style:normal;
+  }
+  .item-body-inner p{
+    font-size:14px;
+    color:#d0d0d0;
+    margin:0 0 14px;
+  }
+  .habit-row{
+    border-top:1px solid var(--line);
+    padding-top:14px;
+    margin-top:4px;
+  }
+  .habit-row .habit-label{
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+    display:block;
+    margin-bottom:6px;
+  }
+  .habit-row .habit-text{
+    font-size:13.5px;
+    color:var(--fg);
+    font-weight:700;
+  }
+
+  section.value{
+    padding:40px 20px 20px;
+    border-top:1px solid var(--line);
+    margin-top:20px;
+  }
+  .value h2{
+    font-size:20px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin:0 0 20px;
+  }
+  .method{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:18px;
+    margin-bottom:16px;
+    transition:border-color .3s ease, opacity .5s ease, transform .65s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .method:hover{border-color:#3a3a3a;}
+  .method h3{
+    font-size:14px;
+    margin:0 0 8px;
+    letter-spacing:1px;
+  }
+  .method p{
+    font-size:13.5px;
+    color:#c4c4c4;
+    margin:0;
+  }
+  .tips{
+    margin-top:24px;
+    font-size:14px;
+    color:#d0d0d0;
+  }
+  .tips p{margin:0 0 14px;}
+  .tips strong{color:var(--fg);}
+
+  footer.about{
+    padding:44px 20px 50px;
+    border-top:1px solid var(--line);
+    margin-top:10px;
+  }
+  footer.about h2{
+    font-size:19px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin:0 0 16px;
+  }
+  footer.about .pain{
+    color:#d6d6d6;
+    font-size:14.5px;
+    margin:0 0 14px;
+  }
+  footer.about p{font-size:14px;color:#c4c4c4;margin:0 0 14px;}
+  footer.about .launch{color:var(--accent);}
+
+  .signup-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:22px 0 6px;
+  }
+  .signup-form input{
+    background:#0d0d0d;
+    border:1px solid var(--line);
+    color:var(--fg);
+    padding:14px;
+    font-family:inherit;
+    font-size:14px;
+    border-radius:2px;
+    outline:none;
+    transition:border-color .2s ease;
+  }
+  .signup-form input:focus{border-color:var(--accent);}
+  .signup-form button{
+    background:var(--accent);
+    color:#000;
+    border:none;
+    padding:14px;
+    font-family:inherit;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-radius:2px;
+    cursor:pointer;
+    transition:opacity .2s ease, transform .15s ease;
+  }
+  .signup-form button:active{transform:scale(0.98);}
+  .signup-form button:disabled{opacity:0.6;cursor:default;}
+  .form-msg{font-size:12.5px;color:var(--muted);min-height:16px;margin:0;}
+  .form-msg.success{color:#a9d6b4;}
+  .form-msg.error{color:#e0a0a0;}
+
+  .signature{
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+    font-size:19px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    color:var(--fg);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+  .signature:hover{color:var(--accent);}
+  .badge-md{width:17px;height:17px;flex-shrink:0;}
+  .footer-tagline{
+    display:block;
+    text-align:center;
+    margin-top:14px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+
+<div class="site-header">
+  <div id="site-nav"></div>
+  <div class="top-credit">
+    <a href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+      @joelblancosierra
+      <svg class="badge-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+        <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <span class="dot">·</span>
+    <span>Focusgod</span>
+  </div>
+</div>
+<div class="back-link"><a href="/guias/">&larr; Más guías</a></div>
+
+<header class="hero">
+  <h1><span class="tw-line" data-text="Empieza a orar"></span><br><span class="tw-line" data-text="correctamente así"></span><span class="tw-cursor"></span></h1>
+  <p>8 claves bíblicas para dejar de recitar y empezar a hablar con Dios de verdad.</p>
+</header>
+
+<section class="intro">
+  <p>¿Por qué la oración se siente vacía a veces? No es falta de fe. Es que nadie te enseñó cómo hacerlo de verdad.</p>
+  <p>Orar no es hablar bien. Es hablar con honestidad. No se empieza con tus problemas — se empieza reconociendo quién es Dios, y se deja que lo demás fluya desde ahí.</p>
+  <p>Toca cada punto para ver el versículo y cómo practicarlo hoy.</p>
+</section>
+
+<div class="list" id="accordion">
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">01</span>
+        <span class="item-title">Busca un lugar a solas</span>
+        <span class="item-sub">Mateo 6:6</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Busca un lugar a solas y en silencio.</p>
+        <p>Jesús dijo: entra en tu cuarto, cierra la puerta, y ora a tu Padre que está en secreto. El ambiente importa. No puedes concentrarte en Dios mientras compites con notificaciones y ruido.</p>
+        <div class="habit-row">
+          <span class="habit-label">Practícalo hoy</span>
+          <span class="habit-text">Antes de orar, deja el móvil en otra habitación.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">02</span>
+        <span class="item-title">Reconoce quién es Dios</span>
+        <span class="item-sub">Mateo 6:9</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Empieza reconociendo quién es Dios, no con tu lista de peticiones.</p>
+        <p>El Padre Nuestro no empieza pidiendo. Empieza adorando: "Padre nuestro que estás en los cielos, santificado sea tu nombre." Cuando reconoces quién es Dios primero, tus peticiones cambian de tamaño.</p>
+        <div class="habit-row">
+          <span class="habit-label">Practícalo hoy</span>
+          <span class="habit-text">Dedica el primer minuto solo a reconocer quién es Dios, sin pedir nada.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">03</span>
+        <span class="item-title">Habla claro y natural</span>
+        <span class="item-sub">Mateo 6:7</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Habla claro y natural, sin repetir por repetir.</p>
+        <p>Jesús advirtió contra las "vanas repeticiones". Dios no necesita fórmulas largas ni palabras rebuscadas. Prefiere honestidad simple a elocuencia vacía.</p>
+        <div class="habit-row">
+          <span class="habit-label">Practícalo hoy</span>
+          <span class="habit-text">Habla con Dios como hablarías con alguien de confianza, sin frases hechas.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">04</span>
+        <span class="item-title">Cuéntale con gratitud</span>
+        <span class="item-sub">Filipenses 4:6</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Cuéntale lo que te preocupa, pero con gratitud.</p>
+        <p>Este versículo no dice que no sientas ansiedad. Dice que, en lugar de cargarla tú solo, la entregues con gratitud de fondo. Eso cambia todo.</p>
+        <div class="habit-row">
+          <span class="habit-label">Practícalo hoy</span>
+          <span class="habit-text">Antes de contarle tu problema, nombra algo por lo que estás agradecido hoy.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">05</span>
+        <span class="item-title">Sé completamente honesto</span>
+        <span class="item-sub">Salmos 62:8</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Sé completamente honesto, Él ya conoce tu corazón.</p>
+        <p>"Derramad delante de Él vuestro corazón." No hace falta suavizar lo que sientes. Puedes traer tu rabia, tu duda, tu cansancio, tal como están.</p>
+        <div class="habit-row">
+          <span class="habit-label">Practícalo hoy</span>
+          <span class="habit-text">Dile a Dios exactamente lo que sientes hoy, sin filtrarlo.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">06</span>
+        <span class="item-title">Quédate en silencio</span>
+        <span class="item-sub">Salmos 46:10</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Quédate en silencio y escucha antes de pedir.</p>
+        <p>"Estad quietos, y conoced que yo soy Dios." La oración no es solo hablar. Antes de pedir, hay que aprender a callar y escuchar.</p>
+        <div class="habit-row">
+          <span class="habit-label">Practícalo hoy</span>
+          <span class="habit-text">Antes de empezar a pedir, quédate 60 segundos en silencio.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">07</span>
+        <span class="item-title">Hazlo cada mañana</span>
+        <span class="item-sub">Salmos 5:3</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">Hazlo cada mañana antes que nada.</p>
+        <p>"De mañana oirás mi voz; de mañana me presentaré delante de ti." El orden importa. Orar antes que cualquier otra cosa marca el tono del resto del día.</p>
+        <div class="habit-row">
+          <span class="habit-label">Practícalo hoy</span>
+          <span class="habit-text">Ora antes de mirar el móvil por primera vez mañana.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item reveal">
+    <button class="item-head">
+      <span class="item-head-text">
+        <span class="item-num">08</span>
+        <span class="item-title">No te rindas</span>
+        <span class="item-sub">Lucas 18:1</span>
+      </span>
+      <span class="item-toggle">+</span>
+    </button>
+    <div class="item-body">
+      <div class="item-body-inner">
+        <p class="tag-feel">No te rindas aunque no veas respuesta todavía.</p>
+        <p>Jesús contó una parábola sobre la necesidad de "orar siempre, y no desmayar". Las respuestas no siempre llegan rápido. La perseverancia es parte de la oración, no un fallo de ella.</p>
+        <div class="habit-row">
+          <span class="habit-label">Practícalo hoy</span>
+          <span class="habit-text">Sigue orando por lo mismo, aunque lleves semanas sin ver respuesta.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section class="value">
+  <h2>Una estructura simple para orar</h2>
+
+  <div class="method reveal">
+    <h3>A — Adoración</h3>
+    <p>Empieza reconociendo quién es Dios. No lo que necesitas de Él, sino quién es.</p>
+  </div>
+
+  <div class="method reveal">
+    <h3>C — Confesión</h3>
+    <p>Sé honesto con lo que has hecho mal. No para castigarte, sino para soltarlo.</p>
+  </div>
+
+  <div class="method reveal">
+    <h3>T — Gratitud (Thanksgiving)</h3>
+    <p>Antes de pedir, agradece. Cambia el punto de partida de toda la oración.</p>
+  </div>
+
+  <div class="method reveal">
+    <h3>S — Súplica</h3>
+    <p>Ahora sí, trae tus peticiones. Las tuyas y las de otros. Con la confianza de quien ya reconoció, confesó y agradeció antes de pedir.</p>
+  </div>
+
+  <div class="tips">
+    <p><strong>No necesitas una oración perfecta.</strong> Necesitas una oración honesta.</p>
+    <p>La oración no es un ritual. Es una relación. Y como toda relación, mejora con la práctica.</p>
+  </div>
+</section>
+
+<footer class="about reveal">
+  <h2>¿Qué es Focusgod?</h2>
+  <p class="pain">¿Sientes que tienes demasiadas distracciones? ¿Una adicción de la que no logras soltarte? ¿Sientes que tu vida no tiene un propósito claro?</p>
+  <p>Focusgod nace para eso: una app para ayudarte a poner tu foco en Dios en medio del ruido. Menos distracción, más presencia, un propósito real.</p>
+  <p class="launch">Está a punto de salir. Déjanos tu correo y entérate antes que nadie.</p>
+
+  <form id="signupForm" class="signup-form">
+    <input type="email" id="signupEmail" placeholder="tu@correo.com" required>
+    <button type="submit">Avísame cuando lance</button>
+  </form>
+  <p class="form-msg" id="formMsg"></p>
+
+  <a class="signature" href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
+    joelblancosierra
+    <svg class="badge-md" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#3897F0"/>
+      <path d="M7 12.5L10.2 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  <span class="footer-tagline">FOCUSGOD — no seas un cristiano promedio</span>
+</footer>
+
+<script>
+function typeSequential(elements, speed, cb){
+  var i = 0;
+  function typeNext(){
+    if(i >= elements.length){ if(cb) cb(); return; }
+    var el = elements[i];
+    var text = el.getAttribute('data-text');
+    var j = 0;
+    el.textContent = '';
+    var interval = setInterval(function(){
+      el.textContent += text[j];
+      j++;
+      if(j >= text.length){
+        clearInterval(interval);
+        i++;
+        typeNext();
+      }
+    }, speed);
+  }
+  typeNext();
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  var lines = document.querySelectorAll('.tw-line');
+  typeSequential(Array.prototype.slice.call(lines), 45);
+
+  var progressFill = document.getElementById('progressBarFill');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var scrollTop = h.scrollTop || document.body.scrollTop;
+    var scrollHeight = h.scrollHeight - h.clientHeight;
+    var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    progressFill.style.height = progress + '%';
+  });
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  document.querySelectorAll('.item-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.item');
+      var body = item.querySelector('.item-body');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.item.open').forEach(function(openItem){
+        if(openItem !== item){
+          openItem.classList.remove('open');
+          openItem.querySelector('.item-body').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        body.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVYs7btmLpBToTdGD2cxISlcJv6RLzjgrv_a0M5lU6v15V-Sc9sG1KsrTdTVKFPOWe/exec';
+  var form = document.getElementById('signupForm');
+  var msg = document.getElementById('formMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('signupEmail').value;
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    msg.textContent = '';
+    msg.className = 'form-msg';
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify({email: email})
+    })
+    .then(function(){
+      msg.textContent = '¡Hecho! Te avisaremos en cuanto salga.';
+      msg.className = 'form-msg success';
+      form.reset();
+      btn.textContent = 'Avísame cuando lance';
+      btn.disabled = false;
+    })
+    .catch(function(){
+      msg.textContent = 'Ha fallado algo. Inténtalo de nuevo.';
+      msg.className = 'form-msg error';
+      btn.textContent = 'Avísame cuando lance';
+      btn.disabled = false;
+    });
+  });
+});
+</script>
+<script src="/nav.js"></script>
+
+</body>
+</html>
