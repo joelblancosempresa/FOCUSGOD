@@ -1,45 +1,37 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-
 export default function FinalCTA() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
-    <section ref={ref} className="bg-bg py-20 px-6 text-center">
-      <div className="max-w-xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="text-3xl sm:text-4xl font-semibold text-ink mb-4"
+    <section style={{ background: "#f0492e", padding: "60px 24px", textAlign: "center" }}>
+      <div style={{ maxWidth: "420px", margin: "0 auto" }}>
+        <h2 style={{
+          fontSize: "32px",
+          fontWeight: 700,
+          color: "#fff",
+          lineHeight: 1.2,
+          letterSpacing: "-0.3px",
+          marginBottom: "10px",
+        }}>
+          Tu rutina espiritual empieza hoy.
+        </h2>
+        <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.75)", marginBottom: "28px", lineHeight: 1.6 }}>
+          Es para siempre. Sin atajos. Sin excusas.
+        </p>
+        <a
+          href="https://apps.apple.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            background: "#fff",
+            color: "#f0492e",
+            fontWeight: 700,
+            fontSize: "16px",
+            padding: "16px 32px",
+            borderRadius: "14px",
+            textDecoration: "none",
+          }}
         >
-          Empieza tu camino con Dios hoy.
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-ink2 text-lg mb-8"
-        >
-          Gratis los primeros 3 días. Sin tarjeta.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <a
-            href="https://apps.apple.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-blue text-lg"
-          >
-            🍎 Descargar en App Store
-          </a>
-        </motion.div>
+          Descargar gratis →
+        </a>
       </div>
     </section>
   );
