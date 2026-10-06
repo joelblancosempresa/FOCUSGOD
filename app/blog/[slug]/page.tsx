@@ -331,7 +331,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               </span>
               <span className="text-ink3 text-sm">{post.date}</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-black text-ink leading-snug mb-6">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-ink leading-snug mb-6">
               {post.title}
             </h1>
             <div className="h-px bg-black/10" />
@@ -341,7 +341,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {paragraphs.map((p, i) => {
               if (p.startsWith("**") && p.endsWith("**")) {
                 return (
-                  <h2 key={i} className="text-xl font-black text-ink mt-8 mb-3">
+                  <h2 key={i} className="text-xl font-semibold text-ink mt-8 mb-3">
                     {p.replace(/\*\*/g, "")}
                   </h2>
                 );
@@ -386,11 +386,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               className="rounded-3xl px-8 py-10 text-center text-white"
               style={{ background: "linear-gradient(135deg, #1CB0F6 0%, #0EA5E9 100%)" }}
             >
-              <h3 className="text-2xl font-black mb-3">¿Listo para poner a Dios primero?</h3>
+              <h3 className="text-2xl font-semibold mb-3">¿Listo para poner a Dios primero?</h3>
               <p className="text-white/80 mb-6">Descarga FocusGod y empieza mañana por la mañana.</p>
               <a
                 href="/download"
-                className="inline-block bg-white text-blue font-black px-8 py-4 rounded-2xl hover:opacity-90 transition-opacity"
+                className="inline-block bg-white text-blue font-semibold px-8 py-4 rounded-2xl hover:opacity-90 transition-opacity"
               >
                 Descargar gratis →
               </a>

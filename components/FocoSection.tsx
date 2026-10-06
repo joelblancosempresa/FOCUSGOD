@@ -16,7 +16,7 @@ export default function FocoSection() {
         className="max-w-4xl mx-auto rounded-3xl px-8 py-14 text-center text-white"
         style={{ background: "linear-gradient(135deg, #1CB0F6 0%, #0EA5E9 100%)" }}
       >
-        <h2 className="text-3xl sm:text-4xl font-black mb-4">
+        <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
           Recupera el tiempo que le robas a Dios.
         </h2>
         <p className="text-white/80 text-lg mb-8">
@@ -26,7 +26,7 @@ export default function FocoSection() {
           href="https://apps.apple.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-white text-blue font-black px-8 py-4 rounded-2xl text-lg hover:opacity-90 transition-opacity active:scale-95"
+          className="inline-block bg-white text-blue font-semibold px-8 py-4 rounded-2xl text-lg hover:opacity-90 transition-opacity active:scale-95"
           style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.15)" }}
         >
           Prueba 3 días gratis →

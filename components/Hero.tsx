@@ -8,7 +8,7 @@ export default function Hero() {
           <p className="text-blue font-semibold text-sm uppercase tracking-widest mb-4">
             App de bienestar espiritual
           </p>
-          <h1 className="text-4xl sm:text-5xl font-black text-ink leading-[1.1] mb-6">
+          <h1 className="text-4xl sm:text-5xl font-semibold text-ink leading-[1.1] mb-6">
             La única forma real de dejar el teléfono y buscar a Dios primero.
           </h1>
           <p className="text-ink2 text-lg leading-relaxed mb-8">
@@ -38,7 +38,7 @@ export default function Hero() {
               🙏 Orar ahora
             </button>
             <div className="mt-3 text-center">
-              <span className="text-yellow font-black text-2xl">🔥 14</span>
+              <span className="text-yellow font-semibold text-2xl">🔥 14</span>
               <p className="text-white/50 text-xs mt-1">días seguidos</p>
             </div>
           </div>

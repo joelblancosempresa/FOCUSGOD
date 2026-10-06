@@ -25,7 +25,7 @@ export default function Stats() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="text-center"
             >
-              <p className="text-4xl sm:text-5xl font-black text-blue">{s.value}</p>
+              <p className="text-4xl sm:text-5xl font-semibold text-blue">{s.value}</p>
               <p className="text-sm text-ink2 mt-2 leading-snug max-w-[160px] mx-auto">{s.label}</p>
             </motion.div>
           ))}

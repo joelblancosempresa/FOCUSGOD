@@ -14,7 +14,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-3xl sm:text-4xl font-black text-ink mb-4"
+          className="text-3xl sm:text-4xl font-semibold text-ink mb-4"
         >
           Empieza tu camino con Dios hoy.
         </motion.h2>

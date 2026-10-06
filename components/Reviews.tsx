@@ -35,7 +35,7 @@ export default function Reviews() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-3xl sm:text-4xl font-black text-ink text-center mb-12"
+          className="text-3xl sm:text-4xl font-semibold text-ink text-center mb-12"
         >
           Vidas que están cambiando.
         </motion.h2>

@@ -79,7 +79,7 @@ export default function Blog() {
         <section className="bg-cream py-16 px-6 text-center">
           <div className="max-w-2xl mx-auto">
             <p className="text-blue font-semibold text-sm uppercase tracking-widest mb-4">El Blog de FocusGod</p>
-            <h1 className="text-4xl sm:text-5xl font-black text-ink leading-[1.1] mb-4">
+            <h1 className="text-4xl sm:text-5xl font-semibold text-ink leading-[1.1] mb-4">
               Tecnología, fe y salud digital.
             </h1>
             <p className="text-ink2 text-lg">
@@ -116,7 +116,7 @@ export default function Blog() {
                 </span>
                 <span className="text-ink3 text-xs">{posts[0].date}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-ink mb-3 leading-snug">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-ink mb-3 leading-snug">
                 {posts[0].title}
               </h2>
               <p className="text-ink2 leading-relaxed mb-6">{posts[0].excerpt}</p>
@@ -140,7 +140,7 @@ export default function Blog() {
                     <span className="text-blue text-xs font-bold">{p.category}</span>
                     <span className="text-ink3 text-xs">· {p.date}</span>
                   </div>
-                  <h3 className="font-black text-ink leading-snug mb-2 group-hover:text-blue transition-colors">
+                  <h3 className="font-semibold text-ink leading-snug mb-2 group-hover:text-blue transition-colors">
                     {p.title}
                   </h3>
                   <p className="text-sm text-ink2 leading-relaxed line-clamp-3">{p.excerpt}</p>
@@ -154,7 +154,7 @@ export default function Blog() {
         {/* CTA */}
         <section className="bg-cream py-16 px-6 text-center">
           <div className="max-w-xl mx-auto">
-            <h2 className="text-2xl font-black text-ink mb-3">¿Listo para tomar el control?</h2>
+            <h2 className="text-2xl font-semibold text-ink mb-3">¿Listo para tomar el control?</h2>
             <p className="text-ink2 mb-6">Descarga FocusGod y pon a Dios primero cada mañana.</p>
             <a href="/download" className="btn-blue">
               🍎 Descargar gratis →

@@ -17,10 +17,9 @@ body {
 
 @layer utilities {
   .btn-blue {
-    @apply bg-blue text-white font-bold px-7 py-4 rounded-2xl text-base transition-all duration-150 hover:opacity-90 active:scale-95;
-    box-shadow: 0 4px 16px rgba(28, 176, 246, 0.35);
+    @apply bg-blue text-white font-medium px-7 py-3 rounded-2xl text-base transition-all duration-150 hover:opacity-90 active:scale-95;
   }
   .btn-outline {
-    @apply bg-white text-blue font-bold px-7 py-4 rounded-2xl text-base border-2 border-blue transition-all duration-150 hover:bg-blue hover:text-white active:scale-95;
+    @apply bg-white text-blue font-medium px-7 py-3 rounded-2xl text-base border-2 border-blue transition-all duration-150 hover:bg-blue hover:text-white active:scale-95;
   }
 }

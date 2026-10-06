@@ -40,7 +40,7 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl sm:text-4xl font-black text-ink text-center mb-14"
+          className="text-3xl sm:text-4xl font-semibold text-ink text-center mb-14"
         >
           Simple. Poderoso. Efectivo.
         </motion.h2>
@@ -56,7 +56,7 @@ export default function HowItWorks() {
             >
               <div className="flex-1">
                 <p className="text-5xl mb-4">{f.emoji}</p>
-                <h3 className="text-2xl font-black text-ink mb-3">{f.title}</h3>
+                <h3 className="text-2xl font-semibold text-ink mb-3">{f.title}</h3>
                 <p className="text-ink2 text-lg leading-relaxed">{f.desc}</p>
               </div>
               <div className="w-48 h-48 bg-cream rounded-3xl flex items-center justify-center text-8xl shadow-sm flex-shrink-0">

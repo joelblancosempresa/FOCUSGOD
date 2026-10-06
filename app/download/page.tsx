@@ -53,7 +53,7 @@ export default function Download() {
               <p className="text-blue font-semibold text-sm uppercase tracking-widest mb-4">
                 Disponible en App Store
               </p>
-              <h1 className="text-4xl sm:text-5xl font-black text-ink leading-[1.1] mb-6">
+              <h1 className="text-4xl sm:text-5xl font-semibold text-ink leading-[1.1] mb-6">
                 La forma más simple de poner a Dios primero.
               </h1>
               <p className="text-ink2 text-lg leading-relaxed mb-8">
@@ -87,7 +87,7 @@ export default function Download() {
                 </button>
                 <div className="flex justify-between items-center">
                   <div>
-                    <span className="text-yellow font-black text-xl">🔥 14</span>
+                    <span className="text-yellow font-semibold text-xl">🔥 14</span>
                     <p className="text-white/50 text-xs">días seguidos</p>
                   </div>
                   <div className="text-right">
@@ -103,14 +103,14 @@ export default function Download() {
         {/* Features grid */}
         <section className="bg-bg py-20 px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-black text-ink text-center mb-12">
+            <h2 className="text-3xl font-semibold text-ink text-center mb-12">
               Todo lo que necesitas para empezar.
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
               {features.map((f, i) => (
                 <div key={i} className="bg-cream rounded-3xl p-6">
                   <p className="text-3xl mb-3">{f.icon}</p>
-                  <h3 className="font-black text-ink mb-2">{f.title}</h3>
+                  <h3 className="font-semibold text-ink mb-2">{f.title}</h3>
                   <p className="text-sm text-ink2 leading-relaxed">{f.desc}</p>
                 </div>
               ))}
@@ -121,7 +121,7 @@ export default function Download() {
         {/* CTA final */}
         <section className="bg-cream py-20 px-6 text-center">
           <div className="max-w-xl mx-auto">
-            <h2 className="text-3xl font-black text-ink mb-4">Empieza hoy. Es gratis.</h2>
+            <h2 className="text-3xl font-semibold text-ink mb-4">Empieza hoy. Es gratis.</h2>
             <p className="text-ink2 text-lg mb-8">3 días de prueba completa. Sin tarjeta de crédito.</p>
             <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="btn-blue text-lg">
               🍎 Descargar en App Store
