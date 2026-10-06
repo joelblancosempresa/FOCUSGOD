@@ -25,10 +25,10 @@ export default function Navbar() {
             height: "64px",
             padding: "0 14px 0 10px",
             borderRadius: "24px",
-            background: "rgba(252, 251, 249, 0.92)",
-            backdropFilter: "blur(24px) saturate(180%)",
-            WebkitBackdropFilter: "blur(24px) saturate(180%)",
-            boxShadow: "0 2px 24px rgba(32,36,46,0.10), 0 0 0 1px rgba(32,36,46,0.06)",
+            background: "rgba(252, 251, 249, 0.55)",
+            backdropFilter: "blur(20px) saturate(160%)",
+            WebkitBackdropFilter: "blur(20px) saturate(160%)",
+            boxShadow: "0 1px 16px rgba(32,36,46,0.06), 0 0 0 1px rgba(32,36,46,0.04)",
           }}
         >
           {/* Logo + name */}
