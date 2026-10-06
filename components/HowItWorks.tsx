@@ -3,27 +3,21 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const steps = [
+const features = [
   {
-    number: "01",
-    title: "bloquea tus apps",
-    desc: "elige qué apps se bloquean cada mañana. instagram, tiktok, youtube — lo que sea. quedan cerradas hasta que cumplas.",
-    icon: "🔒",
-    color: "bg-red/10 text-red",
+    emoji: "🚫",
+    title: "Bloquea Instagram, TikTok y YouTube",
+    desc: "La app bloquea las apps que te roban el tiempo hasta que completes tu momento con Dios. Sin atajos. Sin poder saltártelo.",
   },
   {
-    number: "02",
-    title: "pon a Dios primero",
-    desc: "ora. lee la biblia. un par de minutos son suficientes. FocusGod te guía si no sabes por dónde empezar.",
-    icon: "🙏",
-    color: "bg-amber/10 text-amber",
+    emoji: "🙏",
+    title: "Ora y lee la Biblia cada día",
+    desc: "Una rutina espiritual guiada cada mañana. Oraciones, versículos y reflexiones que caben en 5 minutos.",
   },
   {
-    number: "03",
-    title: "desbloquea todo",
-    desc: "cumpliste. las apps se abren. el día es tuyo — sin culpa, sin pelea contigo mismo.",
-    icon: "✅",
-    color: "bg-green/10 text-green",
+    emoji: "🔥",
+    title: "Construye el hábito que siempre quisiste",
+    desc: "Rachas diarias, recordatorios inteligentes y seguimiento de tu crecimiento espiritual. El hábito se forma solo.",
   },
 ];
 
@@ -32,42 +26,42 @@ export default function HowItWorks() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="bg-bg py-20 px-6">
+    <section id="features" ref={ref} className="bg-bg py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-red text-sm uppercase tracking-widest mb-3 font-medium text-center"
+          className="text-blue text-sm uppercase tracking-widest mb-2 font-semibold text-center"
         >
-          cómo funciona
+          Cómo funciona
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-serif text-3xl sm:text-4xl text-ink text-center mb-14"
+          className="text-3xl sm:text-4xl font-black text-ink text-center mb-14"
         >
-          tres pasos. sin trampa.
+          Simple. Poderoso. Efectivo.
         </motion.h2>
 
-        <div className="grid gap-6 sm:grid-cols-3">
-          {steps.map((step, i) => (
+        <div className="flex flex-col gap-16">
+          {features.map((f, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.12 }}
-              className="bg-card rounded-3xl p-7 shadow-sm border border-ink/5"
+              transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
+              className={`flex flex-col md:flex-row gap-8 items-center ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
             >
-              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-5 ${step.color}`}>
-                {step.icon}
+              <div className="flex-1">
+                <p className="text-5xl mb-4">{f.emoji}</p>
+                <h3 className="text-2xl font-black text-ink mb-3">{f.title}</h3>
+                <p className="text-ink2 text-lg leading-relaxed">{f.desc}</p>
               </div>
-              <p className="text-xs text-ink3 font-semibold uppercase tracking-widest mb-2">
-                paso {step.number}
-              </p>
-              <h3 className="font-serif text-xl text-ink mb-3">{step.title}</h3>
-              <p className="text-sm text-ink2 leading-relaxed">{step.desc}</p>
+              <div className="w-48 h-48 bg-cream rounded-3xl flex items-center justify-center text-8xl shadow-sm flex-shrink-0">
+                {f.emoji}
+              </div>
             </motion.div>
           ))}
         </div>
