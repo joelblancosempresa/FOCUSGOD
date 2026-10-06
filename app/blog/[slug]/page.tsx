@@ -384,7 +384,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           <div className="mt-12 pt-8 border-t border-black/10">
             <div
               className="rounded-3xl px-8 py-10 text-center text-white"
-              style={{ background: "linear-gradient(135deg, #1CB0F6 0%, #0EA5E9 100%)" }}
+              style={{ background: "linear-gradient(135deg, #f0492e 0%, #d03a1f 100%)" }}
             >
               <h3 className="text-2xl font-semibold mb-3">¿Listo para poner a Dios primero?</h3>
               <p className="text-white/80 mb-6">Descarga FocusGod y empieza mañana por la mañana.</p>

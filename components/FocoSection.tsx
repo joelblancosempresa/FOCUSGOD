@@ -14,7 +14,7 @@ export default function FocoSection() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
         className="max-w-4xl mx-auto rounded-3xl px-8 py-14 text-center text-white"
-        style={{ background: "linear-gradient(135deg, #1CB0F6 0%, #0EA5E9 100%)" }}
+        style={{ background: "linear-gradient(135deg, #f0492e 0%, #d03a1f 100%)" }}
       >
         <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
           Recupera el tiempo que le robas a Dios.
