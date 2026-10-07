@@ -21,7 +21,7 @@ export default function Navbar() {
           className="pointer-events-auto w-full flex items-center justify-between"
           style={{
             margin: "8px 12px 0",
-            height: "52px",
+            height: "56px",
             padding: "0 12px 0 8px",
             borderRadius: "18px",
             background: "rgba(255, 255, 255, 0.55)",
@@ -35,12 +35,12 @@ export default function Navbar() {
             <Image
               src="/app-icon.png"
               alt="FocusGod"
-              width={36}
-              height={36}
-              className="rounded-[10px]"
+              width={40}
+              height={40}
+              className="rounded-[11px]"
               priority
             />
-            <span style={{ fontSize: "17px", fontWeight: 700, color: "#20242e", letterSpacing: "-0.3px" }}>
+            <span style={{ fontSize: "18px", fontWeight: 700, color: "#20242e", letterSpacing: "-0.3px" }}>
               FocusGod
             </span>
           </Link>
