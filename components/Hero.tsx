@@ -67,10 +67,10 @@ export default function Hero() {
 
         {/* Texto + botones — derecha */}
         <div style={{ marginLeft: "79px", width: "522px", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h1 style={{ fontSize: "40px", fontWeight: 700, color: "#333", lineHeight: 1.1, letterSpacing: "-0.5px", textAlign: "center", margin: 0 }}>
+          <h1 style={{ fontSize: "40px", fontWeight: 600, color: "#333", lineHeight: 1.1, letterSpacing: "-0.5px", textAlign: "center", margin: 0 }}>
             Ora primero. Enfoca tu día.
           </h1>
-          <p style={{ fontSize: "14px", color: "#333", lineHeight: 1.6, textAlign: "center", marginTop: "14px", width: "480px", margin: "14px 0 0" }}>
+          <p style={{ fontSize: "14px", fontWeight: 600, color: "#555", lineHeight: 1.6, textAlign: "center", width: "490px", margin: "16px 0 0" }}>
             FocusGod bloquea Instagram, TikTok y YouTube hasta que hayas pasado tiempo con Dios.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginTop: "20px" }}>
@@ -78,13 +78,13 @@ export default function Hero() {
               href="https://apps.apple.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "264px", height: "60px", borderRadius: "25px", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", textDecoration: "none" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "264px", height: "60px", borderRadius: "20px", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", textDecoration: "none" }}
             >
               Descargar gratis
             </a>
             <a
               href="/download"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "264px", height: "60px", borderRadius: "25px", background: "rgba(255,255,255,0.7)", color: "#333", fontWeight: 600, fontSize: "16px", textDecoration: "none", border: "1.5px solid rgba(0,0,0,0.1)" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "264px", height: "60px", borderRadius: "20px", background: "#fff", color: "#333", fontWeight: 600, fontSize: "16px", textDecoration: "none", border: "1px solid #ebe9dd" }}
             >
               Ya tengo cuenta
             </a>

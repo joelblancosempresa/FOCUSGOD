@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import DesktopFeatures from "@/components/DesktopFeatures";
 import DesktopCTA from "@/components/DesktopCTA";
 import VerseOfDay from "@/components/VerseOfDay";
 import HowItWorks from "@/components/HowItWorks";
@@ -16,14 +15,13 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <DesktopFeatures />
       <VerseOfDay />
       <HowItWorks />
       <FocoSection />
       <AsSeenIn />
       <Reviews />
       <Stats />
-      <FinalCTA />
+      <div className="md:hidden"><FinalCTA /></div>
       <DesktopCTA />
       <Footer />
     </main>

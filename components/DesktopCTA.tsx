@@ -1,20 +1,62 @@
 export default function DesktopCTA() {
   return (
-    <section
-      className="hidden md:flex md:flex-col md:items-center md:justify-center"
-      style={{ background: "#ffffff", height: "300px" }}
-    >
-      <h2 style={{ fontSize: "40px", fontWeight: 700, color: "#1a1a1a", textAlign: "center", margin: "0 0 24px" }}>
-        Empieza hoy. Es gratis.
-      </h2>
-      <a
-        href="https://apps.apple.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "280px", height: "58px", borderRadius: "50px", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "16px", textDecoration: "none", boxShadow: "0 4px 0 0 #bf321c" }}
+    <div className="hidden md:block">
+
+      {/* Illustration section */}
+      <div style={{ position: "relative", width: "100%", height: "563px", overflow: "hidden" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/cta-desktop-bg.png"
+          alt=""
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+        />
+      </div>
+
+      {/* CTA text section */}
+      <div
+        style={{
+          background: "#ffffff",
+          height: "198px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "20px",
+        }}
       >
-        🍎 Descargar en App Store
-      </a>
-    </section>
+        <h2 style={{
+          fontSize: "40px",
+          fontWeight: 600,
+          color: "#333333",
+          textAlign: "center",
+          maxWidth: "667px",
+          margin: 0,
+          lineHeight: 1.2,
+        }}>
+          Tu rutina espiritual empieza hoy
+        </h2>
+        <a
+          href="https://apps.apple.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "280px",
+            height: "60px",
+            background: "#f0492e",
+            color: "#fff",
+            fontWeight: 700,
+            fontSize: "16px",
+            borderRadius: "16px",
+            textDecoration: "none",
+          }}
+        >
+          Descargar gratis
+        </a>
+      </div>
+
+    </div>
   );
 }
