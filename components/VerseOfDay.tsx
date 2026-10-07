@@ -17,7 +17,7 @@ export default function VerseOfDay() {
           letterSpacing: "-0.2px",
           marginBottom: "28px",
         }}>
-          <Image src="/bible-icon.png" alt="" width={30} height={30} style={{ flexShrink: 0, mixBlendMode: "multiply" }} />
+          <Image src="/bible-icon.png" alt="" width={30} height={30} style={{ flexShrink: 0 }} />
           Versículo del día
         </h2>
 
