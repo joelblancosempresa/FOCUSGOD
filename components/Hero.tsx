@@ -5,8 +5,8 @@ export default function Hero() {
     <section style={{ background: "#ffffff", paddingTop: "82px", overflow: "hidden" }}>
       <div className="md:max-w-6xl md:mx-auto md:flex md:items-center md:gap-16 md:px-14 md:pb-20">
 
-        {/* Phone mockup — top on mobile, right on desktop */}
-        <div className="flex justify-center mt-11 md:mt-0 md:flex-1 md:order-2">
+        {/* Phone mockup — top on mobile, LEFT on desktop */}
+        <div className="flex justify-center mt-11 md:mt-0 md:flex-1 md:order-1">
           <div style={{ maxWidth: "290px", width: "100%", borderRadius: "28px", overflow: "hidden" }}>
             <div style={{ background: "#20242e", padding: "28px 20px 24px" }}>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "10px", marginBottom: "24px" }}>
@@ -46,8 +46,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Text + buttons — bottom on mobile, left on desktop */}
-        <div className="flex flex-col items-center text-center gap-[14px] px-6 pt-10 pb-[52px] md:flex-1 md:order-1 md:items-start md:text-left md:p-0">
+        {/* Text + buttons — bottom on mobile, RIGHT on desktop */}
+        <div className="flex flex-col items-center text-center gap-[14px] px-6 pt-10 pb-[52px] md:flex-1 md:order-2 md:items-start md:text-left md:p-0">
           <h1
             className="md:text-[4rem]"
             style={{ fontSize: "2.6rem", fontWeight: 700, color: "#333333", lineHeight: 1.1, letterSpacing: "-0.5px", margin: 0 }}

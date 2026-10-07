@@ -16,8 +16,19 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none"
          style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
+      <style>{`
+        @media (min-width: 768px) {
+          .navbar-pill {
+            margin: 0 !important;
+            padding: 0 40px !important;
+            border-radius: 0 !important;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.08) !important;
+            background: rgba(255,255,255,0.98) !important;
+          }
+        }
+      `}</style>
       <div
-        className="pointer-events-auto w-full sm:flex sm:items-center sm:justify-between"
+        className="navbar-pill pointer-events-auto w-full sm:flex sm:items-center sm:justify-between"
         style={{
           margin: "8px 12px 0",
           padding: open ? "0 12px 12px 8px" : "0 12px 0 8px",
