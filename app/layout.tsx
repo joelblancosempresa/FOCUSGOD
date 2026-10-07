@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  themeColor: "#ffffff",
   title: "FocusGod — bloquea apps hasta que ores",
   description:
     "FocusGod bloquea tus apps hasta que pones a Dios primero. Ora, lee la Biblia, desbloquea todo.",

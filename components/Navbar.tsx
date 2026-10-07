@@ -25,8 +25,10 @@ export default function Navbar() {
             height: "60px",
             padding: "0 14px 0 10px",
             borderRadius: "20px",
-            background: "#ffffff",
-            boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+            background: "rgba(255, 255, 255, 0.72)",
+            backdropFilter: "blur(20px) saturate(180%)",
+            WebkitBackdropFilter: "blur(20px) saturate(180%)",
+            boxShadow: "0 1px 12px rgba(0,0,0,0.07)",
           }}
         >
           {/* Logo + name */}
