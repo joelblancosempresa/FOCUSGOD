@@ -1,14 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog — FocusGod | Tecnología, fe y salud digital",
-  description: "Artículos sobre cómo las redes sociales, la pornografía y la tecnología afectan tu cerebro, tu fe y tu vida espiritual.",
-};
-
-const categories = ["Todo", "Redes Sociales", "Pornografía & Cerebro", "Salud Digital", "Fe & Tecnología"];
+const categories = ["Todo", "Redes Sociales", "Pornografía", "Salud Digital", "Fe & Tecnología", "Oración"];
 
 const posts = [
   {
@@ -17,150 +14,190 @@ const posts = [
     date: "Oct 2, 2026",
     title: "Instagram fue diseñado para robarte la atención — y funciona",
     excerpt: "Los ingenieros de Meta no diseñaron una red social. Diseñaron una máquina de dopamina. Aquí está la ciencia detrás de cada función que te tiene pegado a la pantalla.",
+    color: "#e8f0fe",
   },
   {
     slug: "pornografia-cerebro-lo-que-la-ciencia-dice",
-    category: "Pornografía & Cerebro",
+    category: "Pornografía",
     date: "Sep 28, 2026",
     title: "Lo que la pornografía le hace a tu cerebro: la neurociencia lo explica",
-    excerpt: "La pornografía activa los mismos circuitos de recompensa que la cocaína. No es una metáfora — es neurología. Y las consecuencias espirituales van mucho más allá.",
+    excerpt: "La pornografía activa los mismos circuitos de recompensa que la cocaína. No es una metáfora — es neurología.",
+    color: "#fce8e8",
   },
   {
     slug: "tiktok-scroll-infinito-dopamina",
     category: "Redes Sociales",
     date: "Sep 20, 2026",
-    title: "TikTok y el scroll infinito: cómo destruyen tu capacidad de concentración",
-    excerpt: "El scroll infinito fue inventado por un ingeniero que lo llama 'el mayor error de su vida'. Los estudios muestran que reduce la capacidad de atención a menos de 8 segundos.",
+    title: "TikTok y el scroll infinito: cómo destruyen tu concentración",
+    excerpt: "El scroll infinito fue inventado por un ingeniero que lo llama 'el mayor error de su vida'.",
+    color: "#fff0e0",
   },
   {
     slug: "movil-al-despertar-destruye-tu-dia",
     category: "Salud Digital",
     date: "Sep 15, 2026",
     title: "Por qué revisar el móvil al despertar destruye literalmente tu día",
-    excerpt: "Los primeros 30 minutos del día determinan tu estado mental las siguientes horas. La ciencia del cortisol y la atención explica por qué Mateo 6:33 es también un consejo de neurología.",
+    excerpt: "Los primeros 30 minutos del día determinan tu estado mental las siguientes horas.",
+    color: "#e8f5e9",
   },
   {
     slug: "facebook-experimento-emocional",
     category: "Redes Sociales",
     date: "Sep 8, 2026",
     title: "Facebook manipuló las emociones de 700.000 usuarios sin decirles nada",
-    excerpt: "En 2014, Facebook publicó un estudio confesando que había manipulado los feeds de casi un millón de personas para alterar su estado de ánimo. Aquí está lo que eso revela sobre las redes.",
+    excerpt: "En 2014, Facebook publicó un estudio confesando que había manipulado los feeds de casi un millón de personas.",
+    color: "#f3e8ff",
   },
   {
     slug: "notificaciones-trampa-dopamina",
     category: "Salud Digital",
     date: "Sep 1, 2026",
     title: "La trampa de las notificaciones: por qué no puedes ignorarlas",
-    excerpt: "Cada notificación activa una pequeña descarga de dopamina — suficiente para interrumpir cualquier tarea. Y están diseñadas exactamente para eso.",
+    excerpt: "Cada notificación activa una pequeña descarga de dopamina — suficiente para interrumpir cualquier tarea.",
+    color: "#fff8e1",
   },
   {
     slug: "pantalla-antes-de-dormir-fe",
     category: "Fe & Tecnología",
     date: "Ago 25, 2026",
-    title: "Pantalla antes de dormir: el enemigo silencioso de tu descanso y tu fe",
-    excerpt: "La luz azul suprime la melatonina. Pero el daño espiritual es igual de real — llenar tu mente de contenido mundano justo antes de dormir aleja la voz de Dios.",
+    title: "Pantalla antes de dormir: el enemigo silencioso de tu fe",
+    excerpt: "La luz azul suprime la melatonina. El daño espiritual es igual de real.",
+    color: "#e8f0fe",
   },
   {
     slug: "adiccion-redes-sociales-fe-cristiana",
     category: "Fe & Tecnología",
     date: "Ago 18, 2026",
-    title: "Adicción a las redes sociales: lo que la fe cristiana sabe que la ciencia acaba de descubrir",
-    excerpt: "La Biblia lleva siglos hablando de idolatría. Hoy los psicólogos lo llaman 'uso compulsivo de tecnología'. El diagnóstico es el mismo; solo cambió el ídolo.",
+    title: "Adicción a las redes: lo que la fe cristiana sabe que la ciencia acaba de descubrir",
+    excerpt: "La Biblia lleva siglos hablando de idolatría. Hoy los psicólogos lo llaman 'uso compulsivo de tecnología'.",
+    color: "#fce8e8",
   },
 ];
 
 export default function Blog() {
+  const [activeCategory, setActiveCategory] = useState("Todo");
+
+  const filtered = activeCategory === "Todo"
+    ? posts
+    : posts.filter(p => p.category === activeCategory);
+
+  const featured = filtered[0];
+  const rest = filtered.slice(1);
+
   return (
     <>
       <Navbar />
-      <main className="pt-14">
+      <main style={{ background: "#ffffff", minHeight: "100vh", paddingTop: "76px" }}>
 
-        {/* Header */}
-        <section className="bg-cream py-16 px-6 text-center">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-blue font-semibold text-sm uppercase tracking-widest mb-4">El Blog de FocusGod</p>
-            <h1 className="text-4xl sm:text-5xl font-semibold text-ink leading-[1.1] mb-4">
-              Tecnología, fe y salud digital.
-            </h1>
-            <p className="text-ink2 text-lg">
-              Lo que las redes sociales, la pornografía y la tecnología le hacen a tu cerebro — y cómo recuperar el control.
-            </p>
-          </div>
-        </section>
+        {/* Title */}
+        <div style={{ padding: "24px 20px 16px" }}>
+          <h1 style={{ fontSize: "28px", fontWeight: 700, color: "#1a1a1a", letterSpacing: "-0.3px" }}>
+            Blog de FocusGod
+          </h1>
+        </div>
 
-        {/* Categories */}
-        <section className="bg-bg border-b border-black/5 px-6 py-4">
-          <div className="max-w-4xl mx-auto flex gap-3 overflow-x-auto pb-1">
-            {categories.map((c, i) => (
-              <button
-                key={i}
-                className={`whitespace-nowrap text-sm font-semibold px-4 py-2 rounded-full transition-colors ${
-                  i === 0 ? "bg-blue text-white" : "bg-cream text-ink2 hover:text-ink"
-                }`}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-        </section>
-
-        {/* Posts grid */}
-        <section className="bg-bg py-16 px-6">
-          <div className="max-w-4xl mx-auto">
-
-            {/* Featured post */}
-            <div className="bg-cream rounded-3xl p-8 mb-8 border border-black/5">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="bg-blue text-white text-xs font-bold px-3 py-1 rounded-full">
-                  {posts[0].category}
-                </span>
-                <span className="text-ink3 text-xs">{posts[0].date}</span>
+        {/* Featured post */}
+        {featured && (
+          <div style={{ padding: "0 20px 24px" }}>
+            <Link href={`/blog/${featured.slug}`} style={{ textDecoration: "none", display: "block" }}>
+              <div style={{
+                background: "#fff",
+                borderRadius: "20px",
+                overflow: "hidden",
+                boxShadow: "0 2px 16px rgba(0,0,0,0.08)",
+                border: "1px solid rgba(0,0,0,0.06)",
+              }}>
+                {/* Image placeholder */}
+                <div style={{
+                  width: "100%",
+                  height: "200px",
+                  background: featured.color,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "48px",
+                }}>
+                  📖
+                </div>
+                <div style={{ padding: "16px" }}>
+                  <p style={{ fontSize: "11px", color: "#888", marginBottom: "6px" }}>{featured.date}</p>
+                  <h2 style={{ fontSize: "17px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.35, marginBottom: "8px" }}>
+                    {featured.title}
+                  </h2>
+                  <p style={{ fontSize: "13px", color: "#666", lineHeight: 1.55 }}>
+                    {featured.excerpt.length > 90 ? featured.excerpt.slice(0, 90) + "…" : featured.excerpt}
+                  </p>
+                </div>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-ink mb-3 leading-snug">
-                {posts[0].title}
-              </h2>
-              <p className="text-ink2 leading-relaxed mb-6">{posts[0].excerpt}</p>
-              <Link
-                href={`/blog/${posts[0].slug}`}
-                className="btn-blue inline-block"
-              >
-                Leer artículo →
-              </Link>
-            </div>
+            </Link>
+          </div>
+        )}
 
-            {/* Rest of posts */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {posts.slice(1).map((p, i) => (
-                <Link
-                  key={i}
-                  href={`/blog/${p.slug}`}
-                  className="bg-white rounded-3xl p-6 border border-black/5 hover:border-blue/30 transition-colors group"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-blue text-xs font-bold">{p.category}</span>
-                    <span className="text-ink3 text-xs">· {p.date}</span>
-                  </div>
-                  <h3 className="font-semibold text-ink leading-snug mb-2 group-hover:text-blue transition-colors">
-                    {p.title}
+        {/* Category pills — scrollable */}
+        <div style={{
+          display: "flex",
+          gap: "8px",
+          overflowX: "auto",
+          padding: "0 20px 20px",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}>
+          {categories.map((c) => (
+            <button
+              key={c}
+              onClick={() => setActiveCategory(c)}
+              style={{
+                flexShrink: 0,
+                padding: "8px 18px",
+                borderRadius: "50px",
+                fontSize: "14px",
+                fontWeight: 600,
+                cursor: "pointer",
+                border: activeCategory === c ? "none" : "1.5px solid rgba(0,0,0,0.12)",
+                background: activeCategory === c ? "#4a8fe8" : "#fff",
+                color: activeCategory === c ? "#fff" : "#333",
+              }}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+
+        {/* Post cards */}
+        <div style={{ padding: "0 20px 40px", display: "flex", flexDirection: "column", gap: "14px" }}>
+          {rest.map((p) => (
+            <Link key={p.slug} href={`/blog/${p.slug}`} style={{ textDecoration: "none" }}>
+              <div style={{
+                background: "#fff",
+                borderRadius: "16px",
+                overflow: "hidden",
+                border: "1px solid rgba(0,0,0,0.06)",
+                display: "flex",
+                boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
+              }}>
+                {/* Small image */}
+                <div style={{
+                  width: "90px",
+                  flexShrink: 0,
+                  background: p.color,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "28px",
+                }}>
+                  📖
+                </div>
+                <div style={{ padding: "12px 14px" }}>
+                  <p style={{ fontSize: "10px", color: "#888", marginBottom: "4px" }}>{p.date}</p>
+                  <h3 style={{ fontSize: "14px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.35, marginBottom: "4px" }}>
+                    {p.title.length > 60 ? p.title.slice(0, 60) + "…" : p.title}
                   </h3>
-                  <p className="text-sm text-ink2 leading-relaxed line-clamp-3">{p.excerpt}</p>
-                </Link>
-              ))}
-            </div>
-
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="bg-cream py-16 px-6 text-center">
-          <div className="max-w-xl mx-auto">
-            <h2 className="text-2xl font-semibold text-ink mb-3">¿Listo para tomar el control?</h2>
-            <p className="text-ink2 mb-6">Descarga FocusGod y pon a Dios primero cada mañana.</p>
-            <a href="/download" className="btn-blue">
-              🍎 Descargar gratis →
-            </a>
-          </div>
-        </section>
+                  <p style={{ fontSize: "12px", color: "#888" }}>{p.category}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
 
       </main>
       <Footer />
