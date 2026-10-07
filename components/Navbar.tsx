@@ -16,14 +16,17 @@ export default function Navbar() {
   return (
     <>
       {/* Island pill — floats over the page */}
-      <nav className="fixed top-0 left-0 right-0 z-50"
-           style={{ paddingTop: "env(safe-area-inset-top, 0px)", background: "#FDFCF7" }}>
+      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none"
+           style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
         <div
-          className="w-full flex items-center justify-between"
+          className="pointer-events-auto w-full flex items-center justify-between"
           style={{
-            height: "56px",
-            padding: "0 20px",
-            borderBottom: "1px solid rgba(0,0,0,0.06)",
+            margin: "10px 14px 0",
+            height: "60px",
+            padding: "0 14px 0 10px",
+            borderRadius: "20px",
+            background: "#ffffff",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
           }}
         >
           {/* Logo + name */}
