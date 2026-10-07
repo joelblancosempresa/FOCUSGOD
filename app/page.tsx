@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import DesktopFeatures from "@/components/DesktopFeatures";
+import DesktopCTA from "@/components/DesktopCTA";
 import VerseOfDay from "@/components/VerseOfDay";
 import HowItWorks from "@/components/HowItWorks";
 import FocoSection from "@/components/FocoSection";
@@ -14,6 +16,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <DesktopFeatures />
       <VerseOfDay />
       <HowItWorks />
       <FocoSection />
@@ -21,6 +24,7 @@ export default function Home() {
       <Reviews />
       <Stats />
       <FinalCTA />
+      <DesktopCTA />
       <Footer />
     </main>
   );
