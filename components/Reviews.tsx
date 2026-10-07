@@ -61,13 +61,11 @@ export default function Reviews() {
               padding: "20px",
               boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
             }}>
-              <div style={{ display: "flex", gap: "2px", marginBottom: "10px" }}>
-                {[1,2,3,4,5].map((s) => (
-                  <span key={s} style={{ color: "#f0b429", fontSize: "13px" }}>★</span>
-                ))}
+              <div style={{ fontSize: "48px", lineHeight: 1, color: "#d9d5ce", fontFamily: "Georgia, serif", marginBottom: "8px", marginTop: "-4px" }}>
+                "
               </div>
               <p style={{ fontSize: "14px", color: "#838381", lineHeight: 1.6, marginBottom: "14px" }}>
-                "{r.text}"
+                {r.text}
               </p>
               <div>
                 <p style={{ fontSize: "13px", fontWeight: 700, color: "#333333" }}>{r.name}</p>
