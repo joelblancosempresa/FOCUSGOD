@@ -14,32 +14,24 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none"
-           style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
-        <div
-          className="pointer-events-auto w-full flex items-center justify-between"
-          style={{
-            margin: "8px 12px 0",
-            height: "56px",
-            padding: "0 12px 0 8px",
-            borderRadius: "18px",
-            background: "rgba(255, 255, 255, 0.55)",
-            backdropFilter: "blur(20px) saturate(180%)",
-            WebkitBackdropFilter: "blur(20px) saturate(180%)",
-            boxShadow: "0 1px 10px rgba(0,0,0,0.06)",
-          }}
-        >
-          {/* Logo + name */}
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none"
+         style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
+      <div
+        className="pointer-events-auto w-full sm:flex sm:items-center sm:justify-between"
+        style={{
+          margin: "8px 12px 0",
+          padding: open ? "0 12px 12px 8px" : "0 12px 0 8px",
+          borderRadius: "18px",
+          background: "rgba(255, 255, 255, 0.97)",
+          backdropFilter: "blur(20px) saturate(180%)",
+          WebkitBackdropFilter: "blur(20px) saturate(180%)",
+          boxShadow: "0 1px 10px rgba(0,0,0,0.06)",
+        }}
+      >
+        {/* Logo row */}
+        <div className="flex items-center justify-between" style={{ height: "56px" }}>
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/app-icon.png"
-              alt="FocusGod"
-              width={40}
-              height={40}
-              className="rounded-[11px]"
-              priority
-            />
+            <Image src="/app-icon.png" alt="FocusGod" width={40} height={40} className="rounded-[11px]" priority />
             <span style={{ fontSize: "18px", fontWeight: 700, color: "#20242e", letterSpacing: "-0.3px" }}>
               FocusGod
             </span>
@@ -52,12 +44,10 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <Link href="/download" className="btn-blue text-sm px-5 py-2.5">
-              Descargar gratis
-            </Link>
+            <Link href="/download" className="btn-blue text-sm px-5 py-2.5">Descargar gratis</Link>
           </div>
 
-          {/* Hamburger — simple swap sin animación */}
+          {/* Hamburger */}
           <button
             className="sm:hidden p-2"
             onClick={() => setOpen(!open)}
@@ -67,46 +57,31 @@ export default function Navbar() {
             {open ? "✕" : "☰"}
           </button>
         </div>
-      </nav>
 
-      {/* Mobile dropdown */}
-      {open && (
-        <div
-          className="fixed z-40 left-0 right-0 sm:hidden"
-          style={{
-            top: "calc(env(safe-area-inset-top, 0px) + 72px)",
-            margin: "0 12px",
-            borderRadius: "18px",
-            background: "rgba(255,255,255,0.97)",
-            backdropFilter: "blur(24px)",
-            WebkitBackdropFilter: "blur(24px)",
-            boxShadow: "0 8px 32px rgba(32,36,46,0.12)",
-            padding: "12px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "4px",
-          }}
-        >
-          {links.map((l, i) => (
+        {/* Mobile links — dentro del mismo card */}
+        {open && (
+          <div className="sm:hidden" style={{ display: "flex", flexDirection: "column" }}>
+            {links.map((l, i) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="text-base font-medium text-ink2 px-2 py-3 transition-colors"
+                style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
+              >
+                {l.label}
+              </Link>
+            ))}
             <Link
-              key={l.href}
-              href={l.href}
+              href="/download"
               onClick={() => setOpen(false)}
-              className="text-base font-medium text-ink2 hover:text-ink px-2 py-3 transition-colors"
-              style={{ borderBottom: i < links.length - 1 ? "1px solid rgba(0,0,0,0.07)" : "none" }}
+              className="btn-blue text-sm px-5 py-3 text-center mt-3"
             >
-              {l.label}
+              Descargar gratis
             </Link>
-          ))}
-          <Link
-            href="/download"
-            onClick={() => setOpen(false)}
-            className="btn-blue text-sm px-5 py-3 text-center mt-2"
-          >
-            Descargar gratis
-          </Link>
-        </div>
-      )}
-    </>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 }
