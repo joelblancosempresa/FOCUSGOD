@@ -74,13 +74,16 @@ const posts = [
   },
 ];
 
+// El post destacado nunca cambia — siempre posts[0]
+const FEATURED = posts[0];
+const ALL_REST = posts.slice(1);
+
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState("Todo");
 
-  const featured = posts[0];
-  const rest = activeCategory === "Todo"
-    ? posts.slice(1)
-    : posts.slice(1).filter(p => p.category === activeCategory);
+  const filtered = activeCategory === "Todo"
+    ? ALL_REST
+    : ALL_REST.filter(p => p.category === activeCategory);
 
   return (
     <>
@@ -94,42 +97,39 @@ export default function Blog() {
           </h1>
         </div>
 
-        {/* Featured post */}
-        {featured && (
-          <div style={{ padding: "0 20px 24px" }}>
-            <Link href={`/blog/${featured.slug}`} style={{ textDecoration: "none", display: "block" }}>
+        {/* Featured post — SIEMPRE posts[0], no cambia con el filtro */}
+        <div style={{ padding: "0 20px 24px" }}>
+          <Link href={`/blog/${FEATURED.slug}`} style={{ textDecoration: "none", display: "block" }}>
+            <div style={{
+              background: "#fff",
+              borderRadius: "20px",
+              overflow: "hidden",
+              boxShadow: "0 2px 16px rgba(0,0,0,0.08)",
+              border: "1px solid rgba(0,0,0,0.06)",
+            }}>
               <div style={{
-                background: "#fff",
-                borderRadius: "20px",
-                overflow: "hidden",
-                boxShadow: "0 2px 16px rgba(0,0,0,0.08)",
-                border: "1px solid rgba(0,0,0,0.06)",
+                width: "100%",
+                height: "200px",
+                background: FEATURED.color,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "48px",
               }}>
-                {/* Image placeholder */}
-                <div style={{
-                  width: "100%",
-                  height: "200px",
-                  background: featured.color,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "48px",
-                }}>
-                  📖
-                </div>
-                <div style={{ padding: "16px" }}>
-                  <p style={{ fontSize: "11px", color: "#888", marginBottom: "6px" }}>{featured.date}</p>
-                  <h2 style={{ fontSize: "17px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.35, marginBottom: "8px" }}>
-                    {featured.title}
-                  </h2>
-                  <p style={{ fontSize: "13px", color: "#666", lineHeight: 1.55 }}>
-                    {featured.excerpt.length > 90 ? featured.excerpt.slice(0, 90) + "…" : featured.excerpt}
-                  </p>
-                </div>
+                📖
               </div>
-            </Link>
-          </div>
-        )}
+              <div style={{ padding: "16px" }}>
+                <p style={{ fontSize: "11px", color: "#888", marginBottom: "6px" }}>{FEATURED.date}</p>
+                <h2 style={{ fontSize: "17px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.35, marginBottom: "8px" }}>
+                  {FEATURED.title}
+                </h2>
+                <p style={{ fontSize: "13px", color: "#666", lineHeight: 1.55 }}>
+                  {FEATURED.excerpt.length > 90 ? FEATURED.excerpt.slice(0, 90) + "…" : FEATURED.excerpt}
+                </p>
+              </div>
+            </div>
+          </Link>
+        </div>
 
         {/* Category pills — scrollable */}
         <div style={{
@@ -163,7 +163,7 @@ export default function Blog() {
 
         {/* Post cards — mismo formato que el destacado */}
         <div style={{ padding: "0 20px 40px", display: "flex", flexDirection: "column", gap: "16px" }}>
-          {rest.map((p) => (
+          {filtered.map((p) => (
             <Link key={p.slug} href={`/blog/${p.slug}`} style={{ textDecoration: "none", display: "block" }}>
               <div style={{
                 background: "#fff",
