@@ -39,7 +39,7 @@ export default function About() {
         {/* Hero */}
         <section className="bg-cream py-20 px-6 text-center">
           <div className="max-w-2xl mx-auto">
-            <p className="text-blue font-bold text-sm uppercase tracking-widest mb-4">Sobre FocusGod</p>
+            <p className="text-blue font-bold text-base mb-4">Sobre FocusGod</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-ink leading-[1.1] mb-6">
               Ayudando a las personas a poner a Dios primero en la era digital.
             </h1>
@@ -53,14 +53,14 @@ export default function About() {
         <section className="bg-bg py-20 px-6">
           <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-12">
             <div>
-              <p className="text-blue font-bold text-sm uppercase tracking-widest mb-3">Nuestra visión</p>
+              <p className="text-blue font-bold text-base mb-3">Nuestra visión</p>
               <h2 className="text-2xl font-semibold text-ink mb-4">Recuperar el tiempo que le robamos a Dios</h2>
               <p className="text-ink2 leading-relaxed">
                 En generaciones anteriores, las distracciones eran pocas. Hoy, miles de ingenieros con doctorados en psicología trabajan para que no puedas dejar el teléfono. FocusGod existe para nivelar esa batalla — poniendo a Dios de nuevo en el primer lugar del día.
               </p>
             </div>
             <div>
-              <p className="text-blue font-bold text-sm uppercase tracking-widest mb-3">Nuestra misión</p>
+              <p className="text-blue font-bold text-base mb-3">Nuestra misión</p>
               <h2 className="text-2xl font-semibold text-ink mb-4">Formar seguidores completamente devotos</h2>
               <p className="text-ink2 leading-relaxed">
                 Nuestra misión es ayudar a las personas a convertirse en seguidores completamente devotos de Dios, transformando cómo empiezan cada día — creando un espacio donde la oración no es opcional, es el punto de partida.
@@ -72,7 +72,7 @@ export default function About() {
         {/* Values */}
         <section className="bg-cream py-20 px-6">
           <div className="max-w-3xl mx-auto">
-            <p className="text-blue font-bold text-sm uppercase tracking-widest mb-2 text-center">Nuestros valores</p>
+            <p className="text-blue font-bold text-base mb-2 text-center">Nuestros valores</p>
             <h2 className="text-3xl font-semibold text-ink text-center mb-12">Lo que nos guía</h2>
             <div className="grid sm:grid-cols-2 gap-6">
               {values.map((v, i) => (
@@ -89,7 +89,7 @@ export default function About() {
         {/* Commitment */}
         <section className="bg-bg py-20 px-6 text-center">
           <div className="max-w-xl mx-auto">
-            <p className="text-blue font-bold text-sm uppercase tracking-widest mb-4">Nuestro compromiso</p>
+            <p className="text-blue font-bold text-base mb-4">Nuestro compromiso</p>
             <h2 className="text-3xl font-semibold text-ink mb-6">Contigo en cada paso</h2>
             <p className="text-ink2 text-lg leading-relaxed mb-8">
               Nos esforzamos por animarte y desafiarte en tu camino espiritual — no solo para orar más, sino para conocer a Dios más íntimamente, y vivir de una manera que refleje Su verdad.
