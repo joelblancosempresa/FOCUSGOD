@@ -9,34 +9,20 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    icon: "🚫",
     title: "Bloqueo real de apps",
     desc: "Instagram, TikTok, YouTube — bloqueados hasta que termines tu momento con Dios. Sin atajos.",
   },
   {
-    icon: "📱",
     title: "Widget espiritual",
     desc: "Versículo del día, contador de racha y botón de oración directo en tu pantalla de inicio.",
   },
   {
-    icon: "🔥",
     title: "Rachas diarias",
     desc: "Cada día que oras a primera hora suma a tu racha. 21 días para transformar un hábito.",
   },
   {
-    icon: "🙏",
     title: "Oración guiada",
-    desc: "No sabes cómo empezar? FocusGod te guía con oraciones cortas y lecturas bíblicas.",
-  },
-  {
-    icon: "📊",
-    title: "Seguimiento espiritual",
-    desc: "Mira tu progreso semana a semana. El crecimiento espiritual merece ser medido.",
-  },
-  {
-    icon: "🔔",
-    title: "Recordatorios inteligentes",
-    desc: "Te recuerda orar en el momento justo — antes de que abras el móvil con otra cosa.",
+    desc: "¿No sabes cómo empezar? FocusGod te guía con oraciones cortas y lecturas bíblicas.",
   },
 ];
 
@@ -128,21 +114,30 @@ export default function Download() {
           </div>
         </section>
 
-        {/* Features grid */}
-        <section className="bg-bg py-20 px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-semibold text-ink text-center mb-12">
-              Todo lo que necesitas para empezar.
-            </h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {features.map((f, i) => (
-                <div key={i} className="bg-cream rounded-3xl p-6">
-                  <p className="text-3xl mb-3">{f.icon}</p>
-                  <h3 className="font-semibold text-ink mb-2">{f.title}</h3>
-                  <p className="text-sm text-ink2 leading-relaxed">{f.desc}</p>
+        {/* Features — imagen arriba + texto abajo, estilo Manna */}
+        <section className="bg-bg py-16 px-6">
+          <div style={{ maxWidth: "420px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "48px" }}>
+            {features.map((f, i) => (
+              <div key={i} style={{ textAlign: "center" }}>
+                {/* Placeholder imagen — negro */}
+                <div style={{
+                  background: "#111",
+                  borderRadius: "24px",
+                  height: "220px",
+                  marginBottom: "24px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "rgba(255,255,255,0.2)",
+                  fontSize: "13px",
+                  letterSpacing: "0.5px",
+                }}>
+                  imagen
                 </div>
-              ))}
-            </div>
+                <h3 className="text-2xl font-semibold text-ink mb-3">{f.title}</h3>
+                <p className="text-ink2 text-base leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
