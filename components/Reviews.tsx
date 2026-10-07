@@ -61,9 +61,10 @@ export default function Reviews() {
               padding: "20px",
               boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
             }}>
-              <div style={{ fontSize: "48px", lineHeight: 1, color: "#d9d5ce", fontFamily: "Georgia, serif", marginBottom: "8px", marginTop: "-4px" }}>
-                "
-              </div>
+              <svg width="52" height="40" viewBox="0 0 52 40" fill="none" style={{ marginBottom: "12px" }}>
+                <path d="M0 40V16C0 7.163 7.163 0 16 0H20V10H16C12.686 10 10 12.686 10 16V22H20V40H0Z" fill="#d4d0c8"/>
+                <path d="M28 40V16C28 7.163 35.163 0 44 0H48V10H44C40.686 10 38 12.686 38 16V22H48V40H28Z" fill="#d4d0c8"/>
+              </svg>
               <p style={{ fontSize: "14px", color: "#838381", lineHeight: 1.6, marginBottom: "14px" }}>
                 {r.text}
               </p>
