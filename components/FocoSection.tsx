@@ -1,6 +1,6 @@
 export default function FocoSection() {
   return (
-    <section style={{ position: "relative", width: "100%", aspectRatio: "3/4", background: "#111111" }}>
+    <section className="aspect-[3/4] md:aspect-[16/7]" style={{ position: "relative", width: "100%", background: "#111111" }}>
       {/* Text + button pinned to bottom */}
       <div style={{
         position: "absolute",

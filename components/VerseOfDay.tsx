@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function VerseOfDay() {
   return (
     <section style={{ background: "#F9F5EB", padding: "56px 24px 60px" }}>
-      <div style={{ maxWidth: "420px", margin: "0 auto", textAlign: "center" }}>
+      <div className="max-w-[420px] md:max-w-2xl mx-auto text-center">
 
         {/* Title + icon inline */}
         <h2 style={{

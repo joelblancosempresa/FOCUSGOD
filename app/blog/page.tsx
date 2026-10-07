@@ -74,7 +74,6 @@ const posts = [
   },
 ];
 
-// El post destacado nunca cambia — siempre posts[0]
 const FEATURED = posts[0];
 const ALL_REST = posts.slice(1);
 
@@ -91,14 +90,14 @@ export default function Blog() {
       <main style={{ background: "#ffffff", minHeight: "100vh", paddingTop: "76px" }}>
 
         {/* Title */}
-        <div style={{ padding: "24px 20px 16px" }}>
+        <div className="max-w-[420px] md:max-w-6xl mx-auto px-5 pt-6 pb-4">
           <h1 style={{ fontSize: "28px", fontWeight: 700, color: "#1a1a1a", letterSpacing: "-0.3px" }}>
             Fe, Mente & Pantalla
           </h1>
         </div>
 
-        {/* Featured post — SIEMPRE posts[0], no cambia con el filtro */}
-        <div style={{ padding: "0 20px 24px" }}>
+        {/* Featured post */}
+        <div className="max-w-[420px] md:max-w-6xl mx-auto px-5 pb-6">
           <Link href={`/blog/${FEATURED.slug}`} style={{ textDecoration: "none", display: "block" }}>
             <div style={{
               background: "#fff",
@@ -106,40 +105,41 @@ export default function Blog() {
               overflow: "hidden",
               boxShadow: "0 2px 16px rgba(0,0,0,0.08)",
               border: "1px solid rgba(0,0,0,0.06)",
-            }}>
+            }} className="md:flex">
               <div style={{
-                width: "100%",
-                height: "200px",
                 background: FEATURED.color,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: "48px",
-              }}>
+              }} className="h-[200px] md:h-auto md:w-[320px] md:flex-shrink-0">
                 📖
               </div>
-              <div style={{ padding: "16px" }}>
+              <div style={{ padding: "16px" }} className="md:py-8 md:px-8 md:flex md:flex-col md:justify-center">
                 <p style={{ fontSize: "11px", color: "#888", marginBottom: "6px" }}>{FEATURED.date}</p>
-                <h2 style={{ fontSize: "17px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.35, marginBottom: "8px" }}>
+                <h2 style={{ fontSize: "17px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.35, marginBottom: "8px" }} className="md:text-2xl">
                   {FEATURED.title}
                 </h2>
-                <p style={{ fontSize: "13px", color: "#666", lineHeight: 1.55 }}>
-                  {FEATURED.excerpt.length > 90 ? FEATURED.excerpt.slice(0, 90) + "…" : FEATURED.excerpt}
+                <p style={{ fontSize: "13px", color: "#666", lineHeight: 1.55 }} className="md:text-sm md:max-w-lg">
+                  {FEATURED.excerpt}
                 </p>
               </div>
             </div>
           </Link>
         </div>
 
-        {/* Category pills — scrollable */}
-        <div style={{
-          display: "flex",
-          gap: "8px",
-          overflowX: "auto",
-          padding: "0 20px 20px",
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-        }}>
+        {/* Category pills */}
+        <div
+          className="max-w-[420px] md:max-w-6xl mx-auto"
+          style={{
+            display: "flex",
+            gap: "8px",
+            overflowX: "auto",
+            padding: "0 20px 20px",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
           {categories.map((c) => (
             <button
               key={c}
@@ -161,8 +161,8 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Post cards — mismo formato que el destacado */}
-        <div style={{ padding: "0 20px 40px", display: "flex", flexDirection: "column", gap: "16px" }}>
+        {/* Post grid */}
+        <div className="max-w-[420px] md:max-w-6xl mx-auto px-5 pb-10 grid gap-4 md:grid-cols-3">
           {filtered.map((p) => (
             <Link key={p.slug} href={`/blog/${p.slug}`} style={{ textDecoration: "none", display: "block" }}>
               <div style={{

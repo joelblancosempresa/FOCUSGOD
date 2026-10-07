@@ -12,16 +12,21 @@ const links = [
 export default function Footer() {
   return (
     <footer style={{ background: "#111", padding: "48px 24px 40px" }}>
-      <div style={{ maxWidth: "420px", margin: "0 auto" }}>
+      <div className="flex flex-col gap-8 md:max-w-6xl md:mx-auto md:flex-row md:items-start md:justify-between">
 
-        {/* Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "28px" }}>
-          <Image src="/app-icon.png" alt="FocusGod" width={36} height={36} style={{ borderRadius: "8px" }} />
-          <span style={{ fontSize: "17px", fontWeight: 700, color: "#fff" }}>FocusGod</span>
+        {/* Logo + tagline */}
+        <div>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
+            <Image src="/app-icon.png" alt="FocusGod" width={36} height={36} style={{ borderRadius: "8px" }} />
+            <span style={{ fontSize: "17px", fontWeight: 700, color: "#fff" }}>FocusGod</span>
+          </div>
+          <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", lineHeight: 1.5, maxWidth: "220px" }}>
+            Ora primero. Desbloquea todo.
+          </p>
         </div>
 
         {/* Links */}
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "12px 24px", marginBottom: "32px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 24px" }}>
           {links.map((l) => (
             <Link key={l.href} href={l.href} style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}>
               {l.label}
@@ -30,7 +35,7 @@ export default function Footer() {
         </div>
 
         {/* Store badges */}
-        <div style={{ display: "flex", gap: "12px", marginBottom: "32px" }}>
+        <div style={{ display: "flex", gap: "12px" }}>
           <div style={{
             display: "flex", alignItems: "center", gap: "8px",
             background: "#222", borderRadius: "10px", padding: "10px 16px",
@@ -59,11 +64,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.25)" }}>
-          © 2025 FocusGod. Todos los derechos reservados.
-        </p>
       </div>
+
+      <p className="md:max-w-6xl md:mx-auto" style={{ fontSize: "12px", color: "rgba(255,255,255,0.25)", marginTop: "32px" }}>
+        © 2025 FocusGod. Todos los derechos reservados.
+      </p>
     </footer>
   );
 }

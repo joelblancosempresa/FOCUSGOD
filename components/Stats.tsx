@@ -7,7 +7,7 @@ const stats = [
 export default function Stats() {
   return (
     <section style={{ background: "#FDFCF7", padding: "40px 24px 48px" }}>
-      <div style={{ maxWidth: "420px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "48px" }}>
+      <div className="flex flex-col gap-12 md:max-w-6xl md:mx-auto md:grid md:grid-cols-3 md:gap-10">
         {stats.map((s, i) => (
           <div key={i} style={{ textAlign: "center" }}>
             <div style={{

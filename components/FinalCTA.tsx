@@ -1,7 +1,7 @@
 export default function FinalCTA() {
   return (
     <section style={{ background: "#f0492e", padding: "60px 24px", textAlign: "center" }}>
-      <div style={{ maxWidth: "420px", margin: "0 auto" }}>
+      <div className="max-w-[420px] md:max-w-xl mx-auto">
         <h2 style={{
           fontSize: "32px",
           fontWeight: 700,

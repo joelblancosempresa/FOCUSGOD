@@ -38,7 +38,7 @@ export default function About() {
 
         {/* Hero */}
         <section className="bg-cream py-20 px-6 text-center">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl md:max-w-4xl mx-auto">
             <p className="text-blue font-bold text-base mb-4">Sobre FocusGod</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-ink leading-[1.1] mb-6">
               Ayudando a las personas a poner a Dios primero en la era digital.
@@ -51,7 +51,7 @@ export default function About() {
 
         {/* Vision */}
         <section className="bg-bg py-20 px-6">
-          <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-12">
+          <div className="max-w-3xl md:max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-blue font-bold text-base mb-3">Nuestra visión</p>
               <h2 className="text-2xl font-semibold text-ink mb-4">Recuperar el tiempo que le robamos a Dios</h2>
@@ -71,7 +71,7 @@ export default function About() {
 
         {/* Values */}
         <section className="bg-cream py-20 px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl md:max-w-5xl mx-auto">
             <p className="text-blue font-bold text-base mb-2 text-center">Nuestros valores</p>
             <h2 className="text-3xl font-semibold text-ink text-center mb-12">Lo que nos guía</h2>
             <div className="grid sm:grid-cols-2 gap-6">

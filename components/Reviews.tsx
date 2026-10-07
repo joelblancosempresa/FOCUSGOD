@@ -22,7 +22,7 @@ export default function Reviews() {
   return (
     <section style={{ background: "#FCFBF2", padding: "56px 0" }}>
       {/* Header */}
-      <div style={{ padding: "0 24px 28px", maxWidth: "420px", margin: "0 auto" }}>
+      <div className="px-6 pb-7 max-w-[420px] md:max-w-6xl mx-auto">
         <h2 style={{
           fontSize: "28px",
           fontWeight: 700,
