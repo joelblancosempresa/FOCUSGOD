@@ -3,7 +3,7 @@
 export default function Hero() {
   return (
     <section
-      className="pt-[82px] md:pt-[130px] md:pb-[72px]"
+      className="pt-[82px] md:pt-[140px] md:pb-[80px]"
       style={{ background: "#ffffff", overflow: "hidden" }}
     >
       <div className="md:max-w-6xl md:mx-auto md:flex md:items-center md:gap-12 md:px-16 w-full">
