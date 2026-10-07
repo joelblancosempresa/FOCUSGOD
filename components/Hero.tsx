@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section style={{ background: "#FDFCF7", paddingTop: "56px", overflow: "hidden" }}>
 
-      {/* Mockup — borde a borde, sin card flotante */}
-      <div style={{ margin: "44px 20px 0", borderRadius: "28px", overflow: "hidden" }}>
+      {/* Mockup — centrado, tamaño similar a Manna */}
+      <div style={{ margin: "44px auto 0", maxWidth: "290px", borderRadius: "28px", overflow: "hidden" }}>
         <div style={{
           background: "#20242e",
           padding: "28px 20px 24px",
