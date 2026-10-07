@@ -20,7 +20,7 @@ export default function Navbar() {
         @media (min-width: 768px) {
           .navbar-pill {
             margin: 0 !important;
-            padding: 0 40px !important;
+            padding: 0 48px !important;
             border-radius: 0 !important;
             box-shadow: 0 1px 0 rgba(0,0,0,0.08) !important;
             background: rgba(255,255,255,0.98) !important;
@@ -28,7 +28,7 @@ export default function Navbar() {
         }
       `}</style>
       <div
-        className="navbar-pill pointer-events-auto w-full sm:flex sm:items-center sm:justify-between"
+        className="navbar-pill pointer-events-auto w-full"
         style={{
           margin: "8px 12px 0",
           padding: open ? "0 12px 12px 8px" : "0 12px 0 8px",
@@ -39,17 +39,18 @@ export default function Navbar() {
           boxShadow: "0 1px 10px rgba(0,0,0,0.06)",
         }}
       >
-        {/* Logo row */}
+        {/* Logo row + desktop nav in same flex row */}
         <div className="flex items-center justify-between" style={{ height: "56px" }}>
-          <Link href="/" className="flex items-center gap-2">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <Image src="/app-icon.png" alt="FocusGod" width={40} height={40} className="rounded-[11px]" priority />
             <span style={{ fontSize: "18px", fontWeight: 700, color: "#20242e", letterSpacing: "-0.3px" }}>
               FocusGod
             </span>
           </Link>
 
-          {/* Desktop links */}
-          <div className="hidden sm:flex items-center gap-6">
+          {/* Desktop links — center/right */}
+          <div className="hidden md:flex items-center gap-8">
             {links.map((l) => (
               <Link key={l.href} href={l.href} className="text-sm font-medium text-ink2 hover:text-ink transition-colors">
                 {l.label}
@@ -58,9 +59,9 @@ export default function Navbar() {
             <Link href="/download" className="btn-blue text-sm px-5 py-2.5">Descargar gratis</Link>
           </div>
 
-          {/* Hamburger */}
+          {/* Hamburger — mobile only */}
           <button
-            className="sm:hidden p-2"
+            className="md:hidden p-2"
             onClick={() => setOpen(!open)}
             aria-label="Menú"
             style={{ fontSize: "20px", lineHeight: 1, color: "#20242e", background: "none", border: "none", cursor: "pointer" }}
@@ -69,10 +70,10 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile links — dentro del mismo card */}
+        {/* Mobile dropdown */}
         {open && (
-          <div className="sm:hidden" style={{ display: "flex", flexDirection: "column" }}>
-            {links.map((l, i) => (
+          <div className="md:hidden" style={{ display: "flex", flexDirection: "column" }}>
+            {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
