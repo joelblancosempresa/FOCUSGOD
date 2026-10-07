@@ -60,7 +60,7 @@ export default function Navbar() {
 
           {/* Desktop: CTA derecha */}
           <div className="hidden md:flex flex-1 justify-center">
-            <Link href="/download" className="btn-blue text-sm px-5 py-2.5" style={{ boxShadow: "0 6px 20px rgba(240,73,46,0.40)" }}>Descargar gratis</Link>
+            <Link href="/download" className="btn-blue text-sm px-5 py-2.5" style={{ boxShadow: "0 6px 18px rgba(240,73,46,0.55)" }}>Descargar gratis</Link>
           </div>
 
           {/* Hamburger — solo móvil */}
