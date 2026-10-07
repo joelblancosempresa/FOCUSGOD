@@ -50,7 +50,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop: links centrados */}
-          <div className="hidden md:flex items-center gap-12 flex-1 justify-center">
+          <div className="hidden md:flex items-center gap-12 flex-1 justify-end">
             {links.map((l) => (
               <Link key={l.href} href={l.href} className="text-sm font-medium text-ink2 hover:text-ink transition-colors">
                 {l.label}
@@ -59,7 +59,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop: CTA derecha */}
-          <div className="hidden md:flex flex-1 justify-end">
+          <div className="hidden md:flex flex-1 justify-start">
             <Link href="/download" className="btn-blue text-sm px-5 py-2.5">Descargar gratis</Link>
           </div>
 
