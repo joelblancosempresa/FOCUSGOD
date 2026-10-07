@@ -47,12 +47,12 @@ export default function Download() {
       <main className="pt-14">
 
         {/* Hero — estilo Manna */}
-        <section style={{ background: "#FEF3C7", paddingTop: "52px", paddingBottom: "0", textAlign: "center", overflow: "hidden" }}>
-          <div style={{ maxWidth: "400px", margin: "0 auto", padding: "0 24px" }}>
-            <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#1a1a1a", lineHeight: 1.15, marginBottom: "16px", letterSpacing: "-0.5px" }}>
+        <section style={{ background: "#FEF3C7", paddingBottom: "0", overflow: "hidden" }} className="pt-20 px-6 text-center">
+          <div className="max-w-sm mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-semibold text-ink leading-[1.1] mb-6">
               La forma más simple de poner a Dios primero.
             </h1>
-            <p style={{ fontSize: "15px", color: "#666", lineHeight: 1.6, marginBottom: "32px" }}>
+            <p className="text-ink2 text-lg leading-relaxed mb-8">
               FocusGod bloquea Instagram, TikTok y YouTube hasta que hayas pasado tiempo con Dios — cada mañana.
             </p>
 
