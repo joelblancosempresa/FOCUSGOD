@@ -4,26 +4,22 @@ export default function Hero() {
   return (
     <section style={{ background: "#FDFCF7", paddingTop: "84px", overflow: "hidden" }}>
 
-      {/* Mockup — top, no label above */}
-      <div style={{ display: "flex", justifyContent: "center", padding: "24px 24px 8px" }}>
+      {/* Mockup — borde a borde, sin card flotante */}
+      <div style={{ margin: "24px 20px 0", borderRadius: "28px", overflow: "hidden" }}>
         <div style={{
-          width: "100%",
-          maxWidth: "340px",
           background: "#20242e",
-          borderRadius: "24px",
-          padding: "20px",
-          boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
+          padding: "28px 20px 24px",
         }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "8px", marginBottom: "20px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "10px", marginBottom: "24px" }}>
             {["📸", "🎵", "▶️", "🐦", "💬", "📘", "🎮", "📺"].map((emoji, i) => (
               <div key={i} style={{
                 background: "rgba(255,255,255,0.08)",
-                borderRadius: "12px",
+                borderRadius: "14px",
                 aspectRatio: "1",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "22px",
+                fontSize: "26px",
                 opacity: 0.4,
               }}>
                 {emoji}
@@ -35,34 +31,34 @@ export default function Hero() {
             background: "#f0492e",
             color: "#fff",
             fontWeight: 700,
-            fontSize: "14px",
-            padding: "14px",
-            borderRadius: "14px",
+            fontSize: "16px",
+            padding: "16px",
+            borderRadius: "50px",
             border: "none",
             cursor: "pointer",
           }}>
             🙏 Orar ahora
           </button>
-          <div style={{ marginTop: "12px", textAlign: "center" }}>
-            <span style={{ color: "#f0b429", fontWeight: 700, fontSize: "22px" }}>🔥 14</span>
-            <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "11px", marginTop: "4px" }}>días seguidos</p>
+          <div style={{ marginTop: "14px", textAlign: "center" }}>
+            <span style={{ color: "#f0b429", fontWeight: 700, fontSize: "24px" }}>🔥 14</span>
+            <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "12px", marginTop: "4px" }}>días seguidos</p>
           </div>
         </div>
       </div>
 
       {/* Title + subtitle + buttons */}
       <div style={{
-        padding: "32px 24px 48px",
+        padding: "40px 24px 52px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         textAlign: "center",
-        gap: "12px",
+        gap: "14px",
         maxWidth: "420px",
         margin: "0 auto",
       }}>
         <h1 style={{
-          fontSize: "2.5rem",
+          fontSize: "2.6rem",
           fontWeight: 700,
           color: "#333333",
           lineHeight: 1.1,
@@ -84,14 +80,14 @@ export default function Hero() {
               background: "#f0492e",
               color: "#fff",
               fontWeight: 700,
-              fontSize: "16px",
-              padding: "16px",
-              borderRadius: "14px",
+              fontSize: "17px",
+              padding: "18px",
+              borderRadius: "50px",
               textDecoration: "none",
               textAlign: "center",
             }}
           >
-            🍎 Descargar gratis
+            Descargar gratis
           </a>
           <a
             href="/download"
@@ -101,8 +97,8 @@ export default function Hero() {
               color: "#333",
               fontWeight: 600,
               fontSize: "16px",
-              padding: "16px",
-              borderRadius: "14px",
+              padding: "18px",
+              borderRadius: "50px",
               textDecoration: "none",
               textAlign: "center",
               border: "1px solid rgba(0,0,0,0.08)",
