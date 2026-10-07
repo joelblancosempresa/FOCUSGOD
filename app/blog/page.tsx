@@ -92,7 +92,7 @@ export default function Blog() {
         {/* Title */}
         <div style={{ padding: "24px 20px 16px" }}>
           <h1 style={{ fontSize: "28px", fontWeight: 700, color: "#1a1a1a", letterSpacing: "-0.3px" }}>
-            Blog de FocusGod
+            Fe, Mente & Pantalla
           </h1>
         </div>
 
@@ -154,7 +154,7 @@ export default function Blog() {
                 fontWeight: 600,
                 cursor: "pointer",
                 border: activeCategory === c ? "none" : "1.5px solid rgba(0,0,0,0.12)",
-                background: activeCategory === c ? "#4a8fe8" : "#fff",
+                background: activeCategory === c ? "#f0492e" : "#fff",
                 color: activeCategory === c ? "#fff" : "#333",
               }}
             >
@@ -163,36 +163,36 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Post cards */}
-        <div style={{ padding: "0 20px 40px", display: "flex", flexDirection: "column", gap: "14px" }}>
+        {/* Post cards — mismo formato que el destacado */}
+        <div style={{ padding: "0 20px 40px", display: "flex", flexDirection: "column", gap: "16px" }}>
           {rest.map((p) => (
-            <Link key={p.slug} href={`/blog/${p.slug}`} style={{ textDecoration: "none" }}>
+            <Link key={p.slug} href={`/blog/${p.slug}`} style={{ textDecoration: "none", display: "block" }}>
               <div style={{
                 background: "#fff",
-                borderRadius: "16px",
+                borderRadius: "20px",
                 overflow: "hidden",
+                boxShadow: "0 2px 16px rgba(0,0,0,0.08)",
                 border: "1px solid rgba(0,0,0,0.06)",
-                display: "flex",
-                boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
               }}>
-                {/* Small image */}
                 <div style={{
-                  width: "90px",
-                  flexShrink: 0,
+                  width: "100%",
+                  height: "180px",
                   background: p.color,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "28px",
+                  fontSize: "44px",
                 }}>
                   📖
                 </div>
-                <div style={{ padding: "12px 14px" }}>
-                  <p style={{ fontSize: "10px", color: "#888", marginBottom: "4px" }}>{p.date}</p>
-                  <h3 style={{ fontSize: "14px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.35, marginBottom: "4px" }}>
-                    {p.title.length > 60 ? p.title.slice(0, 60) + "…" : p.title}
+                <div style={{ padding: "16px" }}>
+                  <p style={{ fontSize: "11px", color: "#888", marginBottom: "6px" }}>{p.date}</p>
+                  <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.35, marginBottom: "6px" }}>
+                    {p.title}
                   </h3>
-                  <p style={{ fontSize: "12px", color: "#888" }}>{p.category}</p>
+                  <p style={{ fontSize: "13px", color: "#666", lineHeight: 1.55 }}>
+                    {p.excerpt.length > 90 ? p.excerpt.slice(0, 90) + "…" : p.excerpt}
+                  </p>
                 </div>
               </div>
             </Link>
