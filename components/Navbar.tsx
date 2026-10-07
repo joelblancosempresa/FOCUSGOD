@@ -22,7 +22,7 @@ export default function Navbar() {
             margin: 0 !important;
             padding: 0 48px !important;
             border-radius: 0 !important;
-            box-shadow: 0 1px 0 rgba(0,0,0,0.08) !important;
+            box-shadow: none !important;
             background: rgba(255,255,255,0.98) !important;
           }
         }
@@ -40,7 +40,7 @@ export default function Navbar() {
         }}
       >
         {/* Logo row */}
-        <div className="flex items-center justify-between" style={{ height: "56px" }}>
+        <div className="flex items-center justify-between" style={{ height: "68px" }}>
           {/* Logo — izquierda */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0 md:flex-1">
             <Image src="/app-icon.png" alt="FocusGod" width={40} height={40} className="rounded-[11px]" priority />
@@ -50,7 +50,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop: links centrados */}
-          <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
+          <div className="hidden md:flex items-center gap-12 flex-1 justify-center">
             {links.map((l) => (
               <Link key={l.href} href={l.href} className="text-sm font-medium text-ink2 hover:text-ink transition-colors">
                 {l.label}
