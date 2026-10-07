@@ -20,7 +20,7 @@ export default function Navbar() {
         @media (min-width: 768px) {
           .navbar-pill {
             margin: 0 !important;
-            padding: 0 12% !important;
+            padding: 0 16% !important;
             border-radius: 0 !important;
             box-shadow: none !important;
             background: rgba(255,255,255,0.98) !important;
@@ -42,25 +42,29 @@ export default function Navbar() {
         {/* Logo row */}
         <div className="flex items-center justify-between pt-1" style={{ height: "68px" }}>
           {/* Logo — izquierda */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0 md:flex-1 md:pl-10">
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image src="/app-icon.png" alt="FocusGod" width={40} height={40} className="rounded-[11px]" priority />
             <span style={{ fontSize: "18px", fontWeight: 700, color: "#20242e", letterSpacing: "-0.3px" }}>
               FocusGod
             </span>
           </Link>
 
-          {/* Desktop: links centrados */}
-          <div className="hidden md:flex items-center gap-12 flex-1 justify-end">
-            {links.map((l) => (
-              <Link key={l.href} href={l.href} className="text-sm font-medium text-ink2 hover:text-ink transition-colors">
-                {l.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Desktop: CTA derecha */}
-          <div className="hidden md:flex flex-1 justify-center">
-            <Link href="/download" className="btn-blue text-sm px-5 py-2.5" style={{ boxShadow: "0 4px 0px rgba(190,35,10,0.5)" }}>Descargar gratis</Link>
+          {/* Desktop: links + botón agrupados a la derecha */}
+          <div className="hidden md:flex items-center gap-[84px]">
+            <div className="flex items-center gap-[56px]">
+              {links.map((l) => (
+                <Link key={l.href} href={l.href} className="text-sm font-medium text-ink2 hover:text-ink transition-colors">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+            <Link
+              href="/download"
+              className="btn-blue text-sm px-5 py-2.5"
+              style={{ borderRadius: "14px", boxShadow: "0 4px 0 0 #bf321c" }}
+            >
+              Descargar gratis
+            </Link>
           </div>
 
           {/* Hamburger — solo móvil */}
