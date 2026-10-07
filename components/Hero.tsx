@@ -7,13 +7,12 @@ export default function Hero() {
         @media (min-width: 768px) {
           .hero-section {
             padding-top: 56px !important;
-            background: #F0EBE0 !important;
           }
         }
       `}</style>
       <section
-        className="hero-section md:min-h-[calc(100vh-0px)] md:flex md:items-center"
-        style={{ background: "#ffffff", paddingTop: "82px", overflow: "hidden" }}
+        className="hero-section md:flex md:items-center"
+        style={{ background: "#ffffff", paddingTop: "82px", overflow: "hidden", minHeight: "100vh" }}
       >
         <div className="md:max-w-6xl md:mx-auto md:flex md:items-center md:gap-12 md:px-16 w-full">
 

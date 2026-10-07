@@ -23,7 +23,7 @@ export default function Navbar() {
             padding: 0 48px !important;
             border-radius: 0 !important;
             box-shadow: 0 1px 0 rgba(0,0,0,0.08) !important;
-            background: rgba(240,235,224,0.98) !important;
+            background: rgba(255,255,255,0.98) !important;
           }
         }
       `}</style>
