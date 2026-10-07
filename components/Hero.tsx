@@ -2,12 +2,15 @@
 
 export default function Hero() {
   return (
-    <section style={{ background: "#ffffff", paddingTop: "82px", overflow: "hidden" }}>
-      <div className="md:max-w-6xl md:mx-auto md:flex md:items-center md:gap-16 md:px-14 md:pb-20">
+    <section
+      style={{ background: "#ffffff", paddingTop: "82px", overflow: "hidden" }}
+      className="md:pt-0 md:min-h-[calc(100vh-56px)] md:flex md:items-center"
+    >
+      <div className="md:max-w-6xl md:mx-auto md:flex md:items-center md:gap-20 md:px-16 md:py-16 w-full">
 
         {/* Phone mockup — top on mobile, LEFT on desktop */}
         <div className="flex justify-center mt-11 md:mt-0 md:flex-1 md:order-1">
-          <div style={{ maxWidth: "290px", width: "100%", borderRadius: "28px", overflow: "hidden" }}>
+          <div style={{ borderRadius: "28px", overflow: "hidden" }} className="w-[290px] md:w-full md:max-w-[420px]">
             <div style={{ background: "#20242e", padding: "28px 20px 24px" }}>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "10px", marginBottom: "24px" }}>
                 {["📸", "🎵", "▶️", "🐦", "💬", "📘", "🎮", "📺"].map((emoji, i) => (
@@ -49,15 +52,15 @@ export default function Hero() {
         {/* Text + buttons — bottom on mobile, RIGHT on desktop */}
         <div className="flex flex-col items-center text-center gap-[14px] px-6 pt-10 pb-[52px] md:flex-1 md:order-2 md:items-start md:text-left md:p-0">
           <h1
-            className="md:text-[4rem]"
+            className="md:text-[3.6rem]"
             style={{ fontSize: "2.6rem", fontWeight: 700, color: "#333333", lineHeight: 1.1, letterSpacing: "-0.5px", margin: 0 }}
           >
             Ora primero.<br />Enfoca tu día.
           </h1>
-          <p style={{ fontSize: "16px", color: "#838381", lineHeight: 1.6, margin: 0 }}>
+          <p style={{ fontSize: "16px", color: "#838381", lineHeight: 1.6, margin: 0 }} className="md:text-lg">
             FocusGod bloquea Instagram, TikTok y YouTube hasta que hayas pasado tiempo con Dios.
           </p>
-          <div className="w-full md:max-w-[340px] flex flex-col gap-3 mt-2">
+          <div className="w-full md:max-w-[380px] flex flex-col gap-3 mt-2">
             <a
               href="https://apps.apple.com"
               target="_blank"

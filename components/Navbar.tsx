@@ -39,27 +39,31 @@ export default function Navbar() {
           boxShadow: "0 1px 10px rgba(0,0,0,0.06)",
         }}
       >
-        {/* Logo row + desktop nav in same flex row */}
+        {/* Logo row */}
         <div className="flex items-center justify-between" style={{ height: "56px" }}>
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+          {/* Logo — izquierda */}
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 md:flex-1">
             <Image src="/app-icon.png" alt="FocusGod" width={40} height={40} className="rounded-[11px]" priority />
             <span style={{ fontSize: "18px", fontWeight: 700, color: "#20242e", letterSpacing: "-0.3px" }}>
               FocusGod
             </span>
           </Link>
 
-          {/* Desktop links — center/right */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Desktop: links centrados */}
+          <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
             {links.map((l) => (
               <Link key={l.href} href={l.href} className="text-sm font-medium text-ink2 hover:text-ink transition-colors">
                 {l.label}
               </Link>
             ))}
+          </div>
+
+          {/* Desktop: CTA derecha */}
+          <div className="hidden md:flex flex-1 justify-end">
             <Link href="/download" className="btn-blue text-sm px-5 py-2.5">Descargar gratis</Link>
           </div>
 
-          {/* Hamburger — mobile only */}
+          {/* Hamburger — solo móvil */}
           <button
             className="md:hidden p-2"
             onClick={() => setOpen(!open)}
