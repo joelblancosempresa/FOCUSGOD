@@ -20,7 +20,7 @@ export default function Navbar() {
         @media (min-width: 768px) {
           .navbar-pill {
             margin: 0 !important;
-            padding: 0 48px !important;
+            padding: 0 12% !important;
             border-radius: 0 !important;
             box-shadow: none !important;
             background: rgba(255,255,255,0.98) !important;
