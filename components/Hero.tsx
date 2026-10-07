@@ -7,7 +7,7 @@ export default function Hero() {
         @media (min-width: 768px) {
           .hero-section {
             padding-top: 56px !important;
-            min-height: 100vh !important;
+            min-height: 600px !important;
           }
         }
       `}</style>
