@@ -77,12 +77,10 @@ const posts = [
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState("Todo");
 
-  const filtered = activeCategory === "Todo"
-    ? posts
-    : posts.filter(p => p.category === activeCategory);
-
-  const featured = filtered[0];
-  const rest = filtered.slice(1);
+  const featured = posts[0];
+  const rest = activeCategory === "Todo"
+    ? posts.slice(1)
+    : posts.slice(1).filter(p => p.category === activeCategory);
 
   return (
     <>
