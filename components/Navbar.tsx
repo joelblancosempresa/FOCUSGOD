@@ -87,12 +87,13 @@ export default function Navbar() {
             gap: "4px",
           }}
         >
-          {links.map((l) => (
+          {links.map((l, i) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-base font-medium text-ink2 hover:text-ink px-2 py-3 rounded-xl hover:bg-black/5 transition-colors"
+              className="text-base font-medium text-ink2 hover:text-ink px-2 py-3 transition-colors"
+              style={{ borderBottom: i < links.length - 1 ? "1px solid rgba(0,0,0,0.07)" : "none" }}
             >
               {l.label}
             </Link>
