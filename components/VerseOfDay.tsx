@@ -23,7 +23,7 @@ export default function VerseOfDay() {
 
         {/* Quote */}
         <div style={{ marginBottom: "20px" }}>
-          <svg width="52" height="40" viewBox="0 0 52 40" fill="none" style={{ marginBottom: "12px" }}>
+          <svg width="52" height="40" viewBox="0 0 52 40" fill="none" style={{ display: "block", marginBottom: "10px" }}>
             <path d="M0 40V16C0 7.163 7.163 0 16 0H20V10H16C12.686 10 10 12.686 10 16V22H20V40H0Z" fill="#c4bdb0"/>
             <path d="M28 40V16C28 7.163 35.163 0 44 0H48V10H44C40.686 10 38 12.686 38 16V22H48V40H28Z" fill="#c4bdb0"/>
           </svg>
@@ -32,6 +32,7 @@ export default function VerseOfDay() {
             lineHeight: 1.6,
             color: "#333333",
             fontStyle: "italic",
+            textAlign: "center",
           }}>
             Busca primero el reino de Dios y su justicia, y todas estas cosas os serán añadidas.
           </p>
