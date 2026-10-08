@@ -72,8 +72,8 @@ export default function HowItWorks() {
               Hábito espiritual construido día a día
             </p>
           </div>
-          {/* Large screenshot placeholder (full-width overlay) */}
-          <div style={{ position: "absolute", left: "-15px", top: "887px", width: "1290px", height: "713px", background: "#111", borderRadius: "12px" }} />
+          {/* Large screenshot placeholder (empty in Figma) */}
+          <div style={{ position: "absolute", left: "-15px", top: "887px", width: "1290px", height: "713px" }} />
 
           {/* ── Module 3 ── */}
           {/* Dark rect — left */}

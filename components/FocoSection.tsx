@@ -48,23 +48,18 @@ export default function FocoSection() {
           }}
         />
 
-        {/* Content overlay */}
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}>
+        {/* Centered 1440px canvas — exact Figma positions */}
+        <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", width: "1440px", height: "518px" }}>
           <h2 style={{
+            position: "absolute",
+            left: "630px",
+            top: "142px",
+            width: "702px",
             fontSize: "35px",
             fontWeight: 600,
             color: "#333333",
             lineHeight: 1.2,
-            textAlign: "center",
-            maxWidth: "702px",
-            marginBottom: "32px",
+            margin: 0,
           }}>
             Empieza cada mañana con Dios primero.
           </h2>
@@ -73,6 +68,9 @@ export default function FocoSection() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
+              position: "absolute",
+              left: "836px",
+              top: "219px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
