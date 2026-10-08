@@ -23,7 +23,9 @@ export default function Navbar() {
             padding: 0 16% !important;
             border-radius: 0 !important;
             box-shadow: none !important;
-            background: rgba(255,255,255,0.98) !important;
+            background: #fdfcf8 !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
           }
         }
       `}</style>

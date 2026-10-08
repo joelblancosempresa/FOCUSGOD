@@ -51,7 +51,7 @@ export default function Hero() {
       {/* ── DESKTOP (exacto del Figma) ─────────────────────── */}
       <div
         className="hidden md:flex md:items-center"
-        style={{ background: "#fdfcf8", height: "564px" }}
+        style={{ background: "#fdfcf8", height: "564px", paddingTop: "68px" }}
       >
         {/* Imagen mockup — izquierda */}
         <div style={{ marginLeft: "189px", flexShrink: 0 }}>
