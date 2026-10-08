@@ -90,10 +90,10 @@ export default function VerseOfDay() {
           </h2>
 
           {/* Quote marks */}
-          <div style={{ display: "flex", justifyContent: "flex-start", paddingLeft: "calc(50% - 488px)", marginBottom: "14px" }}>
-            <svg width="62" height="83" viewBox="0 0 62 83" fill="none">
-              <path d="M0 83V33.2C0 14.84 14.84 0 33.2 0H41.4V20.75H33.2C26.27 20.75 20.75 26.27 20.75 33.2V45.65H41.4V83H0Z" fill="#c4bdb0"/>
-              <path d="M62 83V33.2H41.4V45.65H62V83H41.4V20.75H33.2C26.27 20.75 20.75 26.27 20.75 33.2" fill="#c4bdb0"/>
+          <div style={{ display: "flex", justifyContent: "flex-start", paddingLeft: "calc(50% - 425px)", marginBottom: "14px" }}>
+            <svg width="62" height="48" viewBox="0 0 52 40" fill="none">
+              <path d="M0 40V16C0 7.163 7.163 0 16 0H20V10H16C12.686 10 10 12.686 10 16V22H20V40H0Z" fill="#c4bdb0"/>
+              <path d="M28 40V16C28 7.163 35.163 0 44 0H48V10H44C40.686 10 38 12.686 38 16V22H48V40H28Z" fill="#c4bdb0"/>
             </svg>
           </div>
 

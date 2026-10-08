@@ -2,13 +2,13 @@ export default function DesktopCTA() {
   return (
     <div className="hidden md:block">
 
-      {/* Illustration section */}
-      <div style={{ position: "relative", width: "100%", height: "563px", overflow: "hidden" }}>
+      {/* Illustration section — crop top portion to hide baked-in text at bottom of image */}
+      <div style={{ position: "relative", width: "100%", height: "380px", overflow: "hidden" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/cta-desktop-bg.png"
           alt=""
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
         />
       </div>
 
