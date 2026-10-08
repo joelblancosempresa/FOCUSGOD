@@ -84,7 +84,7 @@ export default function Hero() {
             </a>
             <a
               href="/download"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "264px", height: "60px", borderRadius: "20px", background: "#fff", color: "#333", fontWeight: 600, fontSize: "16px", textDecoration: "none", border: "1px solid #ebe9dd" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "264px", height: "60px", borderRadius: "14px", background: "#fff", color: "#333", fontWeight: 600, fontSize: "16px", textDecoration: "none", border: "1px solid #ebe9dd", boxShadow: "0 4px 0 0 #d4cec6" }}
             >
               Ya tengo cuenta
             </a>
