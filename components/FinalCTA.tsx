@@ -28,6 +28,7 @@ export default function FinalCTA() {
             padding: "16px 32px",
             borderRadius: "14px",
             textDecoration: "none",
+            boxShadow: "0 4px 0 0 rgba(0,0,0,0.15)",
           }}
         >
           Descargar gratis →

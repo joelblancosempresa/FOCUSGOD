@@ -20,7 +20,7 @@ export default function FocoSection() {
             href="https://apps.apple.com"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ display: "block", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "16px", padding: "18px", borderRadius: "16px", textDecoration: "none" }}
+            style={{ display: "block", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "16px", padding: "18px", borderRadius: "14px", textDecoration: "none", boxShadow: "0 4px 0 0 #bf321c" }}
           >
             Prueba 3 días gratis
           </a>
@@ -82,8 +82,9 @@ export default function FocoSection() {
               color: "#fff",
               fontWeight: 700,
               fontSize: "16px",
-              borderRadius: "16px",
+              borderRadius: "14px",
               textDecoration: "none",
+              boxShadow: "0 4px 0 0 #bf321c",
             }}
           >
             Prueba 3 días gratis

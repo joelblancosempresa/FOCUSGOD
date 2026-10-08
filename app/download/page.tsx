@@ -56,9 +56,10 @@ export default function Download() {
                     gap: "10px",
                     background: "#111",
                     color: "#fff",
-                    borderRadius: "50px",
+                    borderRadius: "14px",
                     padding: "12px 20px",
                     textDecoration: "none",
+                    boxShadow: "0 4px 0 0 #bf321c",
                   }}
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
@@ -80,8 +81,9 @@ export default function Download() {
                     gap: "10px",
                     background: "#111",
                     color: "#fff",
-                    borderRadius: "50px",
+                    borderRadius: "14px",
                     padding: "12px 20px",
+                    boxShadow: "0 4px 0 0 #bf321c",
                     textDecoration: "none",
                   }}
                 >

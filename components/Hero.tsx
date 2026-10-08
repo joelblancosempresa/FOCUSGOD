@@ -19,7 +19,7 @@ export default function Hero() {
                     </div>
                   ))}
                 </div>
-                <button style={{ width: "100%", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", padding: "18px", borderRadius: "50px", border: "none", cursor: "pointer" }}>
+                <button style={{ width: "100%", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", padding: "18px", borderRadius: "14px", border: "none", cursor: "pointer", boxShadow: "0 4px 0 0 #bf321c" }}>
                   🙏 Orar ahora
                 </button>
                 <div style={{ marginTop: "18px", textAlign: "center", paddingBottom: "4px" }}>
@@ -37,10 +37,10 @@ export default function Hero() {
               FocusGod bloquea Instagram, TikTok y YouTube hasta que hayas pasado tiempo con Dios.
             </p>
             <div className="w-full flex flex-col gap-3 mt-2">
-              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" style={{ display: "block", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", padding: "18px", borderRadius: "50px", textDecoration: "none", textAlign: "center" }}>
+              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" style={{ display: "block", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", padding: "18px", borderRadius: "14px", textDecoration: "none", textAlign: "center", boxShadow: "0 4px 0 0 #bf321c" }}>
                 Descargar gratis
               </a>
-              <a href="/download" style={{ display: "block", background: "rgba(255,255,255,0.7)", color: "#333", fontWeight: 600, fontSize: "16px", padding: "18px", borderRadius: "50px", textDecoration: "none", textAlign: "center", border: "1.5px solid rgba(0,0,0,0.1)" }}>
+              <a href="/download" style={{ display: "block", background: "rgba(255,255,255,0.7)", color: "#333", fontWeight: 600, fontSize: "16px", padding: "18px", borderRadius: "14px", textDecoration: "none", textAlign: "center", border: "1.5px solid rgba(0,0,0,0.1)" }}>
                 Ya tengo cuenta
               </a>
             </div>

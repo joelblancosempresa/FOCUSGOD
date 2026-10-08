@@ -49,8 +49,9 @@ export default function DesktopCTA() {
             color: "#fff",
             fontWeight: 700,
             fontSize: "16px",
-            borderRadius: "16px",
+            borderRadius: "14px",
             textDecoration: "none",
+            boxShadow: "0 4px 0 0 #bf321c",
           }}
         >
           Descargar gratis

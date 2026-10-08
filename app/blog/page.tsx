@@ -147,13 +147,14 @@ export default function Blog() {
               style={{
                 flexShrink: 0,
                 padding: "8px 18px",
-                borderRadius: "50px",
+                borderRadius: "14px",
                 fontSize: "14px",
                 fontWeight: 600,
                 cursor: "pointer",
                 border: activeCategory === c ? "none" : "1.5px solid rgba(0,0,0,0.12)",
                 background: activeCategory === c ? "#f0492e" : "#fff",
                 color: activeCategory === c ? "#fff" : "#333",
+                boxShadow: activeCategory === c ? "0 4px 0 0 #bf321c" : "none",
               }}
             >
               {c}
