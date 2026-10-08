@@ -78,7 +78,7 @@ export default function Hero() {
               href="https://apps.apple.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "264px", height: "60px", borderRadius: "20px", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", textDecoration: "none" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "264px", height: "60px", borderRadius: "14px", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", textDecoration: "none", boxShadow: "0 4px 0 0 #bf321c" }}
             >
               Descargar gratis
             </a>
