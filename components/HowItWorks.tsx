@@ -1,16 +1,18 @@
 export default function HowItWorks() {
   const features = [
     {
-      title: "Instagram puede esperar. Dios no.",
-      body: "FocusGod bloquea Instagram, TikTok y YouTube hasta que termines tu oración. Sin trucos. Sin atajos.",
+      title: "Desbloquea hablando con Dios",
+      body: "Ora, lee la Biblia o pasa tiempo con Él. Después se abren tus apps.",
+      image: "/howitworks-1.png",
+      alt: "Jesús sentado en un banco con un niño que ha dejado el móvil a un lado",
     },
     {
-      title: "Cada día suma. Cada racha importa.",
-      body: "21 días para crear un hábito. Construye tu racha espiritual una mañana a la vez.",
+      title: "Desconecta cuando lo necesites",
+      body: "Por la noche, para estudiar o un día entero. Tú eliges cuándo.",
     },
     {
-      title: "No sabes cómo empezar. Nosotros sí.",
-      body: "Oraciones cortas, versículos relevantes y guía paso a paso. Cada mañana lista para ti.",
+      title: "Protege lo que ves",
+      body: "Filtro de contenido adulto y límites de tiempo, siempre activos.",
     },
   ];
 
@@ -22,7 +24,12 @@ export default function HowItWorks() {
         <div style={{ display: "flex", flexDirection: "column", gap: "56px" }}>
           {features.map((f, i) => (
             <div key={i}>
-              <div style={{ width: "100%", aspectRatio: "16/9", background: "#111111", borderRadius: "16px", marginBottom: "20px" }} />
+              {f.image ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={f.image} alt={f.alt} style={{ display: "block", width: "100%", maxWidth: "340px", height: "auto", margin: "0 auto 20px" }} />
+              ) : (
+                <div style={{ width: "100%", aspectRatio: "16/9", background: "#111111", borderRadius: "16px", marginBottom: "20px" }} />
+              )}
               <h2 style={{ fontSize: "22px", fontWeight: 700, color: "#333333", lineHeight: 1.25, letterSpacing: "-0.2px", marginBottom: "8px", textAlign: "center" }}>
                 {f.title}
               </h2>
@@ -46,17 +53,17 @@ export default function HowItWorks() {
           {/* Rectangle SVG image — right column */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/howitworks-module1.svg"
-            alt=""
-            style={{ position: "absolute", left: "859px", top: "102px", width: "341px", height: "325.5px", objectFit: "cover" }}
+            src={features[0].image}
+            alt={features[0].alt}
+            style={{ position: "absolute", left: "859px", top: "102px", width: "341px", height: "325.5px", objectFit: "contain" }}
           />
           {/* Text — left */}
           <div style={{ position: "absolute", left: "215px", top: "197px", width: "633px" }}>
             <h2 style={{ fontSize: "35px", fontWeight: 600, color: "#333333", lineHeight: 1.2, margin: 0 }}>
-              Instagram puede esperar.<br />Dios no.
+              {features[0].title}
             </h2>
             <p style={{ fontSize: "14px", fontWeight: 600, color: "#848482", marginTop: "16px" }}>
-              Bloqueo real de distracciones digitales
+              {features[0].body}
             </p>
           </div>
 
@@ -66,10 +73,10 @@ export default function HowItWorks() {
           {/* Text — left */}
           <div style={{ position: "absolute", left: "215px", top: "706px", width: "667px" }}>
             <h2 style={{ fontSize: "35px", fontWeight: 600, color: "#333333", lineHeight: 1.2, margin: 0 }}>
-              Cada día suma.<br />Cada racha importa.
+              {features[1].title}
             </h2>
             <p style={{ fontSize: "14px", fontWeight: 600, color: "#848482", marginTop: "16px" }}>
-              Hábito espiritual construido día a día
+              {features[1].body}
             </p>
           </div>
           {/* Large screenshot placeholder (empty in Figma) */}
@@ -81,10 +88,10 @@ export default function HowItWorks() {
           {/* Text — right */}
           <div style={{ position: "absolute", left: "651px", top: "1226px", width: "667px" }}>
             <h2 style={{ fontSize: "35px", fontWeight: 600, color: "#333333", lineHeight: 1.2, margin: 0 }}>
-              No sabes cómo empezar.<br />Nosotros sí.
+              {features[2].title}
             </h2>
             <p style={{ fontSize: "14px", fontWeight: 600, color: "#848482", marginTop: "16px" }}>
-              Guías de oración personalizadas
+              {features[2].body}
             </p>
           </div>
           {/* Bottom screenshot strip */}

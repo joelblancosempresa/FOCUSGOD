@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { CTA_HREF } from "@/lib/cta";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -46,7 +47,7 @@ export default function Download() {
               </p>
               <div className="flex flex-col gap-[10px] mb-10 max-w-[280px] mx-auto md:mx-0">
                 <a
-                  href="https://apps.apple.com"
+                  href={CTA_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -68,34 +69,6 @@ export default function Download() {
                   <div style={{ textAlign: "left" }}>
                     <div style={{ fontSize: "9px", opacity: 0.7, lineHeight: 1 }}>Download on the</div>
                     <div style={{ fontSize: "15px", fontWeight: 700, lineHeight: 1.2 }}>App Store</div>
-                  </div>
-                </a>
-                <a
-                  href="https://play.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "10px",
-                    background: "#111",
-                    color: "#fff",
-                    borderRadius: "14px",
-                    padding: "12px 20px",
-                    boxShadow: "0 4px 0 0 #bf321c",
-                    textDecoration: "none",
-                  }}
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path d="M3.18 23.76c.3.16.63.24.97.22l12.4-7.15-2.75-2.76-10.62 9.69z" fill="#EA4335"/>
-                    <path d="M22.38 10.62l-3.24-1.87-3.07 3.08 3.07 3.07 3.27-1.88c.93-.54.93-1.86-.03-2.4z" fill="#FBBC04"/>
-                    <path d="M3.18.24C2.84.06 2.46-.01 2.1.01L14.54 12.5l2.6-2.6L3.18.24z" fill="#4285F4"/>
-                    <path d="M2.1.01C1.28.06.69.72.69 1.63v20.74c0 .9.59 1.57 1.41 1.62l12.44-11.99L2.1.01z" fill="#34A853"/>
-                  </svg>
-                  <div style={{ textAlign: "left" }}>
-                    <div style={{ fontSize: "9px", opacity: 0.7, lineHeight: 1 }}>GET IT ON</div>
-                    <div style={{ fontSize: "15px", fontWeight: 700, lineHeight: 1.2 }}>Google Play</div>
                   </div>
                 </a>
               </div>

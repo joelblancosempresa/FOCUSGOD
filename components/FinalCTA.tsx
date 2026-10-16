@@ -1,3 +1,4 @@
+import { CTA_HREF } from "@/lib/cta";
 export default function FinalCTA() {
   return (
     <section style={{ background: "#f0492e", padding: "60px 24px", textAlign: "center" }}>
@@ -10,13 +11,13 @@ export default function FinalCTA() {
           letterSpacing: "-0.3px",
           marginBottom: "10px",
         }}>
-          Tu rutina espiritual empieza hoy.
+          Pon a Dios primero hoy
         </h2>
         <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.75)", marginBottom: "28px", lineHeight: 1.6 }}>
           Es para siempre. Sin atajos. Sin excusas.
         </p>
         <a
-          href="https://apps.apple.com"
+          href={CTA_HREF}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -31,7 +32,7 @@ export default function FinalCTA() {
             boxShadow: "0 4px 0 0 rgba(0,0,0,0.15)",
           }}
         >
-          Descargar gratis →
+          Descargar gratis
         </a>
       </div>
     </section>

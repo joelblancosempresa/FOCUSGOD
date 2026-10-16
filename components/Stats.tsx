@@ -1,7 +1,7 @@
 const stats = [
-  { value: "50K+", label: "usuarios activos", sublabel: "Una comunidad creciente", cardLeft: 80, emojiLeft: 260 },
-  { value: "365d", label: "racha máxima", sublabel: "Disciplina espiritual real", cardLeft: 520, emojiLeft: 700 },
-  { value: "2M+", label: "oraciones completadas", sublabel: "Momentos con Dios", cardLeft: 960, emojiLeft: 1140 },
+  { value: "9", label: "formas de bloquear", sublabel: "", cardLeft: 80, emojiLeft: 260 },
+  { value: "2", label: "Biblias completas, sin internet", sublabel: "", cardLeft: 520, emojiLeft: 700 },
+  { value: "0", label: "datos tuyos salen del iPhone", sublabel: "", cardLeft: 960, emojiLeft: 1140 },
 ];
 
 export default function Stats() {

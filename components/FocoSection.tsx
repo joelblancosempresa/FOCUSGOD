@@ -1,3 +1,4 @@
+import { CTA_HREF } from "@/lib/cta";
 export default function FocoSection() {
   return (
     <section>
@@ -14,15 +15,15 @@ export default function FocoSection() {
           textAlign: "center",
         }}>
           <h2 style={{ fontSize: "26px", fontWeight: 700, color: "#ffffff", lineHeight: 1.2, letterSpacing: "-0.3px", marginBottom: "20px" }}>
-            Empieza mañana con Dios primero.
+            Antes que el scroll, Dios.
           </h2>
           <a
-            href="https://apps.apple.com"
+            href={CTA_HREF}
             target="_blank"
             rel="noopener noreferrer"
             style={{ display: "block", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "16px", padding: "18px", borderRadius: "14px", textDecoration: "none", boxShadow: "0 4px 0 0 #bf321c" }}
           >
-            Prueba 3 días gratis
+            Descargar gratis
           </a>
         </div>
       </div>
@@ -61,10 +62,10 @@ export default function FocoSection() {
             lineHeight: 1.2,
             margin: 0,
           }}>
-            Empieza cada mañana con Dios primero.
+            Antes que el scroll, Dios.
           </h2>
           <a
-            href="https://apps.apple.com"
+            href={CTA_HREF}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -85,7 +86,7 @@ export default function FocoSection() {
               boxShadow: "0 4px 0 0 #bf321c",
             }}
           >
-            Prueba 3 días gratis
+            Descargar gratis
           </a>
         </div>
       </div>

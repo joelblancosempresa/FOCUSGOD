@@ -1,3 +1,4 @@
+import { CTA_HREF } from "@/lib/cta";
 export default function DesktopCTA() {
   return (
     <div className="hidden md:block">
@@ -33,10 +34,10 @@ export default function DesktopCTA() {
           margin: 0,
           lineHeight: 1.2,
         }}>
-          Tu rutina espiritual empieza hoy
+          Pon a Dios primero hoy
         </h2>
         <a
-          href="https://apps.apple.com"
+          href={CTA_HREF}
           target="_blank"
           rel="noopener noreferrer"
           style={{

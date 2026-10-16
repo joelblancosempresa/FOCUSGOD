@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { CTA_HREF } from "@/lib/cta";
 
 const links = [
   { href: "/blog", label: "Blog" },
@@ -60,13 +61,15 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
-            <Link
-              href="/download"
+            <a
+              href={CTA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-blue text-sm px-5 py-2.5"
               style={{ borderRadius: "14px", boxShadow: "0 4px 0 0 #bf321c" }}
             >
               Descargar gratis
-            </Link>
+            </a>
           </div>
 
           {/* Hamburger — solo móvil */}
@@ -94,13 +97,15 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              href="/download"
+            <a
+              href={CTA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="btn-blue text-sm px-5 py-3 text-center mt-3"
             >
               Descargar gratis
-            </Link>
+            </a>
           </div>
         )}
       </div>
