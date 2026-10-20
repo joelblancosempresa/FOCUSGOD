@@ -1,9 +1,9 @@
 (function(){
   // Edita SOLO esta lista para añadir/quitar páginas del menú en todo el sitio.
   var links = [
-    { label: 'Inicio', href: 'https://focusgodapp.com/' },
-    { label: 'Guías', href: '/guias/' },
-    { label: 'Fundador', href: '/fundador/' }
+    { label: 'Guías', href: '/' },
+    { label: 'Fundador', href: '/fundador/' },
+    { label: 'La app', href: 'https://focusgodapp.com/' }
   ];
 
   var container = document.getElementById('site-nav');

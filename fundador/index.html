@@ -206,42 +206,7 @@
     margin:0 0 18px;
   }
   footer.about p{font-size:15px;color:#d6d6d6;margin:0 0 16px;}
-  footer.about .launch{color:var(--accent);font-weight:700;}
 
-  .signup-form{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    margin:24px 0 6px;
-  }
-  .signup-form input{
-    background:#0d0d0d;
-    border:1px solid var(--line);
-    color:var(--fg);
-    padding:14px;
-    font-family:inherit;
-    font-size:14px;
-    border-radius:2px;
-    outline:none;
-  }
-  .signup-form input:focus{border-color:var(--accent);}
-  .signup-form button{
-    background:var(--accent);
-    color:#000;
-    border:none;
-    padding:14px;
-    font-family:inherit;
-    font-weight:700;
-    font-size:13px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    border-radius:2px;
-    cursor:pointer;
-  }
-  .signup-form button:disabled{opacity:0.6;cursor:default;}
-  .form-msg{font-size:12.5px;color:var(--muted);min-height:16px;margin:0;}
-  .form-msg.success{color:#a9d6b4;}
-  .form-msg.error{color:#e0a0a0;}
 
   .signature{
     margin-top:32px;
@@ -335,13 +300,7 @@
 <footer class="about reveal">
   <h2>Qué es Focusgod</h2>
   <p>Focusgod es una app para ayudarte a poner tu foco en Dios en medio del ruido. Para que dejes de vivir distraído y empieces a vivir con el propósito para el que fuiste diseñado.</p>
-  <p class="launch">Está a punto de salir. Únete antes que nadie.</p>
 
-  <form id="signupForm" class="signup-form">
-    <input type="email" id="signupEmail" placeholder="tu@correo.com" required>
-    <button type="submit">Avísame cuando lance</button>
-  </form>
-  <p class="form-msg" id="formMsg"></p>
 
   <a class="signature" href="https://instagram.com/joelblancosierra" target="_blank" rel="noopener">
     joelblancosierra
@@ -379,37 +338,6 @@ document.addEventListener('DOMContentLoaded', function(){
     revealEls.forEach(function(el){ el.classList.add('is-visible'); });
   }
 
-  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVYs7btmLpBToTdGD2cxISlcJv6RLzjgrv_a0M5lU6v15V-Sc9sG1KsrTdTVKFPOWe/exec';
-  var form = document.getElementById('signupForm');
-  var msg = document.getElementById('formMsg');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var email = document.getElementById('signupEmail').value;
-    var btn = form.querySelector('button');
-    btn.disabled = true;
-    btn.textContent = 'Enviando...';
-    msg.textContent = '';
-    msg.className = 'form-msg';
-    fetch(SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {'Content-Type': 'text/plain;charset=utf-8'},
-      body: JSON.stringify({email: email})
-    })
-    .then(function(){
-      msg.textContent = '¡Hecho! Te avisaremos en cuanto salga.';
-      msg.className = 'form-msg success';
-      form.reset();
-      btn.textContent = 'Avísame cuando lance';
-      btn.disabled = false;
-    })
-    .catch(function(){
-      msg.textContent = 'Ha fallado algo. Inténtalo de nuevo.';
-      msg.className = 'form-msg error';
-      btn.textContent = 'Avísame cuando lance';
-      btn.disabled = false;
-    });
-  });
 });
 </script>
 <script src="/nav.js"></script>
