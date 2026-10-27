@@ -1,31 +1,22 @@
-import { CTA_HREF } from "@/lib/cta";
+import { CTA_HREF, CTA_PROPS, CTA_LABEL } from "@/lib/cta";
 export default function FocoSection() {
   return (
     <section>
 
       {/* ── MÓVIL (sin cambios) ── */}
-      <div className="md:hidden aspect-[3/4]" style={{ position: "relative", width: "100%", background: "#111111" }}>
-        <div style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          padding: "32px 24px 40px",
-          background: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.85) 40%)",
-          textAlign: "center",
-        }}>
-          <h2 style={{ fontSize: "26px", fontWeight: 700, color: "#ffffff", lineHeight: 1.2, letterSpacing: "-0.3px", marginBottom: "20px" }}>
-            Antes que el scroll, Dios.
-          </h2>
-          <a
-            href={CTA_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: "block", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "16px", padding: "18px", borderRadius: "14px", textDecoration: "none", boxShadow: "0 4px 0 0 #bf321c" }}
-          >
-            Descargar gratis
-          </a>
-        </div>
+      <div className="md:hidden" style={{ background: "#FDFCF8", padding: "48px 24px 56px", textAlign: "center" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/howitworks-1.png" alt="Jesús sentado en un banco con un niño que ha dejado el móvil a un lado" style={{ display: "block", width: "100%", maxWidth: "320px", height: "auto", margin: "0 auto 24px" }} />
+        <h2 style={{ fontSize: "26px", fontWeight: 700, color: "#333333", lineHeight: 1.2, letterSpacing: "-0.3px", marginBottom: "20px" }}>
+          Antes que el scroll, Dios.
+        </h2>
+        <a
+          href={CTA_HREF}
+          {...CTA_PROPS}
+          style={{ display: "block", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "16px", padding: "18px", borderRadius: "14px", textDecoration: "none", boxShadow: "0 4px 0 0 #bf321c" }}
+        >
+          {CTA_LABEL}
+        </a>
       </div>
 
       {/* ── DESKTOP (Figma exact) ── */}
@@ -66,8 +57,7 @@ export default function FocoSection() {
           </h2>
           <a
             href={CTA_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...CTA_PROPS}
             style={{
               position: "absolute",
               left: "836px",
@@ -86,7 +76,7 @@ export default function FocoSection() {
               boxShadow: "0 4px 0 0 #bf321c",
             }}
           >
-            Descargar gratis
+            {CTA_LABEL}
           </a>
         </div>
       </div>

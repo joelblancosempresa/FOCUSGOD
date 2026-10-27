@@ -20,6 +20,7 @@ const sections: { title: string; body: React.ReactNode }[] = [
           <li><strong>Apps bloqueadas:</strong> FocusGod usa Tiempo de Uso de Apple (Family Controls). Apple nos entrega identificadores cifrados, así que no podemos saber qué apps o webs eliges ni cuánto las usas.</li>
           <li><strong>Cámara:</strong> se usa para comprobar que tienes los ojos cerrados mientras oras y para reconocer el texto de tu Biblia de papel. Las imágenes se analizan al momento en el dispositivo y no se graban, guardan ni envían.</li>
           <li><strong>Movimiento:</strong> los pasos de tu caminata se leen del iPhone y no se comparten.</li>
+          <li><strong>Ubicación:</strong> solo la usa el bloqueo «Domingo en la iglesia». Se comprueba en ese momento si estás cerca de tu iglesia y se olvida: no se guarda dónde has estado ni se envía a nadie.</li>
           <li><strong>Notificaciones:</strong> los recordatorios se programan en el propio dispositivo.</li>
         </ul>
         <p>Si borras la app, estos datos se eliminan.</p>
@@ -41,27 +42,37 @@ const sections: { title: string; body: React.ReactNode }[] = [
     ),
   },
   {
-    title: "3. Base legal",
-    body: <p>Tratamos los datos de suscripción porque son necesarios para darte el servicio que contratas (ejecución del contrato) y, para mejorar la pantalla de suscripción, por interés legítimo.</p>,
+    title: "3. Lista de espera de la web",
+    body: (
+      <>
+        <p>Si te apuntas en <strong>focusgodapp.com/app</strong> para que te avisemos cuando salga la app, guardamos tu <strong>nombre</strong>, tu <strong>email</strong>, si usas <strong>iPhone o Android</strong>, la fecha y desde qué enlace llegaste.</p>
+        <p>Solo lo usamos para avisarte del lanzamiento y contarte novedades de FocusGod. Se guarda en una hoja de cálculo de Google (Google Sheets) a la que solo accedemos nosotros, y podemos usar un servicio de envío de emails para escribirte. No lo vendemos ni lo compartimos con nadie más.</p>
+        <p>Cada email que te enviemos incluye un enlace para darte de baja. También puedes pedirnos que borremos tus datos escribiéndonos.</p>
+      </>
+    ),
   },
   {
-    title: "4. Conservación",
-    body: <p>RevenueCat y Superwall conservan sus datos mientras sean necesarios para gestionar tu suscripción o según sus propias políticas. Los datos del dispositivo se conservan hasta que borras la app.</p>,
+    title: "4. Base legal",
+    body: <p>Tratamos los datos de suscripción porque son necesarios para darte el servicio que contratas (ejecución del contrato) y, para mejorar la pantalla de suscripción, por interés legítimo. Los datos de la lista de espera los tratamos porque nos das tu consentimiento al apuntarte, y puedes retirarlo cuando quieras.</p>,
   },
   {
-    title: "5. Tus derechos",
+    title: "5. Conservación",
+    body: <p>RevenueCat y Superwall conservan sus datos mientras sean necesarios para gestionar tu suscripción o según sus propias políticas. Los datos del dispositivo se conservan hasta que borras la app. Los de la lista de espera, hasta que te des de baja o nos pidas borrarlos.</p>,
+  },
+  {
+    title: "6. Tus derechos",
     body: <p>Puedes pedir acceso, rectificación o eliminación de los datos que tengan nuestros proveedores, u oponerte a su tratamiento, escribiéndonos a <a href={`mailto:${EMAIL}`}>{EMAIL}</a>. También puedes reclamar ante la autoridad de protección de datos de tu país; en España, la Agencia Española de Protección de Datos (aepd.es).</p>,
   },
   {
-    title: "6. Menores",
+    title: "7. Menores",
     body: <p>FocusGod no está dirigida a menores de 13 años y no recoge conscientemente datos de ellos.</p>,
   },
   {
-    title: "7. Cambios",
+    title: "8. Cambios",
     body: <p>Si cambiamos esta política, actualizaremos la fecha de arriba. Si el cambio es importante, te avisaremos en la app.</p>,
   },
   {
-    title: "8. Contacto",
+    title: "9. Contacto",
     body: <p>Joel Blanco Sierra · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>,
   },
 ];
@@ -81,7 +92,7 @@ export default function Privacidad() {
             <p className="text-ink2 text-lg leading-relaxed">
               FocusGod no tiene cuentas ni servidores propios. Aquí te contamos qué datos trata la app y por qué.
             </p>
-            <p className="text-ink3 text-sm mt-6">Última actualización: 12 de octubre de 2026</p>
+            <p className="text-ink3 text-sm mt-6">Última actualización: 27 de octubre de 2026</p>
           </div>
         </section>
 

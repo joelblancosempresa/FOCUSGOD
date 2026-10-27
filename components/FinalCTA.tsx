@@ -1,4 +1,4 @@
-import { CTA_HREF } from "@/lib/cta";
+import { CTA_HREF, CTA_PROPS, CTA_LABEL, CTA_NOTE } from "@/lib/cta";
 export default function FinalCTA() {
   return (
     <section style={{ background: "#f0492e", padding: "60px 24px", textAlign: "center" }}>
@@ -14,12 +14,11 @@ export default function FinalCTA() {
           Pon a Dios primero hoy
         </h2>
         <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.75)", marginBottom: "28px", lineHeight: 1.6 }}>
-          Es para siempre. Sin atajos. Sin excusas.
+          {CTA_NOTE}
         </p>
         <a
           href={CTA_HREF}
-          target="_blank"
-          rel="noopener noreferrer"
+          {...CTA_PROPS}
           style={{
             display: "block",
             background: "#fff",
@@ -32,7 +31,7 @@ export default function FinalCTA() {
             boxShadow: "0 4px 0 0 rgba(0,0,0,0.15)",
           }}
         >
-          Descargar gratis
+          {CTA_LABEL}
         </a>
       </div>
     </section>

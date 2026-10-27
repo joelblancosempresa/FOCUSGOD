@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { CTA_HREF } from "@/lib/cta";
+import { CTA_HREF, CTA_PROPS, CTA_LABEL } from "@/lib/cta";
 
 const links = [
   { href: "/blog", label: "Blog" },
@@ -24,9 +24,7 @@ export default function Navbar() {
             padding: 0 16% !important;
             border-radius: 0 !important;
             box-shadow: none !important;
-            background: #fdfcf8 !important;
-            backdrop-filter: none !important;
-            -webkit-backdrop-filter: none !important;
+            background: rgba(253, 252, 248, 0.78) !important;
           }
         }
       `}</style>
@@ -36,7 +34,7 @@ export default function Navbar() {
           margin: "8px 12px 0",
           padding: open ? "0 12px 12px 8px" : "0 12px 0 8px",
           borderRadius: "18px",
-          background: "rgba(255, 255, 255, 0.97)",
+          background: "rgba(255, 255, 255, 0.8)",
           backdropFilter: "blur(20px) saturate(180%)",
           WebkitBackdropFilter: "blur(20px) saturate(180%)",
           boxShadow: "0 1px 10px rgba(0,0,0,0.06)",
@@ -46,7 +44,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between pt-1" style={{ height: "68px" }}>
           {/* Logo — izquierda */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <Image src="/app-icon.png" alt="FocusGod" width={40} height={40} className="rounded-[11px]" priority />
+            <Image src="/app-icon-vela.png" alt="FocusGod" width={40} height={40} className="rounded-[11px]" priority />
             <span style={{ fontSize: "18px", fontWeight: 700, color: "#20242e", letterSpacing: "-0.3px" }}>
               FocusGod
             </span>
@@ -63,12 +61,11 @@ export default function Navbar() {
             </div>
             <a
               href={CTA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...CTA_PROPS}
               className="btn-blue text-sm px-5 py-2.5"
               style={{ borderRadius: "14px", boxShadow: "0 4px 0 0 #bf321c" }}
             >
-              Descargar gratis
+              {CTA_LABEL}
             </a>
           </div>
 
@@ -99,12 +96,11 @@ export default function Navbar() {
             ))}
             <a
               href={CTA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...CTA_PROPS}
               onClick={() => setOpen(false)}
               className="btn-blue text-sm px-5 py-3 text-center mt-3"
             >
-              Descargar gratis
+              {CTA_LABEL}
             </a>
           </div>
         )}

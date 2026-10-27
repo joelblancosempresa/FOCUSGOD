@@ -34,10 +34,7 @@ export default function VerseOfDay() {
 
           <p style={{ fontSize: "14px", color: "#838381", marginBottom: "4px" }}>Mateo 6:33</p>
           <p style={{ fontSize: "12px", color: "#838381", marginBottom: "36px" }}>
-            Powered by{" "}
-            <a href="https://www.biblegateway.com" target="_blank" rel="noopener noreferrer" style={{ color: "#4a8fe8", textDecoration: "none" }}>
-              BibleGateway.com
-            </a>
+            Reina-Valera 1909
           </p>
 
         </div>
@@ -96,7 +93,7 @@ export default function VerseOfDay() {
 
           {/* Reference */}
           <p style={{ fontSize: "14px", fontWeight: 600, color: "#333333", marginBottom: "32px" }}>
-            Mateo 6:33
+            Mateo 6:33 <span style={{ fontWeight: 400, color: "#838381" }}>· Reina-Valera 1909</span>
           </p>
 
         </div>

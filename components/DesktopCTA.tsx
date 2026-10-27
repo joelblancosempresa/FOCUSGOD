@@ -1,4 +1,4 @@
-import { CTA_HREF } from "@/lib/cta";
+import { CTA_HREF, CTA_PROPS, CTA_LABEL, CTA_NOTE } from "@/lib/cta";
 export default function DesktopCTA() {
   return (
     <div className="hidden md:block">
@@ -17,7 +17,7 @@ export default function DesktopCTA() {
       <div
         style={{
           background: "#ffffff",
-          height: "198px",
+          height: "230px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -38,8 +38,7 @@ export default function DesktopCTA() {
         </h2>
         <a
           href={CTA_HREF}
-          target="_blank"
-          rel="noopener noreferrer"
+          {...CTA_PROPS}
           style={{
             display: "flex",
             alignItems: "center",
@@ -55,8 +54,9 @@ export default function DesktopCTA() {
             boxShadow: "0 4px 0 0 #bf321c",
           }}
         >
-          Descargar gratis
+          {CTA_LABEL}
         </a>
+        <p style={{ fontSize: "13px", color: "#9a978f", margin: "-8px 0 0" }}>{CTA_NOTE}</p>
       </div>
 
     </div>

@@ -1,80 +1,35 @@
-"use client";
-import { useRef } from "react";
-
-const reviews = [
-  { name: "María O.", location: "México 🇲🇽", text: "La tengo en presave desde el día uno. Solo con saber que existe ya cambié cómo empiezo mis mañanas. No puedo esperar a que salga." },
-  { name: "Carlos M.", location: "España 🇪🇸", text: "Llevo semanas esperando el lanzamiento. El concepto me hizo darme cuenta de lo mucho que miro el móvil antes de orar. Ya estoy cambiando." },
-  { name: "Valentina R.", location: "Colombia 🇨🇴", text: "Tengo el presave. Mi grupo de la iglesia también lo tiene. Vamos a usarla juntos desde el primer día que salga." },
-  { name: "Andrés F.", location: "Argentina 🇦🇷", text: "Solo leer cómo funciona ya me convenció. Me apunté al presave y comparto la web con todos mis amigos. Esto llena un hueco real." },
-  { name: "Lucía P.", location: "Chile 🇨🇱", text: "Presave hecho. Llevo años intentando orar antes de abrir Instagram y nunca lo logro. Esto es exactamente lo que necesito." },
-  { name: "Diego S.", location: "Perú 🇵🇪", text: "Ya noto la diferencia solo de haberme comprometido a descargarla. Cambié mi mentalidad antes de que salga. Eso es poderoso." },
-  { name: "Sofía G.", location: "México 🇲🇽", text: "Tengo el presave y cuento los días. Nunca había visto una app que de verdad te obligue a buscar a Dios primero. Necesaria." },
-];
+import Image from "next/image";
 
 export default function Reviews() {
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (dir: "left" | "right") => {
-    if (!trackRef.current) return;
-    trackRef.current.scrollBy({ left: dir === "right" ? 280 : -280, behavior: "smooth" });
-  };
-
   return (
-    <section style={{ background: "#FCFBF2" }}>
+    <section style={{ background: "#FCFBF2" }} className="px-6 py-14 md:py-24">
+      <div className="max-w-[420px] md:max-w-[760px] mx-auto">
+        <h2 className="text-[26px] md:text-[35px]" style={{ fontWeight: 700, color: "#333333", letterSpacing: "-0.2px", textAlign: "center", lineHeight: 1.2, margin: "0 0 28px" }}>
+          Hecho por un cristiano, para cristianos
+        </h2>
 
-      {/* ── MÓVIL (sin cambios) ── */}
-      <div className="md:hidden" style={{ padding: "56px 0" }}>
-        <div className="px-6 pb-7 max-w-[420px] mx-auto">
-          <h2 style={{ fontSize: "28px", fontWeight: 700, color: "#333333", letterSpacing: "-0.2px", textAlign: "center" }}>
-            Lo que dicen nuestros usuarios
-          </h2>
-        </div>
-        <div style={{ position: "relative" }}>
-          <div
-            ref={trackRef}
-            style={{ display: "flex", gap: "14px", overflowX: "auto", scrollSnapType: "x mandatory", paddingLeft: "24px", paddingRight: "24px", paddingBottom: "8px", scrollbarWidth: "none", msOverflowStyle: "none" }}
-            className="hide-scrollbar"
-          >
-            {reviews.map((r, i) => (
-              <div key={i} style={{ flex: "0 0 260px", scrollSnapAlign: "start", background: "#fff", borderRadius: "20px", padding: "20px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
-                <svg width="52" height="40" viewBox="0 0 52 40" fill="none" style={{ marginBottom: "12px" }}>
-                  <path d="M0 40V16C0 7.163 7.163 0 16 0H20V10H16C12.686 10 10 12.686 10 16V22H20V40H0Z" fill="#d4d0c8"/>
-                  <path d="M28 40V16C28 7.163 35.163 0 44 0H48V10H44C40.686 10 38 12.686 38 16V22H48V40H28Z" fill="#d4d0c8"/>
-                </svg>
-                <p style={{ fontSize: "14px", color: "#838381", lineHeight: 1.6, marginBottom: "14px" }}>{r.text}</p>
-                <div>
-                  <p style={{ fontSize: "13px", fontWeight: 700, color: "#333333" }}>{r.name}</p>
-                  <p style={{ fontSize: "12px", color: "#b0ada8", marginTop: "2px" }}>{r.location}</p>
-                </div>
-              </div>
-            ))}
+        <div style={{ background: "#fff", borderRadius: "20px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }} className="p-6 md:p-10">
+          <svg width="52" height="40" viewBox="0 0 52 40" fill="none" style={{ marginBottom: "16px" }} aria-hidden="true">
+            <path d="M0 40V16C0 7.163 7.163 0 16 0H20V10H16C12.686 10 10 12.686 10 16V22H20V40H0Z" fill="#d4d0c8"/>
+            <path d="M28 40V16C28 7.163 35.163 0 44 0H48V10H44C40.686 10 38 12.686 38 16V22H48V40H28Z" fill="#d4d0c8"/>
+          </svg>
+          <div className="text-[16px] md:text-[18px]" style={{ color: "#555", lineHeight: 1.65, display: "flex", flexDirection: "column", gap: "14px" }}>
+            <p style={{ margin: 0, fontWeight: 600, color: "#333" }}>
+              Hice FocusGod para quienes quieren dejar de darle a su móvil lo que le pertenece a Dios.
+            </p>
+            <p style={{ margin: 0 }}>
+              Por eso no hay anuncios, no hay cuenta que crear y tus oraciones no salen de tu iPhone. Solo tú y Dios, cada día.
+            </p>
           </div>
-          <div style={{ display: "flex", justifyContent: "center", gap: "12px", marginTop: "20px", padding: "0 24px" }}>
-            <button onClick={() => scroll("left")} style={{ width: "44px", height: "44px", borderRadius: "50%", border: "1.5px solid rgba(0,0,0,0.12)", background: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#333" }}>←</button>
-            <button onClick={() => scroll("right")} style={{ width: "44px", height: "44px", borderRadius: "50%", border: "1.5px solid rgba(0,0,0,0.12)", background: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#333" }}>→</button>
-          </div>
-        </div>
-      </div>
-
-      {/* ── DESKTOP (Figma — 465px, 4 cards static) ── */}
-      <div className="hidden md:block" style={{ height: "465px" }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", gap: "30px" }}>
-          {reviews.slice(0, 4).map((r, i) => (
-            <div key={i} style={{ width: "300px", height: "270px", background: "#fff", borderRadius: "20px", padding: "24px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)", display: "flex", flexDirection: "column" }}>
-              <svg width="52" height="40" viewBox="0 0 52 40" fill="none" style={{ marginBottom: "12px", flexShrink: 0 }}>
-                <path d="M0 40V16C0 7.163 7.163 0 16 0H20V10H16C12.686 10 10 12.686 10 16V22H20V40H0Z" fill="#d4d0c8"/>
-                <path d="M28 40V16C28 7.163 35.163 0 44 0H48V10H44C40.686 10 38 12.686 38 16V22H48V40H28Z" fill="#d4d0c8"/>
-              </svg>
-              <p style={{ fontSize: "13px", color: "#838381", lineHeight: 1.6, flex: 1, overflow: "hidden" }}>{r.text}</p>
-              <div style={{ marginTop: "12px" }}>
-                <p style={{ fontSize: "13px", fontWeight: 700, color: "#333333" }}>{r.name}</p>
-                <p style={{ fontSize: "12px", color: "#b0ada8", marginTop: "2px" }}>{r.location}</p>
-              </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "24px" }}>
+            <Image src="/app-icon-vela.png" alt="" width={40} height={40} style={{ borderRadius: "10px" }} />
+            <div>
+              <p style={{ fontSize: "14px", fontWeight: 700, color: "#333", margin: 0 }}>Joel Blanco</p>
+              <p style={{ fontSize: "13px", color: "#b0ada8", margin: "2px 0 0" }}>Creador de FocusGod</p>
             </div>
-          ))}
+          </div>
         </div>
       </div>
-
     </section>
   );
 }
