@@ -114,7 +114,7 @@ export default function Blog() {
                 justifyContent: "center",
                 fontSize: "48px",
                 position: "relative",
-              }} className="h-[200px] md:h-auto md:w-[320px] md:flex-shrink-0">
+              }} className="h-[200px] md:h-auto md:min-h-[240px] md:w-[400px] md:flex-shrink-0">
                 {BLOG_IMAGES[FEATURED.slug] ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={BLOG_IMAGES[FEATURED.slug]} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
