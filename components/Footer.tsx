@@ -20,7 +20,7 @@ export default function Footer() {
         {/* Logo + tagline */}
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
-            <Image src="/app-icon-vela.png" alt="FocusGod" width={36} height={36} style={{ borderRadius: "8px" }} />
+            <Image src="/app-icon-claro.png" alt="FocusGod" width={36} height={36} />
             <span style={{ fontSize: "17px", fontWeight: 700, color: "#fff" }}>FocusGod</span>
           </div>
           <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", lineHeight: 1.5, maxWidth: "220px" }}>
