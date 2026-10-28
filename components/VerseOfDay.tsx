@@ -7,12 +7,11 @@ export default function VerseOfDay() {
       {/* ── MÓVIL (sin cambios) ── */}
       <div className="md:hidden" style={{ padding: "56px 24px 60px" }}>
         <div style={{ maxWidth: "420px", margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{
+          <h2 className="fg-h2" style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             gap: "10px",
-            fontSize: "26px",
             fontWeight: 700,
             color: "#333333",
             letterSpacing: "-0.2px",

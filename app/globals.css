@@ -32,3 +32,12 @@ body {
     @apply bg-cream border border-[rgba(32,36,46,0.08)] rounded-[20px] shadow-card-3d;
   }
 }
+
+/* Tamaños fluidos en móvil: el texto escala con el ancho de la pantalla,
+   así los títulos se parten igual en un iPhone pequeño que en un Pro Max. */
+@layer components {
+  .fg-h1 { font-size: clamp(30px, calc((100vw - 48px) * 0.105), 46px); }
+  .fg-h1-hero { font-size: clamp(34px, calc((100vw - 48px) * 0.127), 52px); }
+  .fg-h2 { font-size: clamp(22px, calc((100vw - 48px) * 0.0856), 34px); }
+  .fg-lead { font-size: clamp(15px, calc((100vw - 48px) * 0.049), 18px); }
+}

@@ -60,7 +60,7 @@ export default function WaitlistForm() {
         </h2>
         <p style={{ fontSize: "16px", color: "#7a7872", lineHeight: 1.55, margin: 0 }}>
           Te avisaremos el día que FocusGod salga.
-          {plataforma === "android" && " Y si somos muchos con Android, también la haremos para Android."}
+          {plataforma === "android" && " Android llega en la segunda fase: te avisaremos en cuanto esté."}
         </p>
         {WHATSAPP_URL && (
           <a
@@ -110,7 +110,7 @@ export default function WaitlistForm() {
         </div>
         {plataforma === "android" && (
           <p style={{ fontSize: "13px", color: "#7a7872", lineHeight: 1.5, margin: "8px 0 0" }}>
-            De momento FocusGod es solo para iPhone. Apúntate igual: si somos muchos, también la haremos para Android.
+            FocusGod sale primero en iPhone. Android llega en la segunda fase, que ya está en marcha: apúntate y te avisamos.
           </p>
         )}
       </fieldset>

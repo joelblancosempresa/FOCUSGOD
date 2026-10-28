@@ -13,10 +13,10 @@ export default function BlockGallery() {
   return (
     <section style={{ background: "#FDFCF8" }} className="py-16 md:py-24">
       <div className="px-6 text-center max-w-[720px] mx-auto">
-        <h2 className="text-[28px] md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 12px", textWrap: "balance" }}>
+        <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 12px", textWrap: "balance" }}>
           11 formas de proteger tu tiempo con Dios
         </h2>
-        <p className="text-[16px] md:text-[19px]" style={{ color: "#838381", lineHeight: 1.5, margin: 0 }}>
+        <p className="fg-lead md:text-[19px]" style={{ color: "#838381", lineHeight: 1.5, margin: 0 }}>
           Elige cómo y cuándo. Y con el Modo Estricto, no hay vuelta atrás en un momento de debilidad.
         </p>
       </div>

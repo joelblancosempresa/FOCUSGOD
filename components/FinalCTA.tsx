@@ -3,8 +3,7 @@ export default function FinalCTA() {
   return (
     <section style={{ background: "#f0492e", padding: "60px 24px", textAlign: "center" }}>
       <div className="max-w-[420px] md:max-w-xl mx-auto">
-        <h2 style={{
-          fontSize: "32px",
+        <h2 className="fg-h2" style={{
           fontWeight: 700,
           color: "#fff",
           lineHeight: 1.2,

@@ -12,7 +12,7 @@ export default function AsSeenIn() {
       {/* ── MÓVIL (sin cambios) ── */}
       <div className="md:hidden" style={{ padding: "48px 20px" }}>
         <div style={{ maxWidth: "420px", margin: "0 auto", background: "#F6F1E3", borderRadius: "24px", padding: "28px 20px" }}>
-          <h2 style={{ fontSize: "22px", fontWeight: 700, color: "#333333", letterSpacing: "-0.2px", textAlign: "center", marginBottom: "20px" }}>
+          <h2 className="fg-h2" style={{ fontWeight: 700, color: "#333333", letterSpacing: "-0.2px", textAlign: "center", marginBottom: "20px" }}>
             Respaldado por datos
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>

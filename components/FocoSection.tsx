@@ -7,7 +7,7 @@ export default function FocoSection() {
       <div className="md:hidden" style={{ background: "#FDFCF8", padding: "48px 24px 56px", textAlign: "center" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/howitworks-1.png" alt="Jesús sentado en un banco con un niño que ha dejado el móvil a un lado" style={{ display: "block", width: "100%", maxWidth: "320px", height: "auto", margin: "0 auto 24px" }} />
-        <h2 style={{ fontSize: "26px", fontWeight: 700, color: "#333333", lineHeight: 1.2, letterSpacing: "-0.3px", marginBottom: "20px" }}>
+        <h2 className="fg-h2" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.2, letterSpacing: "-0.3px", marginBottom: "20px" }}>
           Antes que el scroll, Dios.
         </h2>
         <a

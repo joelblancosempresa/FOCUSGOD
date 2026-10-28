@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "¿Estará para Android?",
-    a: "De momento es solo para iPhone. Si tienes Android, apúntate igual a la lista: si somos muchos, también la haremos para Android.",
+    a: "Sí. Primero sale en iPhone y Android llega en la segunda fase, que ya está en marcha. Apúntate eligiendo Android y te avisamos el día que salga.",
   },
 ];
 
@@ -33,14 +33,14 @@ export default function FAQ() {
   return (
     <section style={{ background: "#FDFCF8" }} className="px-6 py-14 md:py-24">
       <div className="max-w-[420px] md:max-w-[760px] mx-auto">
-        <h2 className="text-[26px] md:text-[35px]" style={{ fontWeight: 700, color: "#333333", textAlign: "center", lineHeight: 1.2, letterSpacing: "-0.2px", margin: "0 0 28px" }}>
+        <h2 className="fg-h2 md:text-[35px]" style={{ fontWeight: 700, color: "#333333", textAlign: "center", lineHeight: 1.2, letterSpacing: "-0.2px", margin: "0 0 28px" }}>
           Preguntas frecuentes
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
           {faqs.map((f) => (
             <details key={f.q} className="faq-item" style={{ background: "#fff", borderRadius: "16px", boxShadow: "0 2px 12px rgba(0,0,0,0.05)" }}>
               <summary
-                className="text-[16px] md:text-[18px]"
+                className="fg-lead md:text-[18px]"
                 style={{ cursor: "pointer", listStyle: "none", padding: "18px 20px", fontWeight: 600, color: "#333333", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "16px" }}
               >
                 {f.q}

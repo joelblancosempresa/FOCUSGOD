@@ -8,6 +8,8 @@ import FocoSection from "@/components/FocoSection";
 import AsSeenIn from "@/components/AsSeenIn";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
+import HowItWorksSteps from "@/components/HowItWorksSteps";
+import Widgets from "@/components/Widgets";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -27,8 +29,10 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <HowItWorksSteps />
       <VerseOfDay />
       <HowItWorks />
+      <Widgets compact />
       <FocoSection />
       <AsSeenIn />
       <Reviews />

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Showcase from "@/components/Showcase";
 import BlockGallery from "@/components/BlockGallery";
 import Achievements from "@/components/Achievements";
+import Widgets from "@/components/Widgets";
 import { CTA_HREF, CTA_PROPS, CTA_NOTE } from "@/lib/cta";
 
 export const metadata: Metadata = {
@@ -38,10 +39,10 @@ export default function Download() {
         {/* Hero */}
         <section style={{ background: "linear-gradient(180deg, #FEF3C7 0%, #FDFCF8 100%)" }} className="px-6 pt-32 pb-16 md:pt-40 md:pb-24 text-center">
           <div className="max-w-[460px] md:max-w-[720px] mx-auto">
-            <h1 className="text-[32px] md:text-[48px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.6px", margin: 0, textWrap: "balance" }}>
+            <h1 className="fg-h1 md:text-[48px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.6px", margin: 0, textWrap: "balance" }}>
               La forma más sencilla de poner a Dios primero
             </h1>
-            <p className="text-[16px] md:text-[19px]" style={{ color: "#7a7872", lineHeight: 1.55, margin: "16px auto 28px", maxWidth: "520px" }}>
+            <p className="fg-lead md:text-[19px]" style={{ color: "#7a7872", lineHeight: 1.55, margin: "16px auto 28px", maxWidth: "520px" }}>
               FocusGod te ayuda a orar y leer la Biblia cada día, y aparta lo que te distrae hasta que lo haces.
             </p>
             <AppStoreBadge />
@@ -82,12 +83,13 @@ export default function Download() {
           ]}
         />
 
+        <Widgets />
         <BlockGallery />
         <Achievements />
 
         {/* Final */}
         <section style={{ background: "#FEF3C7" }} className="px-6 py-16 md:py-20 text-center">
-          <h2 className="text-[28px] md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 24px" }}>
+          <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 24px" }}>
             Sé de los primeros en tenerla
           </h2>
           <AppStoreBadge />

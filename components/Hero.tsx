@@ -21,10 +21,10 @@ export default function Hero() {
             />
           </div>
           <div className="flex flex-col items-center text-center gap-[14px] px-6 pt-6 pb-[52px]">
-            <h1 style={{ fontSize: "2.6rem", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.1, letterSpacing: "-0.5px", margin: 0 }}>
+            <h1 className="fg-h1-hero" style={{ fontWeight: 700, color: "#1a1a1a", lineHeight: 1.1, letterSpacing: "-0.5px", margin: 0 }}>
               Pon a Dios primero.<br />Cada día.
             </h1>
-            <p style={{ fontSize: "16px", color: "#7a7872", lineHeight: 1.6, margin: 0 }}>
+            <p className="fg-lead" style={{ color: "#7a7872", lineHeight: 1.6, margin: 0 }}>
               FocusGod te ayuda a orar y leer la Biblia cada día, y aparta las distracciones del móvil para que tu tiempo con Dios sea de verdad.
             </p>
             <div className="w-full flex flex-col gap-3 mt-2">

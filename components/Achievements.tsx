@@ -11,10 +11,10 @@ export default function Achievements() {
   return (
     <section style={{ background: "#F9F5EB" }} className="px-6 py-16 md:py-24">
       <div className="max-w-[440px] md:max-w-[960px] mx-auto text-center">
-        <h2 className="text-[28px] md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 12px" }}>
+        <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 12px" }}>
           Logros que celebran tu constancia
         </h2>
-        <p className="text-[16px] md:text-[19px]" style={{ color: "#838381", lineHeight: 1.5, margin: "0 0 36px" }}>
+        <p className="fg-lead md:text-[19px]" style={{ color: "#838381", lineHeight: 1.5, margin: "0 0 36px" }}>
           Cada día que pones a Dios primero cuenta. Y se nota.
         </p>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-8">

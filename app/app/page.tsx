@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WaitlistForm from "@/components/WaitlistForm";
+import HowItWorksSteps from "@/components/HowItWorksSteps";
 
 export const metadata: Metadata = {
   title: "Apúntate a FocusGod — Te avisamos el día que salga",
@@ -23,15 +24,16 @@ export default function AppWaitlist() {
             style={{ borderRadius: "22px", boxShadow: "0 12px 26px rgba(32,36,46,0.22)", margin: "0 auto" }}
             priority
           />
-          <h1 className="text-[32px] md:text-[42px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.6px", margin: "24px 0 0" }}>
+          <h1 className="fg-h1 md:text-[42px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.6px", margin: "24px 0 0" }}>
             FocusGod llega muy pronto
           </h1>
-          <p className="text-[16px] md:text-[18px]" style={{ color: "#7a7872", lineHeight: 1.55, margin: "14px 0 28px" }}>
+          <p className="fg-lead md:text-[18px]" style={{ color: "#7a7872", lineHeight: 1.55, margin: "14px 0 28px" }}>
             Apúntate y te avisamos el día que salga en el App Store. Sin spam: solo lo importante.
           </p>
           <WaitlistForm />
         </div>
       </main>
+      <HowItWorksSteps background="#FDFCF8" />
       <Footer />
     </>
   );

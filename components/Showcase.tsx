@@ -17,10 +17,10 @@ export default function Showcase({ items, variant = "phone" }: { items: Showcase
               <img src={it.src} alt={it.alt} loading="lazy" className="w-full max-w-[320px] md:max-w-[400px] shrink-0" style={{ height: "auto", borderRadius: "28px" }} />
             )}
             <div className="text-center md:text-left md:flex-1">
-              <h2 className="text-[28px] md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 12px", textWrap: "balance" }}>
+              <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 12px", textWrap: "balance" }}>
                 {it.title}
               </h2>
-              <p className="text-[16px] md:text-[19px]" style={{ color: "#838381", lineHeight: 1.5, marginTop: 0, marginBottom: 0 }}>
+              <p className="fg-lead md:text-[19px]" style={{ color: "#838381", lineHeight: 1.5, marginTop: 0, marginBottom: 0 }}>
                 {it.line}
               </p>
             </div>
