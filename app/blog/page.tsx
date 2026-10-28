@@ -18,6 +18,14 @@ const posts = [
     color: "#e8f0fe",
   },
   {
+    slug: "como-orar-cuando-no-sabes-que-decir",
+    category: "Oración",
+    date: "Oct 29, 2026",
+    title: "Cómo orar cuando no sabes qué decir",
+    excerpt: "Te sientas a orar y no sale nada. Una guía sencilla, basada en la Biblia, para hablar con Dios aunque no encuentres las palabras.",
+    color: "#fff8e1",
+  },
+  {
     slug: "pornografia-cerebro-lo-que-la-ciencia-dice",
     category: "Pornografía",
     date: "Sep 28, 2026",

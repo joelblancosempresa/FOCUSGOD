@@ -7,6 +7,63 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 const posts: Record<string, { category: string; date: string; title: string; content: string }> = {
+  "como-orar-cuando-no-sabes-que-decir": {
+    category: "Oración",
+    date: "Oct 29, 2026",
+    title: "Cómo orar cuando no sabes qué decir",
+    content: `
+Te sientas a orar, cierras los ojos… y no sale nada. O empiezas y a los treinta segundos estás pensando en lo que tienes que hacer mañana. Si te pasa, no eres el único: hasta los discípulos, que vivían con Jesús, tuvieron que pedirle que les enseñara a orar (Lucas 11:1).
+
+La buena noticia es que orar no es un examen. Es una conversación con alguien que ya te conoce.
+
+**No necesitas palabras perfectas**
+
+Jesús lo dejó claro cuando enseñó a orar a sus discípulos:
+
+"Y orando, no seáis prolijos, como los gentiles, que piensan que por su palabrería serán oídos. No os hagáis, pues, semejantes a ellos; porque vuestro Padre sabe de qué cosas tenéis necesidad antes que vosotros le pidáis." — Mateo 6:7-8
+
+Dios no está esperando un discurso bonito. Está esperando que vengas.
+
+**Cuando de verdad no sabes qué decir**
+
+Hay días en los que no te salen las palabras porque estás cansado, triste o confundido. Para esos días, la Biblia tiene una promesa:
+
+"El Espíritu nos ayuda en nuestra debilidad; pues qué hemos de pedir como conviene, no lo sabemos, pero el Espíritu mismo intercede por nosotros con gemidos indecibles." — Romanos 8:26
+
+Incluso un "Señor, no sé qué decirte, pero aquí estoy" es una oración de verdad.
+
+**Un camino sencillo en cinco pasos**
+
+Si te ayuda tener una guía, prueba esto. No hace falta seguirlo al pie de la letra: es un punto de partida.
+
+**1. Empieza por quién es Él.** Antes de pedir, recuerda a quién hablas. Jesús enseñó a empezar así: Padre nuestro que estás en los cielos, santificado sea tu nombre (Mateo 6:9).
+
+**2. Da gracias por algo concreto.** No "gracias por todo", sino por algo de hoy: un desayuno, una conversación, haberte despertado.
+
+**3. Cuéntale cómo estás de verdad.** El Salmo 62:8 dice que derramemos delante de Él nuestro corazón. Si estás ansioso, díselo. Si estás enfadado, también.
+
+**4. Pide por lo que necesitas, y por otros.** Filipenses 4:6 nos invita a presentar a Dios nuestras peticiones en toda oración y ruego, con acción de gracias.
+
+**5. Quédate un momento en silencio.** Orar también es escuchar.
+
+**Una oración para cuando no te salen las palabras**
+
+"Señor, hoy no sé muy bien qué decirte. Gracias por estar aquí aunque yo no sepa cómo empezar. Tú conoces lo que llevo dentro mejor que yo. Te entrego lo que me preocupa y te pido que me guíes hoy. Enséñame a buscarte primero. Amén."
+
+**Cuando la mente se te va a otra parte**
+
+- Busca un sitio y una hora: Jesús habló de entrar en tu aposento y cerrar la puerta (Mateo 6:6). Un lugar tranquilo ayuda más de lo que parece.
+- Aparta el móvil: es difícil hablar con Dios con una notificación vibrando al lado.
+- Ora con un salmo: léelo despacio y conviértelo en tus palabras. El Salmo 23 o el 139 son buenos para empezar.
+- Empieza por poco: dos minutos de verdad valen más que veinte distraído.
+
+**Lo que más importa es volver cada día**
+
+No hace falta orar mucho, hace falta orar a menudo. La relación con Dios crece como cualquier relación: con tiempo, constancia y sinceridad.
+
+Por eso FocusGod empieza cada oración preguntándote cómo llega tu corazón hoy y te da un versículo para ese momento. Después cierras los ojos y hablas con Él. Y tus redes esperan hasta que lo hayas hecho.
+    `,
+  },
   "instagram-disenado-para-robarte-la-atencion": {
     category: "Redes Sociales",
     date: "Oct 2, 2026",
