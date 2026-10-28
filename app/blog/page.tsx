@@ -1,4 +1,5 @@
 "use client";
+import { BLOG_IMAGES } from "@/lib/blog-images";
 
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -112,8 +113,12 @@ export default function Blog() {
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: "48px",
+                position: "relative",
               }} className="h-[200px] md:h-auto md:w-[320px] md:flex-shrink-0">
-                📖
+                {BLOG_IMAGES[FEATURED.slug] ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={BLOG_IMAGES[FEATURED.slug]} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                ) : "📖"}
               </div>
               <div style={{ padding: "16px" }} className="md:py-8 md:px-8 md:flex md:flex-col md:justify-center">
                 <p style={{ fontSize: "11px", color: "#888", marginBottom: "6px" }}>{FEATURED.date}</p>
@@ -181,8 +186,12 @@ export default function Blog() {
                   alignItems: "center",
                   justifyContent: "center",
                   fontSize: "44px",
+                  position: "relative",
                 }}>
-                  📖
+                  {BLOG_IMAGES[p.slug] ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={BLOG_IMAGES[p.slug]} alt="" loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                  ) : "📖"}
                 </div>
                 <div style={{ padding: "16px" }}>
                   <p style={{ fontSize: "11px", color: "#888", marginBottom: "6px" }}>{p.date}</p>

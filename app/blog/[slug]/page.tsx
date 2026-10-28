@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { CTA_HREF, CTA_PROPS, CTA_LABEL } from "@/lib/cta";
+import { BLOG_IMAGES } from "@/lib/blog-images";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -304,9 +305,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = posts[slug];
   if (!post) return {};
+  const cover = BLOG_IMAGES[slug];
   return {
     title: `${post.title} — FocusGod Blog`,
     description: post.content.slice(0, 160).replace(/[*#\n]/g, " ").trim(),
+    ...(cover && { openGraph: { images: [cover] }, twitter: { card: "summary_large_image", images: [cover] } }),
   };
 }
 
@@ -335,6 +338,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <h1 className="text-3xl sm:text-4xl font-semibold text-ink leading-snug mb-6">
               {post.title}
             </h1>
+            {BLOG_IMAGES[slug] && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={BLOG_IMAGES[slug]} alt="" style={{ display: "block", width: "100%", height: "auto", borderRadius: "20px", marginBottom: "28px" }} />
+            )}
             <div className="h-px bg-black/10" />
           </div>
 
