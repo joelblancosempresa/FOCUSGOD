@@ -1,23 +1,25 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
 
+export const viewport: Viewport = { themeColor: "#fdfcf8" };
+
 export const metadata: Metadata = {
-  themeColor: "#ffffff",
-  title: "FocusGod — bloquea apps hasta que ores",
+  metadataBase: new URL("https://www.focusgodapp.com"),
+  title: "FocusGod — Crece cada día en tu relación con Dios",
   description:
-    "FocusGod bloquea tus apps hasta que pones a Dios primero. Ora, lee la Biblia, desbloquea todo.",
+    "FocusGod te ayuda a orar y leer la Biblia cada día, y aparta las distracciones del móvil hasta que pasas tiempo con Dios.",
   openGraph: {
-    title: "FocusGod — bloquea apps hasta que ores",
+    title: "FocusGod — Crece cada día en tu relación con Dios",
     description:
-      "FocusGod bloquea tus apps hasta que pones a Dios primero. Ora, lee la Biblia, desbloquea todo.",
+      "FocusGod te ayuda a orar y leer la Biblia cada día, y aparta las distracciones del móvil hasta que pasas tiempo con Dios.",
     type: "website",
     url: "https://focusgodapp.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FocusGod — bloquea apps hasta que ores",
-    description: "Ora. Lee la Biblia. Desbloquea todo.",
+    title: "FocusGod — Crece cada día en tu relación con Dios",
+    description: "Ora y lee la Biblia cada día. Primero Dios, después el móvil.",
   },
 };
 

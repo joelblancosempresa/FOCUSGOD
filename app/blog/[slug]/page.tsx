@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { CTA_HREF, CTA_PROPS, CTA_LABEL } from "@/lib/cta";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -387,12 +388,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               style={{ background: "linear-gradient(135deg, #f0492e 0%, #d03a1f 100%)" }}
             >
               <h3 className="text-2xl font-semibold mb-3">¿Listo para poner a Dios primero?</h3>
-              <p className="text-white/80 mb-6">Descarga FocusGod y empieza mañana por la mañana.</p>
+              <p className="text-white/80 mb-6">FocusGod sale muy pronto. Apúntate y te avisamos el día del lanzamiento.</p>
               <a
-                href="/download"
+                href={CTA_HREF}
+                {...CTA_PROPS}
                 className="inline-block bg-white text-blue font-semibold px-8 py-4 rounded-2xl hover:opacity-90 transition-opacity"
               >
-                Descargar gratis →
+                {CTA_LABEL}
               </a>
             </div>
           </div>

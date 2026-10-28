@@ -6,7 +6,8 @@ const links = [
   { href: "/", label: "Inicio" },
   { href: "/about", label: "Sobre Nosotros" },
   { href: "/blog", label: "Blog" },
-  { href: "/download", label: "Descargar" },
+  { href: "/download", label: "La app" },
+  { href: "/soporte", label: "Soporte" },
   { href: "/privacidad", label: "Privacidad" },
   { href: "/terminos", label: "Términos" },
 ];

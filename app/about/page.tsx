@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { CTA_HREF, CTA_PROPS, CTA_LABEL } from "@/lib/cta";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
@@ -94,8 +95,8 @@ export default function About() {
             <p className="text-ink2 text-lg leading-relaxed mb-8">
               Nos esforzamos por animarte y desafiarte en tu camino espiritual — no solo para orar más, sino para conocer a Dios más íntimamente, y vivir de una manera que refleje Su verdad.
             </p>
-            <a href="/download" className="btn-blue">
-              Empieza gratis hoy →
+            <a href={CTA_HREF} {...CTA_PROPS} className="btn-blue">
+              {CTA_LABEL}
             </a>
           </div>
         </section>

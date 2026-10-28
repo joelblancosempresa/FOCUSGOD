@@ -8,9 +8,9 @@ import Widgets from "@/components/Widgets";
 import { CTA_HREF, CTA_PROPS, CTA_NOTE } from "@/lib/cta";
 
 export const metadata: Metadata = {
-  title: "Descargar FocusGod — Pon a Dios primero cada día",
+  title: "La app FocusGod — Pon a Dios primero cada día",
   description:
-    "Ora con los ojos cerrados, lee la Biblia cada día y mira crecer tu fe. Descarga FocusGod en el App Store.",
+    "Ora con los ojos cerrados, lee la Biblia cada día y mira crecer tu fe. FocusGod llega muy pronto al App Store: apúntate y te avisamos.",
 };
 
 function AppStoreBadge() {

@@ -7,7 +7,7 @@ import { CTA_HREF, CTA_PROPS, CTA_LABEL } from "@/lib/cta";
 
 const links = [
   { href: "/blog", label: "Blog" },
-  { href: "/download", label: "Descargar" },
+  { href: "/download", label: "La app" },
   { href: "/about", label: "Nosotros" },
 ];
 
