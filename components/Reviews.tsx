@@ -22,7 +22,7 @@ export default function Reviews() {
             </p>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "24px" }}>
-            <Image src="/app-icon-vela.png" alt="" width={40} height={40} style={{ borderRadius: "10px" }} />
+            <Image src="/ilus/onb-joel.jpg" alt="Joel Blanco, creador de FocusGod" width={48} height={48} style={{ borderRadius: "50%", objectFit: "cover" }} />
             <div>
               <p style={{ fontSize: "14px", fontWeight: 700, color: "#333", margin: 0 }}>Joel Blanco</p>
               <p style={{ fontSize: "13px", color: "#b0ada8", margin: "2px 0 0" }}>Creador de FocusGod</p>

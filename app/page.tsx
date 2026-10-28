@@ -7,6 +7,7 @@ import HowItWorks from "@/components/HowItWorks";
 import FocoSection from "@/components/FocoSection";
 import AsSeenIn from "@/components/AsSeenIn";
 import Reviews from "@/components/Reviews";
+import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -31,6 +32,7 @@ export default function Home() {
       <FocoSection />
       <AsSeenIn />
       <Reviews />
+      <FAQ />
       <div className="md:hidden"><FinalCTA /></div>
       <DesktopCTA />
       <Footer />

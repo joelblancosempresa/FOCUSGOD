@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Showcase from "@/components/Showcase";
+import BlockGallery from "@/components/BlockGallery";
+import Achievements from "@/components/Achievements";
 import { CTA_HREF, CTA_PROPS, CTA_NOTE } from "@/lib/cta";
 
 export const metadata: Metadata = {
@@ -77,14 +79,11 @@ export default function Download() {
               src: "/app/lectura.jpg",
               alt: "Lectura de Génesis 1 en FocusGod",
             },
-            {
-              title: "11 formas de proteger tu tiempo",
-              line: "De orar para desbloquear a llegar a tu iglesia el domingo.",
-              src: "/app/bloqueos.jpg",
-              alt: "Lista de bloqueos de FocusGod",
-            },
           ]}
         />
+
+        <BlockGallery />
+        <Achievements />
 
         {/* Final */}
         <section style={{ background: "#FEF3C7" }} className="px-6 py-16 md:py-20 text-center">
