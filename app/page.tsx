@@ -9,7 +9,6 @@ import AsSeenIn from "@/components/AsSeenIn";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import HowItWorksSteps from "@/components/HowItWorksSteps";
-import Widgets from "@/components/Widgets";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -32,7 +31,6 @@ export default function Home() {
       <HowItWorksSteps />
       <VerseOfDay />
       <HowItWorks />
-      <Widgets compact />
       <FocoSection />
       <AsSeenIn />
       <Reviews />
