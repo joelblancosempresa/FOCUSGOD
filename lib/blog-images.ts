@@ -2,6 +2,7 @@
 // El ?v= cambia al cambiar la imagen, para que nadie vea una versión vieja guardada en caché.
 export const BLOG_IMAGES: Record<string, string> = {
   "adiccion-redes-sociales-fe-cristiana": "/blog/adiccion-redes-sociales-fe-cristiana.jpg?v=79cdf9c7",
+  "como-orar-cuando-no-sabes-que-decir": "/blog/como-orar-cuando-no-sabes-que-decir.jpg?v=66d5bdc1",
   "facebook-experimento-emocional": "/blog/facebook-experimento-emocional.jpg?v=cd2b68b6",
   "instagram-disenado-para-robarte-la-atencion": "/blog/instagram-disenado-para-robarte-la-atencion.jpg?v=a73cc5a0",
   "movil-al-despertar-destruye-tu-dia": "/blog/movil-al-despertar-destruye-tu-dia.jpg?v=50606925",
