@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Qué datos trata FocusGod y por qué. Sin cuentas, sin servidores propios: lo tuyo se queda en tu iPhone.",
 };
 
-const EMAIL = "joelblancosempresa@gmail.com";
+const EMAIL = "support@focusgodapp.com";
 
 const sections: { title: string; body: React.ReactNode }[] = [
   {

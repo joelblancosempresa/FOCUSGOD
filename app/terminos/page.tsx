@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Las condiciones para usar FocusGod: suscripción, prueba gratuita, cancelación y responsabilidades.",
 };
 
-const EMAIL = "joelblancosempresa@gmail.com";
+const EMAIL = "support@focusgodapp.com";
 
 const sections: { title: string; body: React.ReactNode }[] = [
   {

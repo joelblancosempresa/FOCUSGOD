@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "¿Necesitas ayuda con FocusGod? Escríbenos.",
 };
 
-const EMAIL = "joelblancosempresa@gmail.com";
+const EMAIL = "support@focusgodapp.com";
 
 const faqs = [
   {
