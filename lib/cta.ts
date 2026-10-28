@@ -10,4 +10,4 @@ export const CTA_PROPS = CTA_HREF.startsWith("http")
   : {};
 
 // Enlace del Canal de WhatsApp de la comunidad. Vacío = no se muestra el botón.
-export const WHATSAPP_URL = "";
+export const WHATSAPP_URL = "https://chat.whatsapp.com/BtpukUEsAQP7riUhxMUWvL";
