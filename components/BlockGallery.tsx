@@ -1,24 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
-const blocks = [
-  { name: "Hasta que ores", line: "Tus apps se abren cuando hablas con Él", src: "/ilus/onb-bloqueo-orar.jpg" },
-  { name: "Hasta que leas la Biblia", line: "En la app o escaneando tu Biblia de papel", src: "/ilus/onb-bloqueo-tiempo.jpg" },
-  { name: "Caminata con Dios", line: "Sal a andar y habla con Él", src: "/ilus/onb-bloqueo-caminata.jpg" },
-  { name: "Digital Detox", line: "Un día entero sin distracciones", src: "/ilus/onb-bloqueo-detox.jpg" },
-  { name: "Wind Down", line: "Sin redes desde tu hora hasta el amanecer", src: "/ilus/onb-bloqueo-winddown.jpg" },
-  { name: "Concentración", line: "Todo bloqueado mientras estudias o trabajas", src: "/ilus/onb-bloqueo-concentracion.jpg" },
-  { name: "Por horario", line: "Se activa solo a las horas que elijas", src: "/ilus/onb-bloqueo-horario.jpg" },
-  { name: "Filtro adulto", line: "Contenido para adultos bloqueado siempre", src: "/ilus/onb-bloqueo-filtro.jpg" },
+// Arriba los bloqueos que solo tiene FocusGod (la fila que más se mira); abajo los de controlar las redes.
+const top = [
+  { name: "Ora para desbloquear", line: "Tus apps se abren al terminar tu oración del día.", src: "/ilus/bloqueo-orar-v2.jpg" },
+  { name: "Lee la Biblia para desbloquear", line: "Lee en la app o haz una foto a tu Biblia de papel.", src: "/ilus/bloqueo-biblia-v2.jpg" },
+  { name: "Sal a caminar con Dios", line: "Sal a andar y haz una foto fuera para desbloquear.", src: "/ilus/onb-bloqueo-caminata.jpg" },
+  { name: "Domingo en la iglesia", line: "Los domingos, tus apps siguen cerradas hasta que llegas a tu iglesia.", src: "/ilus/bloqueo-iglesia-tmp.jpg" },
+];
+const bottom = [
+  { name: "Un día sin redes", line: "Eliges un día y tus apps siguen cerradas hasta que acaba.", src: "/ilus/onb-bloqueo-detox.jpg" },
+  { name: "Noches sin pantalla", line: "Desde la hora que elijas hasta que amanece.", src: "/ilus/onb-bloqueo-winddown.jpg" },
+  { name: "Modo estudio o trabajo", line: "Todo cerrado hasta que acaba tu sesión.", src: "/ilus/onb-bloqueo-concentracion.jpg" },
+  { name: "Bloqueo por horario", line: "Tus apps se cierran solas a las horas que elijas.", src: "/ilus/onb-bloqueo-horario.jpg" },
+  { name: "Filtro de contenido adulto", line: "Bloquea el contenido para adultos. Siempre activo.", src: "/ilus/onb-bloqueo-filtro.jpg" },
 ];
 
-const rows = [blocks.slice(0, 4), blocks.slice(4)];
+const rows = [top, bottom];
 
-function Card({ b }: { b: (typeof blocks)[number] }) {
+function Card({ b }: { b: (typeof top)[number] }) {
   return (
     <div className="shrink-0 w-[200px] md:w-[240px]" style={{ background: "#fff", borderRadius: "22px", overflow: "hidden", boxShadow: "0 2px 14px rgba(0,0,0,0.07)" }}>
       <img src={b.src} alt="" loading="lazy" style={{ display: "block", width: "100%", aspectRatio: "1", objectFit: "cover" }} />
-      <div style={{ padding: "14px 16px 18px" }}>
-        <p style={{ fontSize: "16px", fontWeight: 700, color: "#333", margin: "0 0 4px" }}>{b.name}</p>
-        <p style={{ fontSize: "13px", color: "#838381", lineHeight: 1.45, margin: 0 }}>{b.line}</p>
+      {/* Texto centrado; el título reserva 2 líneas para que todas las tarjetas queden alineadas */}
+      <div style={{ padding: "16px 16px 20px", textAlign: "center" }}>
+        <p style={{ fontSize: "16px", fontWeight: 700, color: "#333", lineHeight: 1.3, minHeight: "2.6em", margin: "0 0 6px", display: "flex", alignItems: "center", justifyContent: "center", textWrap: "balance" }}>{b.name}</p>
+        <p style={{ fontSize: "13px", color: "#838381", lineHeight: 1.45, margin: 0, textWrap: "balance" }}>{b.line}</p>
       </div>
     </div>
   );
@@ -51,7 +56,7 @@ export default function BlockGallery() {
       </div>
 
       <p className="px-6 text-center" style={{ fontSize: "14px", color: "#a8a6a0", margin: "24px 0 0" }}>
-        Además: Tiempo con Dios, Límite de tiempo y Domingo en la iglesia.
+        Además: Tiempo con Dios y Límite de tiempo.
       </p>
     </section>
   );

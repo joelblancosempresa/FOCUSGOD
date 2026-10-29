@@ -29,29 +29,22 @@ export default function CookieBanner() {
     <div
       role="dialog"
       aria-label="Aviso de cookies"
+      // Móvil: centrado abajo. Ordenador: rectángulo en la esquina inferior izquierda.
+      className="fixed z-[60] left-3 right-3 mx-auto max-w-[440px] rounded-[24px] bottom-[calc(12px+env(safe-area-inset-bottom,0px))] md:left-6 md:right-auto md:bottom-6 md:mx-0 md:max-w-[520px] md:rounded-[16px]"
       style={{
-        position: "fixed",
-        left: 12,
-        right: 12,
-        bottom: "calc(12px + env(safe-area-inset-bottom, 0px))",
-        maxWidth: 440,
-        margin: "0 auto",
-        zIndex: 60,
         background: "#fff",
-        borderRadius: 24,
         overflow: "hidden",
         boxShadow: "0 8px 40px rgba(0,0,0,0.18)",
       }}
     >
-      <div style={{ padding: "24px 22px 22px" }}>
-        <p style={{ fontSize: 16, lineHeight: 1.55, color: "#1a1a1a", margin: "0 0 20px" }}>
+      <div className="px-[22px] pt-6 pb-[22px] md:p-5 md:flex md:items-center md:gap-5">
+        <p className="text-[16px] mb-5 md:text-[14px] md:mb-0" style={{ lineHeight: 1.55, color: "#1a1a1a" }}>
           Usamos solo lo imprescindible para que la web funcione. No usamos cookies de seguimiento ni de publicidad.
         </p>
         <button
           onClick={accept}
+          className="w-full h-[52px] md:w-auto md:h-11 md:px-7 shrink-0"
           style={{
-            width: "100%",
-            height: 52,
             border: "none",
             borderRadius: 14,
             background: "#f0492e",
@@ -66,11 +59,10 @@ export default function CookieBanner() {
         </button>
       </div>
       <div
+        className="py-3 px-[22px] justify-center md:justify-start md:py-2.5 md:px-5"
         style={{
           background: "#f3f1ea",
-          padding: "12px 22px",
           display: "flex",
-          justifyContent: "center",
           gap: 24,
           fontSize: 14,
         }}
