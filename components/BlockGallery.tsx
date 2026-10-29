@@ -4,7 +4,7 @@ const top = [
   { name: "Ora para desbloquear", line: "Tus apps se abren al terminar tu oración del día.", src: "/ilus/bloqueo-orar-v2.jpg" },
   { name: "Lee la Biblia para desbloquear", line: "Lee en la app o haz una foto a tu Biblia de papel.", src: "/ilus/bloqueo-biblia-v2.jpg" },
   { name: "Sal a caminar con Dios", line: "Sal a andar y haz una foto fuera para desbloquear.", src: "/ilus/onb-bloqueo-caminata.jpg" },
-  { name: "Domingo en la iglesia", line: "Los domingos, tus apps siguen cerradas hasta que llegas a tu iglesia.", src: "/ilus/bloqueo-iglesia-tmp.jpg" },
+  { name: "Domingo en la iglesia", line: "Tus apps se bloquean mientras estás en la iglesia y se abren al salir.", src: "/ilus/bloqueo-iglesia-tmp.jpg" },
 ];
 const bottom = [
   { name: "Un día sin redes", line: "Eliges un día y tus apps siguen cerradas hasta que acaba.", src: "/ilus/onb-bloqueo-detox.jpg" },
