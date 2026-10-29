@@ -59,19 +59,19 @@ export default function Download() {
             {
               title: "Ora con los ojos cerrados",
               line: "El reloj solo avanza mientras hablas con Él.",
-              src: "/app/orar.jpg",
+              src: "/app/orar-v4.jpg",
               alt: "Pantalla de oración: Cierra los ojos y ora con Dios",
             },
             {
               title: "¿Cómo llega tu corazón hoy?",
               line: "Le cuentas cómo estás y recibes un versículo para ese momento.",
-              src: "/app/corazon.jpg",
+              src: "/app/corazon-v4.jpg",
               alt: "Pantalla ¿Cómo llega tu corazón hoy? con estados de ánimo",
             },
             {
               title: "Tu vela, tu constancia",
               line: "Se enciende cada día que buscas a Dios. Y se apaga si lo dejas.",
-              src: "/app/inicio.jpg",
+              src: "/app/inicio-v4.jpg",
               alt: "Inicio de FocusGod con la vela Foco en Dios",
             },
             {

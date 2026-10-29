@@ -24,7 +24,7 @@ export default function Navbar() {
             padding: 0 16% !important;
             border-radius: 0 !important;
             box-shadow: none !important;
-            background: rgba(253, 252, 248, 0.78) !important;
+            background: rgba(253, 252, 248, 0.7) !important;
           }
         }
       `}</style>
@@ -34,7 +34,7 @@ export default function Navbar() {
           margin: "8px 12px 0",
           padding: open ? "0 12px 12px 8px" : "0 12px 0 8px",
           borderRadius: "18px",
-          background: "rgba(255, 255, 255, 0.8)",
+          background: "rgba(255, 255, 255, 0.72)",
           backdropFilter: "blur(20px) saturate(180%)",
           WebkitBackdropFilter: "blur(20px) saturate(180%)",
           boxShadow: "0 1px 10px rgba(0,0,0,0.06)",

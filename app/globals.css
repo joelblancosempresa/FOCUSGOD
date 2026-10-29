@@ -39,5 +39,40 @@ body {
   .fg-h1 { font-size: clamp(30px, calc((100vw - 48px) * 0.105), 46px); }
   .fg-h1-hero { font-size: clamp(34px, calc((100vw - 48px) * 0.127), 52px); }
   .fg-h2 { font-size: clamp(22px, calc((100vw - 48px) * 0.0856), 34px); }
+  /* Portada del cielo: "Pon a Dios primero." mide 9,3× la letra, así cabe en una línea en todos los iPhone */
+  .fg-h1-sky { font-size: clamp(30px, calc((100vw - 48px) * 0.104), 72px); white-space: nowrap; }
   .fg-lead { font-size: clamp(15px, calc((100vw - 48px) * 0.049), 18px); }
 }
+
+/* Filas de tarjetas que pasan solas (galería de bloqueos) */
+.marquee { display: flex; gap: 20px; width: max-content; animation: marquee 50s linear infinite; }
+.marquee-reverse { animation-direction: reverse; }
+.marquee:hover { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(calc(-50% - 10px)); } }
+@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
+
+.odometer-reel { transition: transform 2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@media (prefers-reduced-motion: reduce) { .odometer-reel { transition: none; } }
+
+/* Portada: nubes que flotan, destellos y rayos de luz que giran */
+.hero-cloud { animation: hero-cloud 9s ease-in-out infinite alternate; }
+.hero-cloud-slow { animation-duration: 13s; }
+@keyframes hero-cloud { to { transform: translateX(24px); } }
+
+.hero-sparkle { animation: hero-sparkle 3.2s ease-in-out infinite; }
+@keyframes hero-sparkle { 0%, 100% { opacity: 0.35; transform: scale(0.75); } 50% { opacity: 1; transform: scale(1.1); } }
+
+.hero-rays {
+  position: absolute; left: 50%; top: -1100px; width: 2200px; height: 2200px; pointer-events: none;
+  background: repeating-conic-gradient(from 0deg, rgba(255, 250, 230, 0) 0deg, rgba(255, 250, 230, 0.42) 4deg, rgba(255, 250, 230, 0) 8deg, rgba(255, 250, 230, 0) 18deg);
+  -webkit-mask-image: radial-gradient(circle, #000 0%, rgba(0, 0, 0, 0.6) 22%, transparent 42%);
+  mask-image: radial-gradient(circle, #000 0%, rgba(0, 0, 0, 0.6) 22%, transparent 42%);
+  animation: hero-rays 80s linear infinite;
+}
+.hero-rays-2 { background: repeating-conic-gradient(from 9deg, rgba(255, 255, 255, 0) 0deg, rgba(255, 255, 255, 0.28) 3deg, rgba(255, 255, 255, 0) 6deg, rgba(255, 255, 255, 0) 25deg); animation-duration: 120s; animation-direction: reverse; }
+@keyframes hero-rays { from { transform: translateX(-50%) rotate(0deg); } to { transform: translateX(-50%) rotate(360deg); } }
+
+.hero-glow { animation: hero-glow 6s ease-in-out infinite alternate; }
+@keyframes hero-glow { from { opacity: 0.8; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) { .hero-cloud, .hero-sparkle, .hero-rays, .hero-glow { animation: none; } }

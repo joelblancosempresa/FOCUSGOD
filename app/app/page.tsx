@@ -33,7 +33,7 @@ export default function AppWaitlist() {
           <WaitlistForm />
         </div>
       </main>
-      <HowItWorksSteps background="#FDFCF8" />
+      <HowItWorksSteps />
       <Footer />
     </>
   );
