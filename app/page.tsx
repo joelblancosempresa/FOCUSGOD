@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import DesktopCTA from "@/components/DesktopCTA";
 import VerseOfDay from "@/components/VerseOfDay";
 import FocoSection from "@/components/FocoSection";
 import AsSeenIn from "@/components/AsSeenIn";
@@ -9,7 +8,6 @@ import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import HowItWorksSteps from "@/components/HowItWorksSteps";
 import BlockGallery from "@/components/BlockGallery";
-import TimeWithGod from "@/components/TimeWithGod";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -36,9 +34,7 @@ export default function Home() {
       <AsSeenIn />
       <Reviews />
       <FAQ />
-      <TimeWithGod />
-      <div className="md:hidden"><FinalCTA /></div>
-      <DesktopCTA />
+      <FinalCTA />
       <Footer />
     </main>
   );

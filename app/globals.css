@@ -51,9 +51,6 @@ body {
 @keyframes marquee { to { transform: translateX(calc(-50% - 10px)); } }
 @media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
 
-.odometer-reel { transition: transform 2s cubic-bezier(0.2, 0.8, 0.2, 1); }
-@media (prefers-reduced-motion: reduce) { .odometer-reel { transition: none; } }
-
 /* Portada: nubes que flotan, destellos y rayos de luz que giran */
 .hero-cloud { animation: hero-cloud 9s ease-in-out infinite alternate; }
 .hero-cloud-slow { animation-duration: 13s; }
