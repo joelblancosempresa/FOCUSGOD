@@ -3,6 +3,7 @@
 const top = [
   { name: "Ora para desbloquear", line: "Tus apps se abren al terminar tu oración del día.", src: "/ilus/bloqueo-orar-v2.jpg" },
   { name: "Lee la Biblia para desbloquear", line: "Lee en la app o haz una foto a tu Biblia de papel.", src: "/ilus/bloqueo-biblia-v2.jpg" },
+  { name: "Tiempo con Dios", line: "Un rato a solas con Él y una foto de tu reflexión al acabar.", src: "/ilus/onb-bloqueo-tiempo.jpg" },
   { name: "Sal a caminar con Dios", line: "Sal a andar y haz una foto fuera para desbloquear.", src: "/ilus/onb-bloqueo-caminata.jpg" },
   { name: "Domingo en la iglesia", line: "Tus apps se bloquean mientras estás en la iglesia y se abren al salir.", src: "/ilus/bloqueo-iglesia-tmp.jpg" },
 ];
@@ -11,6 +12,7 @@ const bottom = [
   { name: "Noches sin pantalla", line: "Desde la hora que elijas hasta que amanece.", src: "/ilus/onb-bloqueo-winddown.jpg" },
   { name: "Modo estudio o trabajo", line: "Todo cerrado hasta que acaba tu sesión.", src: "/ilus/onb-bloqueo-concentracion.jpg" },
   { name: "Bloqueo por horario", line: "Tus apps se cierran solas a las horas que elijas.", src: "/ilus/onb-bloqueo-horario.jpg" },
+  { name: "Límite de tiempo", line: "Tus apps se cierran al gastar los minutos del día.", src: "/ilus/bloqueo-limite-tmp.jpg" },
   { name: "Filtro de contenido adulto", line: "Bloquea el contenido para adultos. Siempre activo.", src: "/ilus/onb-bloqueo-filtro.jpg" },
 ];
 
@@ -40,7 +42,7 @@ export default function BlockGallery() {
           Un bloqueo para cada momento
         </h2>
         <p className="fg-lead md:text-[19px]" style={{ color: "#838381", lineHeight: 1.5, margin: 0 }}>
-          Al despertar, antes de dormir o mientras estudias. Con el Modo Estricto, ni tú puedes quitarlos.
+          Al despertar, antes de dormir o mientras estudias. Tú decides cuándo.
         </p>
       </div>
 
@@ -55,9 +57,6 @@ export default function BlockGallery() {
         ))}
       </div>
 
-      <p className="px-6 text-center" style={{ fontSize: "14px", color: "#a8a6a0", margin: "24px 0 0" }}>
-        Además: Tiempo con Dios y Límite de tiempo.
-      </p>
     </section>
   );
 }

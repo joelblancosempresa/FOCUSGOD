@@ -14,11 +14,12 @@ export default function Reviews() {
             <path d="M28 40V16C28 7.163 35.163 0 44 0H48V10H44C40.686 10 38 12.686 38 16V22H48V40H28Z" fill="#d4d0c8"/>
           </svg>
           <div className="fg-lead md:text-[18px]" style={{ color: "#555", lineHeight: 1.65, display: "flex", flexDirection: "column", gap: "14px" }}>
+            {/* Quita la culpa («no es falta de fe»), nombra la causa real y presenta la salida. */}
             <p style={{ margin: 0, fontWeight: 600, color: "#333" }}>
-              Hice FocusGod para quienes quieren dejar de darle a su móvil lo que le pertenece a Dios.
+              Si te cuesta buscar a Dios cada día, no es que le ames poco.
             </p>
             <p style={{ margin: 0 }}>
-              Por eso no hay anuncios, no hay cuenta que crear y tus oraciones no salen de tu iPhone. Solo tú y Dios, cada día.
+              Es que tu móvil está diseñado para quedarse con tu tiempo y tu atención. Hice FocusGod para que ese tiempo vuelva a ser para Él: para orar, leer su Palabra y conocerle de verdad.
             </p>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "24px" }}>
