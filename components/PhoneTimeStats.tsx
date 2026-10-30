@@ -38,8 +38,9 @@ export default function PhoneTimeStats({ children }: { children: React.ReactNode
     // Fondo naranja: si la pantalla crece (Safari esconde su barra al bajar), el hueco bajo el bloque fijo
     // sigue siendo naranja hasta el pie de página en vez de dejar ver el fondo de la página.
     <div ref={ref} className="relative" style={{ height: "220svh", background: "#f0492e" }}>
-      <div className="sticky top-0 flex flex-col" style={{ height: "100svh" }}>
-        <div className="flex-1 flex flex-col items-center justify-center gap-8 md:gap-10 px-6 pt-[124px] pb-12" style={{ background: "#FDFCF8" }}>
+      {/* minHeight y no height: si el contenido no cabe en la pantalla, el bloque crece en vez de salirse y tapar el pie */}
+      <div className="sticky top-0 flex flex-col" style={{ minHeight: "100svh" }}>
+        <div className="flex-1 flex flex-col items-center justify-center gap-6 md:gap-10 px-6 pt-[110px] pb-10 md:pt-[124px] md:pb-12" style={{ background: "#FDFCF8" }}>
           <h2 className="text-[28px] md:text-[44px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.5px", textAlign: "center", margin: 0, maxWidth: "640px", textWrap: "balance" }}>
             Tiempo medio que pasamos con el móvil
           </h2>
