@@ -1,10 +1,9 @@
-import { ChooseAppsPhone, UnlockAppsPhone } from "@/components/PhoneScreens";
-import BlockModesPhone from "@/components/BlockModesPhone";
+import { ChooseAppsPhone, BibleScanPhone, UnlockAppsPhone } from "@/components/PhoneScreens";
 
 // Los 3 pasos cuentan una historia: eliges las apps → pasas tiempo con Dios → se abren.
 const steps = [
   { pill: "Paso 1", title: "Elige las apps que te distraen", line: "Las eliges con el selector de Apple. FocusGod nunca ve cuáles son.", Phone: ChooseAppsPhone },
-  { pill: "Paso 2", title: "Pasa tiempo con Dios", line: "Cuando quieras abrirlas, primero ora o lee su Palabra. Tú eliges cómo.", Phone: BlockModesPhone },
+  { pill: "Paso 2", title: "Pasa tiempo con Dios", line: "Cuando quieras abrirlas, primero ora o lee su Palabra. Tú eliges cómo.", Phone: BibleScanPhone },
   { pill: "Paso 3", title: "Y después, el móvil", line: "Al terminar, tus apps se abren solas. Y tu vela crece cada día que lo cumples.", Phone: UnlockAppsPhone },
 ];
 

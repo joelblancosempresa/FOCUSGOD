@@ -52,9 +52,9 @@ body {
 @media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
 
 /* Portada: nubes que flotan, destellos y rayos de luz que giran */
-.hero-cloud { animation: hero-cloud 9s ease-in-out infinite alternate; }
-.hero-cloud-slow { animation-duration: 13s; }
-@keyframes hero-cloud { to { transform: translateX(24px); } }
+.hero-cloud { animation: hero-cloud 5s ease-in-out infinite alternate; }
+.hero-cloud-slow { animation-duration: 7s; animation-direction: alternate-reverse; }
+@keyframes hero-cloud { to { transform: translateX(38px); } }
 
 .hero-sparkle { animation: hero-sparkle 3.2s ease-in-out infinite; }
 @keyframes hero-sparkle { 0%, 100% { opacity: 0.35; transform: scale(0.75); } 50% { opacity: 1; transform: scale(1.1); } }
@@ -74,11 +74,15 @@ body {
 
 @media (prefers-reduced-motion: reduce) { .hero-cloud, .hero-sparkle, .hero-rays, .hero-glow { animation: none; } }
 
-/* Cambio suave de imagen y frase en la pantalla «Tú eliges cómo» */
-.fg-fade { animation: fg-fade 0.4s ease-in-out; }
-@keyframes fg-fade { from { opacity: 0; } }
 
 /* Safari en iOS 26 ignora theme-color y pinta su barra con el fondo de la página:
    en la home (la que tiene el cielo) ese fondo es el azul de arriba del cielo. */
 /* Color medio del borde de arriba del cielo con sus rayos: Safari solo admite un color liso. */
 html:has(.hero-sky), body:has(.hero-sky) { background-color: #cde1e8; }
+
+/* Línea que recorre el marco de la cámara al escanear la Biblia */
+.scan-line { top: 140px; animation: scan-line 1.4s ease-in-out infinite alternate; }
+@keyframes scan-line { to { top: 322px; } }
+/* Línea que recorre la cara en la pantalla de orar */
+.face-scan { top: 12px; animation: face-scan 1.2s ease-in-out infinite alternate; }
+@keyframes face-scan { to { top: 126px; } }

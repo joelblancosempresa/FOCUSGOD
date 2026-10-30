@@ -67,6 +67,11 @@ export default function Hero() {
       <SmallCloud className="hero-cloud absolute w-[110px] md:w-[170px]" style={{ top: "20%", left: "-5%" }} />
       <SmallCloud className="hero-cloud hero-cloud-slow absolute w-[80px] md:w-[140px]" style={{ top: "13%", right: "-3%" }} />
       <SmallCloud className="hero-cloud absolute w-[100px] hidden md:block" style={{ top: "42%", left: "14%" }} />
+      {/* Más nubes, algunas en grupo junto a las de arriba */}
+      <SmallCloud className="hero-cloud hero-cloud-slow absolute w-[60px] md:w-[95px]" style={{ top: "27%", left: "13%", opacity: 0.85 }} />
+      <SmallCloud className="hero-cloud absolute w-[70px] md:w-[110px]" style={{ top: "19%", right: "14%", opacity: 0.9 }} />
+      <SmallCloud className="hero-cloud hero-cloud-slow absolute w-[56px] md:w-[90px]" style={{ top: "7%", left: "30%", opacity: 0.75 }} />
+      <SmallCloud className="hero-cloud absolute w-[64px] hidden md:block" style={{ top: "36%", right: "20%", opacity: 0.8 }} />
       <Sparkle size={22} style={{ top: "15%", left: "26%" }} />
       <Sparkle size={14} style={{ top: "24%", right: "22%", animationDelay: "1.2s" }} />
       <Sparkle size={18} style={{ top: "38%", right: "12%", animationDelay: "2.1s" }} />
