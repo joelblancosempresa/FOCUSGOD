@@ -77,3 +77,7 @@ body {
 /* Cambio suave de imagen y frase en la pantalla «Tú eliges cómo» */
 .fg-fade { animation: fg-fade 0.4s ease-in-out; }
 @keyframes fg-fade { from { opacity: 0; } }
+
+/* Safari en iOS 26 ignora theme-color y pinta su barra con el fondo de la página:
+   en la home (la que tiene el cielo) ese fondo es el azul de arriba del cielo. */
+html:has(.hero-sky), body:has(.hero-sky) { background-color: #a3d4f0; }

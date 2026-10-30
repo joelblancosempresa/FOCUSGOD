@@ -55,7 +55,7 @@ function Sparkle({ style, size }: { style: React.CSSProperties; size: number }) 
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden flex flex-col items-center justify-center pt-[96px] pb-[170px] md:pb-[260px]"
+      className="hero-sky relative overflow-hidden flex flex-col items-center justify-center pt-[96px] pb-[130px] md:pb-[260px]"
       style={{ minHeight: "100svh", background: `linear-gradient(180deg, #a3d4f0 0%, ${SKY} 45%, #cbe6f2 100%)` }}
     >
       {/* Luz: halo cálido + dos capas de rayos que giran despacio en sentidos opuestos */}
@@ -89,9 +89,9 @@ export default function Hero() {
 
       {/* Tres capas de nubes: dorada, crema y la de delante del color de la página */}
       {/* Móvil: solo se ve el centro del dibujo, así que los lados suben antes */}
-      <CloudBank fill={CLOUD_GOLD} base={170} lift={150} span={300} seed={1} className="md:hidden absolute left-0 bottom-[50px] w-full h-[250px]" />
-      <CloudBank fill={CLOUD_CREAM} base={200} lift={120} span={300} seed={7} className="md:hidden absolute left-0 bottom-[25px] w-full h-[230px]" />
-      <CloudBank fill={CLOUD_FRONT} base={245} lift={90} span={300} seed={13} className="md:hidden absolute left-0 bottom-0 w-full h-[210px]" />
+      <CloudBank fill={CLOUD_GOLD} base={170} lift={150} span={300} seed={1} className="md:hidden absolute left-0 bottom-[34px] w-full h-[230px]" />
+      <CloudBank fill={CLOUD_CREAM} base={200} lift={120} span={300} seed={7} className="md:hidden absolute left-0 bottom-[14px] w-full h-[200px]" />
+      <CloudBank fill={CLOUD_FRONT} base={245} lift={90} span={300} seed={13} className="md:hidden absolute left-0 bottom-0 w-full h-[150px]" />
       <CloudBank fill={CLOUD_GOLD} base={170} lift={160} seed={1} className="hidden md:block absolute left-0 bottom-[40px] w-full aspect-[1440/360]" />
       <CloudBank fill={CLOUD_CREAM} base={200} lift={130} seed={7} className="hidden md:block absolute left-0 bottom-[15px] w-full aspect-[1440/360]" />
       <CloudBank fill={CLOUD_FRONT} base={245} lift={100} seed={13} className="hidden md:block absolute left-0 bottom-0 w-full aspect-[1440/360]" />
