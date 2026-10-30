@@ -7,6 +7,8 @@ import { useEffect, useRef, useState } from "react";
 // del móvil de la app (258 × 522) y se escala al tamaño del teléfono de la web.
 
 export const BLUE = "#0A84FF"; // azul del sistema de Apple en oscuro
+// Difuminado suave del teléfono hacia el fondo de la página (varias paradas para que no se note el corte).
+const FADE = "linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,0.85) 66%, rgba(0,0,0,0.55) 76%, rgba(0,0,0,0.25) 86%, transparent 97%)";
 // Las que se eligen en «Social» (paso 1) y luego se bloquean.
 const APPS = [
   { id: "instagram", nombre: "Instagram" },
@@ -30,7 +32,7 @@ export function PhoneFrame({ children, phoneRef }: { children: React.ReactNode; 
       ref={phoneRef}
       aria-hidden="true"
       className="relative w-[170px] md:w-[250px] rounded-[26px] border-[5px] md:rounded-[38px] md:border-[7px] overflow-hidden [--s:0.62] md:[--s:0.915]"
-      style={{ aspectRatio: "258 / 522", borderColor: "#1b1f27", background: "#000", maskImage: "linear-gradient(to bottom, #000 62%, transparent 95%)", WebkitMaskImage: "linear-gradient(to bottom, #000 62%, transparent 95%)" }}
+      style={{ aspectRatio: "258 / 522", borderColor: "#1b1f27", background: "#000", maskImage: FADE, WebkitMaskImage: FADE }}
     >
       <div className="absolute left-0 top-0" style={{ width: 258, height: 522, transform: "scale(var(--s))", transformOrigin: "top left", color: "#fff", textAlign: "left" }}>
         {children}

@@ -15,8 +15,9 @@ const title = "FocusGod — Crece cada día en tu relación con Dios";
 const description =
   "FocusGod te ayuda a orar y leer la Biblia cada día. Bloquea Instagram, TikTok y YouTube hasta que pasas tiempo con Dios, para que tu relación con Él crezca de verdad.";
 
-// Color del cielo de la portada: Safari pinta con él la barra de arriba y no queda una franja blanca.
-export const viewport: Viewport = { themeColor: "#a3d4f0" };
+// El cielo de la portada llega hasta arriba del todo, por detrás de la barra de Safari
+// (viewport-fit=cover), y no queda una franja de otro color.
+export const viewport: Viewport = { themeColor: "#a3d4f0", viewportFit: "cover" };
 
 export const metadata: Metadata = {
   title,
