@@ -55,7 +55,7 @@ function Sparkle({ style, size }: { style: React.CSSProperties; size: number }) 
 export default function Hero() {
   return (
     <section
-      className="hero-sky relative overflow-hidden flex flex-col items-center pt-[calc(96px+env(safe-area-inset-top,0px))] pb-[calc(28px+env(safe-area-inset-bottom,0px))] md:justify-center md:pb-[260px]"
+      className="hero-sky relative overflow-hidden flex flex-col items-center pt-[calc(96px+env(safe-area-inset-top,0px))] pb-[56px] md:justify-center md:pb-[260px]"
       style={{ minHeight: "100svh", background: `linear-gradient(180deg, #a3d4f0 0%, ${SKY} 45%, #cbe6f2 100%)` }}
     >
       {/* Luz: halo cálido + dos capas de rayos que giran despacio en sentidos opuestos */}
