@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import VerseOfDay from "@/components/VerseOfDay";
@@ -14,6 +14,9 @@ import Footer from "@/components/Footer";
 const title = "FocusGod — Crece cada día en tu relación con Dios";
 const description =
   "FocusGod te ayuda a orar y leer la Biblia cada día. Bloquea Instagram, TikTok y YouTube hasta que pasas tiempo con Dios, para que tu relación con Él crezca de verdad.";
+
+// Color del cielo de la portada: Safari pinta con él la barra de arriba y no queda una franja blanca.
+export const viewport: Viewport = { themeColor: "#a3d4f0" };
 
 export const metadata: Metadata = {
   title,

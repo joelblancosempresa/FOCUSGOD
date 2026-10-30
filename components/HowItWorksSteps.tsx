@@ -1,9 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
+import { ChooseAppsPhone, UnlockAppsPhone } from "@/components/PhoneScreens";
+import BlockModesPhone from "@/components/BlockModesPhone";
 
+// Los 3 pasos cuentan una historia: eliges las apps → pasas tiempo con Dios → se abren.
 const steps = [
-  { pill: "Mis bloqueos", title: "Elige qué apps bloquear", line: "Instagram, TikTok, YouTube… Las que más tiempo te quitan.", src: "/app/bloqueos-v4.jpg", alt: "Pantalla de bloqueos de FocusGod" },
-  { pill: "Oración", title: "Ora o lee la Biblia", line: "Cierras los ojos y hablas con Dios. La cámara no graba nada, solo ve que sigues orando.", src: "/app/orar-v4.jpg", alt: "Pantalla de oración de FocusGod" },
-  { pill: "Tu vela", title: "Y tus apps se desbloquean", line: "Cada día que lo cumples, tu vela crece.", src: "/app/inicio-v4.jpg", alt: "Pantalla de inicio de FocusGod con la vela" },
+  { pill: "Paso 1", title: "Elige las apps que te distraen", line: "Las eliges con el selector de Apple. FocusGod nunca ve cuáles son.", Phone: ChooseAppsPhone },
+  { pill: "Paso 2", title: "Pasa tiempo con Dios", line: "Cuando quieras abrirlas, primero ora o lee su Palabra. Tú eliges cómo.", Phone: BlockModesPhone },
+  { pill: "Paso 3", title: "Y después, el móvil", line: "Al terminar, tus apps se abren solas. Y tu vela crece cada día que lo cumples.", Phone: UnlockAppsPhone },
 ];
 
 const pill: React.CSSProperties = { display: "inline-block", border: "1.5px solid rgba(51,51,51,0.14)", borderRadius: "999px", padding: "6px 16px", fontSize: "14px", fontWeight: 600, color: "#838381", margin: "0 0 16px" };
@@ -20,10 +22,9 @@ export default function HowItWorksSteps() {
 
         {steps.map((s) => (
           <div key={s.pill} className="mt-16 md:mt-24 flex flex-col items-center">
-            <div className="relative w-[170px] md:w-[250px]">
-              <div aria-hidden="true" style={{ position: "absolute", inset: "-35% -60%", background: "radial-gradient(closest-side, rgba(247,165,49,0.22), transparent)", pointerEvents: "none" }} />
-              {/* El móvil se funde con el fondo en su mitad de abajo, como en Opal */}
-              <img src={s.src} alt={s.alt} loading="lazy" className="rounded-[26px] border-[5px] md:rounded-[38px] md:border-[7px]" style={{ position: "relative", display: "block", width: "100%", height: "auto", borderColor: "#1b1f27", background: "#1b1f27", maskImage: "linear-gradient(to bottom, #000 45%, transparent 92%)", WebkitMaskImage: "linear-gradient(to bottom, #000 45%, transparent 92%)" }} />
+            <div className="relative flex flex-col items-center w-full">
+              <div aria-hidden="true" style={{ position: "absolute", left: "50%", top: 0, width: 420, height: 420, transform: "translateX(-50%)", background: "radial-gradient(closest-side, rgba(247,165,49,0.22), transparent)", pointerEvents: "none" }} />
+              <s.Phone />
             </div>
             <span style={{ ...pill, marginTop: "4px" }}>{s.pill}</span>
             <h3 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", margin: "0 0 12px", textWrap: "balance" }}>

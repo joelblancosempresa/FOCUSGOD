@@ -64,12 +64,16 @@ body {
   background: repeating-conic-gradient(from 0deg, rgba(255, 250, 230, 0) 0deg, rgba(255, 250, 230, 0.42) 4deg, rgba(255, 250, 230, 0) 8deg, rgba(255, 250, 230, 0) 18deg);
   -webkit-mask-image: radial-gradient(circle, #000 0%, rgba(0, 0, 0, 0.6) 22%, transparent 42%);
   mask-image: radial-gradient(circle, #000 0%, rgba(0, 0, 0, 0.6) 22%, transparent 42%);
-  animation: hero-rays 80s linear infinite;
+  animation: hero-rays 55s linear infinite;
 }
-.hero-rays-2 { background: repeating-conic-gradient(from 9deg, rgba(255, 255, 255, 0) 0deg, rgba(255, 255, 255, 0.28) 3deg, rgba(255, 255, 255, 0) 6deg, rgba(255, 255, 255, 0) 25deg); animation-duration: 120s; animation-direction: reverse; }
+.hero-rays-2 { background: repeating-conic-gradient(from 9deg, rgba(255, 255, 255, 0) 0deg, rgba(255, 255, 255, 0.28) 3deg, rgba(255, 255, 255, 0) 6deg, rgba(255, 255, 255, 0) 25deg); animation-duration: 85s; animation-direction: reverse; }
 @keyframes hero-rays { from { transform: translateX(-50%) rotate(0deg); } to { transform: translateX(-50%) rotate(360deg); } }
 
 .hero-glow { animation: hero-glow 6s ease-in-out infinite alternate; }
 @keyframes hero-glow { from { opacity: 0.8; } to { opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) { .hero-cloud, .hero-sparkle, .hero-rays, .hero-glow { animation: none; } }
+
+/* Cambio suave de imagen y frase en la pantalla «Tú eliges cómo» */
+.fg-fade { animation: fg-fade 0.4s ease-in-out; }
+@keyframes fg-fade { from { opacity: 0; } }

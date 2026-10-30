@@ -20,8 +20,11 @@ export default function PhoneTimeStats({ children }: { children: React.ReactNode
     let raf = 0;
     const update = () => {
       raf = 0;
+      // Empieza a cambiar cuando la sección va por el 30 % de la pantalla, antes de quedarse fija.
       const r = ref.current!.getBoundingClientRect();
-      const p = Math.min(0.999, Math.max(0, -r.top / (r.height - window.innerHeight)));
+      const vh = window.innerHeight;
+      const start = vh * 0.3;
+      const p = Math.min(0.999, Math.max(0, (start - r.top) / (start + r.height - vh)));
       setStep(Math.floor(p * STATS.length));
     };
     const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
@@ -34,7 +37,7 @@ export default function PhoneTimeStats({ children }: { children: React.ReactNode
   return (
     <div ref={ref} className="relative" style={{ height: "220svh" }}>
       <div className="sticky top-0 flex flex-col" style={{ height: "100svh" }}>
-        <div className="flex-1 flex flex-col items-center justify-center gap-8 md:gap-10 px-6 pt-24 pb-6" style={{ background: "#FDFCF8" }}>
+        <div className="flex-1 flex flex-col items-center justify-center gap-8 md:gap-10 px-6 pt-[124px] pb-12" style={{ background: "#FDFCF8" }}>
           <h2 className="text-[28px] md:text-[44px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.5px", textAlign: "center", margin: 0, maxWidth: "640px", textWrap: "balance" }}>
             Tiempo medio que pasamos con el móvil
           </h2>

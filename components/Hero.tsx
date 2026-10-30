@@ -55,8 +55,8 @@ function Sparkle({ style, size }: { style: React.CSSProperties; size: number }) 
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden flex flex-col items-center pb-[150px] md:pb-[260px]"
-      style={{ background: `linear-gradient(180deg, #a3d4f0 0%, ${SKY} 45%, #cbe6f2 100%)` }}
+      className="relative overflow-hidden flex flex-col items-center justify-center pt-[96px] pb-[170px] md:pb-[260px]"
+      style={{ minHeight: "100svh", background: `linear-gradient(180deg, #a3d4f0 0%, ${SKY} 45%, #cbe6f2 100%)` }}
     >
       {/* Luz: halo cálido + dos capas de rayos que giran despacio en sentidos opuestos */}
       <div aria-hidden="true" className="hero-glow absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 60% at 50% 0%, rgba(255,247,222,0.95), rgba(255,247,222,0.35) 45%, transparent 75%)" }} />
@@ -73,15 +73,15 @@ export default function Hero() {
       <Sparkle size={12} style={{ top: "33%", left: "9%", animationDelay: "0.6s" }} />
 
       {/* Texto */}
-      <div className="relative z-10 px-6 pt-[150px] md:pt-[170px] max-w-[440px] md:max-w-[820px] text-center flex flex-col items-center">
+      <div className="relative z-10 px-6 md:pt-[70px] max-w-[440px] md:max-w-[820px] text-center flex flex-col items-center">
         <h1 className="fg-h1-sky" style={{ fontWeight: 700, color: "#2b2f36", lineHeight: 1.1, letterSpacing: "-0.01em", margin: 0 }}>
           Pon a Dios primero.<br />Cada día.
         </h1>
-        <p className="text-[15px] md:text-[20px]" style={{ color: "#4d5a63", lineHeight: 1.5, margin: "20px 0 0", maxWidth: "560px", textWrap: "balance" }}>
+        <p className="text-[15px] md:text-[20px]" style={{ color: "#4d5a63", lineHeight: 1.5, margin: "24px 0 0", maxWidth: "560px", textWrap: "balance" }}>
           FocusGod te ayuda a buscar a Dios cada día y a crecer en tu relación con Él.
           <span style={{ display: "block" }}>El móvil puede esperar.</span>
         </p>
-        <a href={CTA_HREF} {...CTA_PROPS} className="w-full md:w-auto" style={{ display: "block", marginTop: "36px", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", padding: "18px 40px", borderRadius: "16px", textDecoration: "none", textAlign: "center", boxShadow: "0 4px 0 0 #bf321c, 0 12px 30px rgba(191,50,28,0.22)" }}>
+        <a href={CTA_HREF} {...CTA_PROPS} className="w-full md:w-auto" style={{ display: "block", marginTop: "40px", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "17px", padding: "18px 40px", borderRadius: "16px", textDecoration: "none", textAlign: "center", boxShadow: "0 4px 0 0 #bf321c, 0 12px 30px rgba(191,50,28,0.22)" }}>
           {CTA_LABEL}
         </a>
         <p style={{ fontSize: "13px", color: "#5f6d76", margin: "14px 0 0" }}>{CTA_NOTE}</p>
