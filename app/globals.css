@@ -80,4 +80,5 @@ body {
 
 /* Safari en iOS 26 ignora theme-color y pinta su barra con el fondo de la página:
    en la home (la que tiene el cielo) ese fondo es el azul de arriba del cielo. */
-html:has(.hero-sky), body:has(.hero-sky) { background-color: #a3d4f0; }
+/* Color medio del borde de arriba del cielo con sus rayos: Safari solo admite un color liso. */
+html:has(.hero-sky), body:has(.hero-sky) { background-color: #cde1e8; }

@@ -17,7 +17,7 @@ const description =
 
 // El cielo de la portada llega hasta arriba del todo, por detrás de la barra de Safari
 // (viewport-fit=cover), y no queda una franja de otro color.
-export const viewport: Viewport = { themeColor: "#a3d4f0", viewportFit: "cover" };
+export const viewport: Viewport = { themeColor: "#cde1e8", viewportFit: "cover" };
 
 export const metadata: Metadata = {
   title,

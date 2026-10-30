@@ -22,7 +22,7 @@ const APPS = [
 const INICIO = [
   ...APPS.map((a) => ({ ...a, src: `/ilus/onb-app-${a.id}.png`, bloquea: true })),
   { id: "youtube", nombre: "YouTube", src: "/ilus/onb-app-youtube.png", bloquea: true },
-  { id: "clash", nombre: "Clash", src: "/ilus/onb-app-clash.png", bloquea: true },
+  { id: "clash", nombre: "Clash", src: "/ilus/onb-app-clash-v2.png", bloquea: true },
   { id: "focusgod", nombre: "FocusGod", src: "/app-icon-vela.png", bloquea: false },
 ];
 
