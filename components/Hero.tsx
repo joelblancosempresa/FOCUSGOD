@@ -92,9 +92,9 @@ export default function Hero() {
 
       {/* Tres capas de nubes: dorada, crema y la de delante del color de la página */}
       {/* Móvil: solo se ve el centro del dibujo, así que los lados suben antes */}
-      <CloudBank fill={CLOUD_GOLD} base={170} lift={150} span={300} seed={1} className="md:hidden absolute left-0 bottom-[34px] w-full h-[230px]" />
-      <CloudBank fill={CLOUD_CREAM} base={200} lift={120} span={300} seed={7} className="md:hidden absolute left-0 bottom-[14px] w-full h-[200px]" />
-      <CloudBank fill={CLOUD_FRONT} base={245} lift={90} span={300} seed={13} className="md:hidden absolute left-0 bottom-0 w-full h-[150px]" />
+      <CloudBank fill={CLOUD_GOLD} base={170} lift={150} span={300} seed={1} className="md:hidden absolute left-0 bottom-[34px] w-full h-[270px]" />
+      <CloudBank fill={CLOUD_CREAM} base={200} lift={120} span={300} seed={7} className="md:hidden absolute left-0 bottom-[14px] w-full h-[240px]" />
+      <CloudBank fill={CLOUD_FRONT} base={245} lift={90} span={300} seed={13} className="md:hidden absolute left-0 bottom-0 w-full h-[190px]" />
       <CloudBank fill={CLOUD_GOLD} base={170} lift={160} seed={1} className="hidden md:block absolute left-0 bottom-[40px] w-full aspect-[1440/360]" />
       <CloudBank fill={CLOUD_CREAM} base={200} lift={130} seed={7} className="hidden md:block absolute left-0 bottom-[15px] w-full aspect-[1440/360]" />
       <CloudBank fill={CLOUD_FRONT} base={245} lift={100} seed={13} className="hidden md:block absolute left-0 bottom-0 w-full aspect-[1440/360]" />
