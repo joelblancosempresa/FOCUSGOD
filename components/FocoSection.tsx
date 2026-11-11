@@ -1,87 +1,30 @@
 import { CTA_HREF, CTA_PROPS, CTA_LABEL } from "@/lib/cta";
+
+// La ilustración del mar de fondo y el texto y el botón encima, abajo.
 export default function FocoSection() {
   return (
-    <section>
-
-      {/* ── MÓVIL (sin cambios) ── */}
-      <div className="md:hidden" style={{ background: "#FDFCF8", padding: "48px 24px 56px", textAlign: "center" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/howitworks-1.png" alt="Jesús sentado en un banco con un niño que ha dejado el móvil a un lado" style={{ display: "block", width: "100%", maxWidth: "320px", height: "auto", margin: "0 auto 24px" }} />
-        <h2 className="fg-h2" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.2, letterSpacing: "-0.4px", marginBottom: "20px" }}>
+    <section className="relative overflow-hidden flex flex-col items-center justify-end text-center px-6 pb-12 md:pb-16 h-[560px] md:h-[640px]" style={{ background: "#0c1a6b" }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/ilus/foco-fondo.jpg"
+        alt="Una persona sentada junto al mar mirando la luz que baja del cielo"
+        className="absolute inset-0 w-full h-full object-cover object-[42%_center]"
+      />
+      {/* Oscurece un poco la parte de abajo para que el texto se lea bien */}
+      <div aria-hidden="true" className="absolute inset-0" style={{ background: "linear-gradient(0deg, rgba(4,20,30,0.7) 0%, rgba(4,20,30,0.35) 35%, transparent 60%)" }} />
+      <div className="relative z-10 w-full max-w-[440px] md:max-w-[640px] flex flex-col items-center">
+        <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#fff", lineHeight: 1.2, letterSpacing: "-0.4px", margin: "0 0 24px" }}>
           Antes que el scroll, Dios.
         </h2>
         <a
           href={CTA_HREF}
           {...CTA_PROPS}
+          className="w-full md:w-[280px]"
           style={{ display: "block", background: "#f0492e", color: "#fff", fontWeight: 700, fontSize: "16px", padding: "18px", borderRadius: "14px", textDecoration: "none", boxShadow: "0 4px 0 0 #bf321c" }}
         >
           {CTA_LABEL}
         </a>
       </div>
-
-      {/* ── DESKTOP (Figma exact) ── */}
-      <div
-        className="hidden md:block"
-        style={{ position: "relative", width: "100%", height: "518px", overflow: "hidden" }}
-      >
-        {/* Background image */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/foco-desktop-bg.png"
-          alt=""
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "155.21%",
-            top: "-55.21%",
-            objectFit: "cover",
-            pointerEvents: "none",
-          }}
-        />
-
-        {/* Centered 1440px canvas — exact Figma positions */}
-        <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", width: "1440px", height: "518px" }}>
-          <h2 style={{
-            position: "absolute",
-            left: "630px",
-            top: "142px",
-            width: "702px",
-            fontSize: "40px",
-            fontWeight: 700,
-            letterSpacing: "-0.4px",
-            color: "#333333",
-            lineHeight: 1.2,
-            margin: 0,
-          }}>
-            Antes que el scroll, Dios.
-          </h2>
-          <a
-            href={CTA_HREF}
-            {...CTA_PROPS}
-            style={{
-              position: "absolute",
-              left: "836px",
-              top: "219px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "280px",
-              height: "60px",
-              background: "#f0492e",
-              color: "#fff",
-              fontWeight: 700,
-              fontSize: "16px",
-              borderRadius: "14px",
-              textDecoration: "none",
-              boxShadow: "0 4px 0 0 #bf321c",
-            }}
-          >
-            {CTA_LABEL}
-          </a>
-        </div>
-      </div>
-
     </section>
   );
 }

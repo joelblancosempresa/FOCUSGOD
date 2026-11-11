@@ -11,7 +11,7 @@ const bottom = [
   { name: "Un día sin redes", line: "Eliges un día y tus apps siguen cerradas hasta que acaba.", src: "/ilus/bloqueo-detox-v2.jpg" },
   { name: "Noches sin pantalla", line: "Desde la hora que elijas hasta que amanece.", src: "/ilus/bloqueo-noche-v3.jpg" },
   { name: "Modo estudio o trabajo", line: "Todo cerrado hasta que acaba tu sesión.", src: "/ilus/bloqueo-estudio-v2.jpg" },
-  { name: "Bloqueo por horario", line: "Tus apps se cierran solas a las horas que elijas.", src: "/ilus/bloqueo-horario-v2.jpg" },
+  { name: "Bloqueo por horario", line: "Tus apps se cierran solas a las horas que elijas.", src: "/ilus/bloqueo-horario-v3.jpg" },
   { name: "Límite de tiempo", line: "Tus apps se cierran al gastar los minutos del día.", src: "/ilus/bloqueo-limite-v2.jpg" },
   { name: "Filtro de contenido adulto", line: "Bloquea el contenido para adultos. Siempre activo.", src: "/ilus/bloqueo-filtro-v2.jpg" },
 ];
