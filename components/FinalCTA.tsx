@@ -6,7 +6,7 @@ export default function FinalCTA() {
     <PhoneTimeStats>
       <section style={{ background: "#f0492e" }} className="px-6 py-12 md:py-16">
         <div className="max-w-[440px] md:max-w-[640px] mx-auto text-center flex flex-col items-center">
-          <h2 className="fg-h2 md:text-[40px]" style={{ color: "#fff", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.3px", margin: "0 0 24px", textWrap: "balance" }}>
+          <h2 className="fg-h2 md:text-[40px]" style={{ color: "#fff", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.4px", margin: "0 0 24px", textWrap: "balance" }}>
             FocusGod te ayuda a devolverle ese tiempo a Dios.
           </h2>
           <a

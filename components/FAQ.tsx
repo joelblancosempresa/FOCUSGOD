@@ -33,7 +33,7 @@ export default function FAQ() {
   return (
     <section style={{ background: "#FDFCF8" }} className="px-6 py-14 md:py-24">
       <div className="max-w-[420px] md:max-w-[760px] mx-auto">
-        <h2 className="fg-h2 md:text-[35px]" style={{ fontWeight: 700, color: "#333333", textAlign: "center", lineHeight: 1.2, letterSpacing: "-0.2px", margin: "0 0 28px" }}>
+        <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", textAlign: "center", lineHeight: 1.2, letterSpacing: "-0.4px", margin: "0 0 28px" }}>
           Preguntas frecuentes
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>

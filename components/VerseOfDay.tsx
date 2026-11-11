@@ -14,7 +14,7 @@ export default function VerseOfDay() {
             gap: "10px",
             fontWeight: 700,
             color: "#333333",
-            letterSpacing: "-0.2px",
+            letterSpacing: "-0.4px",
             marginBottom: "28px",
           }}>
             <Image src="/bible-icon.png" alt="" width={30} height={30} style={{ flexShrink: 0 }} />
@@ -60,8 +60,9 @@ export default function VerseOfDay() {
             display: "inline-flex",
             alignItems: "center",
             gap: "12px",
-            fontSize: "25px",
-            fontWeight: 600,
+            fontSize: "40px",
+            fontWeight: 700,
+            letterSpacing: "-0.4px",
             color: "#333333",
             marginBottom: "24px",
           }}>

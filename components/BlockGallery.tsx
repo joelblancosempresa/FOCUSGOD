@@ -1,17 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 // Arriba los bloqueos que solo tiene FocusGod (la fila que más se mira); abajo los de controlar las redes.
 const top = [
-  { name: "Ora para desbloquear", line: "Tus apps se abren al terminar tu oración del día.", src: "/ilus/bloqueo-orar-v2.jpg" },
+  { name: "Ora para desbloquear", line: "Tus apps se abren al terminar tu oración del día.", src: "/ilus/bloqueo-orar-v3.jpg" },
   { name: "Lee la Biblia para desbloquear", line: "Lee en la app o haz una foto a tu Biblia de papel.", src: "/ilus/bloqueo-biblia-v2.jpg" },
-  { name: "Tiempo con Dios", line: "Un rato a solas con Él y una foto de tu reflexión al acabar.", src: "/ilus/onb-bloqueo-tiempo.jpg" },
-  { name: "Sal a caminar con Dios", line: "Sal a andar y haz una foto fuera para desbloquear.", src: "/ilus/onb-bloqueo-caminata.jpg" },
-  { name: "Domingo en la iglesia", line: "Tus apps se bloquean mientras estás en la iglesia y se abren al salir.", src: "/ilus/bloqueo-iglesia-tmp.jpg" },
+  { name: "Tiempo con Dios", line: "Un rato a solas con Él y una foto de tu reflexión al acabar.", src: "/ilus/bloqueo-tiempo-v3.jpg" },
+  { name: "Sal a caminar con Dios", line: "Sal a andar y haz una foto fuera para desbloquear.", src: "/ilus/bloqueo-caminata-v3.jpg" },
+  { name: "Domingo en la iglesia", line: "Tus apps se bloquean mientras estás en la iglesia y se abren al salir.", src: "/ilus/bloqueo-iglesia-v2.jpg" },
 ];
 const bottom = [
-  { name: "Un día sin redes", line: "Eliges un día y tus apps siguen cerradas hasta que acaba.", src: "/ilus/onb-bloqueo-detox.jpg" },
-  { name: "Noches sin pantalla", line: "Desde la hora que elijas hasta que amanece.", src: "/ilus/onb-bloqueo-winddown.jpg" },
-  { name: "Modo estudio o trabajo", line: "Todo cerrado hasta que acaba tu sesión.", src: "/ilus/onb-bloqueo-concentracion.jpg" },
-  { name: "Bloqueo por horario", line: "Tus apps se cierran solas a las horas que elijas.", src: "/ilus/onb-bloqueo-horario.jpg" },
+  { name: "Un día sin redes", line: "Eliges un día y tus apps siguen cerradas hasta que acaba.", src: "/ilus/bloqueo-detox-v2.jpg" },
+  { name: "Noches sin pantalla", line: "Desde la hora que elijas hasta que amanece.", src: "/ilus/bloqueo-noche-v2.jpg" },
+  { name: "Modo estudio o trabajo", line: "Todo cerrado hasta que acaba tu sesión.", src: "/ilus/bloqueo-estudio-v2.jpg" },
+  { name: "Bloqueo por horario", line: "Tus apps se cierran solas a las horas que elijas.", src: "/ilus/bloqueo-horario-v2.jpg" },
   { name: "Límite de tiempo", line: "Tus apps se cierran al gastar los minutos del día.", src: "/ilus/bloqueo-limite-tmp.jpg" },
   { name: "Filtro de contenido adulto", line: "Bloquea el contenido para adultos. Siempre activo.", src: "/ilus/onb-bloqueo-filtro.jpg" },
 ];

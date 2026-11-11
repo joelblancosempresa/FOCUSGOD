@@ -30,7 +30,7 @@ export default function AsSeenIn() {
   return (
     <section style={{ background: "#FDFCF7" }} className="px-5 py-14 md:py-24">
       <div className="max-w-[440px] md:max-w-[640px] mx-auto rounded-[24px] px-4 py-8 md:px-8 md:py-10" style={{ background: "#F6F1E3" }}>
-        <h2 className="fg-h2 md:text-[34px]" style={{ fontWeight: 700, color: "#333333", letterSpacing: "-0.3px", textAlign: "center", margin: "0 0 8px" }}>
+        <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", letterSpacing: "-0.4px", textAlign: "center", margin: "0 0 8px" }}>
           {/* «en la ciencia» siempre junto: en móvil baja entero a la segunda línea */}
           Un método basado <span style={{ whiteSpace: "nowrap" }}>en la ciencia</span>
         </h2>

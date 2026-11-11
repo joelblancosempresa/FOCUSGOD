@@ -4,7 +4,7 @@ export default function Reviews() {
   return (
     <section style={{ background: "#FCFBF2" }} className="px-6 py-14 md:py-24">
       <div className="max-w-[420px] md:max-w-[760px] mx-auto">
-        <h2 className="fg-h2 md:text-[35px]" style={{ fontWeight: 700, color: "#333333", letterSpacing: "-0.2px", textAlign: "center", lineHeight: 1.2, margin: "0 0 28px" }}>
+        <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", letterSpacing: "-0.4px", textAlign: "center", lineHeight: 1.2, margin: "0 0 28px" }}>
           Hecho por un cristiano, para cristianos
         </h2>
 

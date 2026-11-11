@@ -41,7 +41,7 @@ export default function PhoneTimeStats({ children }: { children: React.ReactNode
       {/* minHeight y no height: si el contenido no cabe en la pantalla, el bloque crece en vez de salirse y tapar el pie */}
       <div className="sticky top-0 flex flex-col" style={{ minHeight: "100svh" }}>
         <div className="flex-1 flex flex-col items-center justify-center gap-6 md:gap-10 px-6 pt-[110px] pb-10 md:pt-[124px] md:pb-12" style={{ background: "#FDFCF8" }}>
-          <h2 className="text-[28px] md:text-[44px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.5px", textAlign: "center", margin: 0, maxWidth: "640px", textWrap: "balance" }}>
+          <h2 className="fg-h2 md:text-[40px]" style={{ fontWeight: 700, color: "#333333", lineHeight: 1.15, letterSpacing: "-0.4px", textAlign: "center", margin: 0, maxWidth: "640px", textWrap: "balance" }}>
             Tiempo medio que pasamos con el móvil
           </h2>
           <div className="relative w-full h-[132px] md:h-[190px]" aria-live="polite">
